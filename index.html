@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>myAnalyst — Real-time analytics for multi-unit auto service</title>
+  <meta name="description" content="myAnalyst turns your POS data into live store-by-store dashboards, a 0–100 Store Health score, budget pacing, retention intelligence, and SMS alerts — built for quick-lube, tire, and auto-service chains." />
+  <link rel="icon" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo.png" alt="myAnalyst" class="brand-logo" /></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="platform.html">Platform</a>
+        <a href="pro.html">Pro</a>
+        <a href="add-ons.html">Add-ons</a>
+        <a href="industries.html">Industries</a>
+        <a href="customers.html">Customers</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="customers.html#sample" class="btn btn-ghost">See a sample report</a>
+        <a href="contact.html" class="btn btn-primary">Book a demo</a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-drawer">
+    <a href="platform.html">Platform</a><a href="pro.html">Pro</a><a href="add-ons.html">Add-ons</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="pricing.html">Pricing</a>
+    <a href="contact.html" class="btn btn-primary">Book a demo</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="hero-pill"><span class="dot"></span> Built for multi-unit auto service</span>
+        <h1>Every store. Every car.<br/>In real time.</h1>
+        <p class="lead">myAnalyst reads your POS and turns it into live store-by-store dashboards, a Store Health score for every location, budget pacing, and SMS alerts the moment a number moves — refreshed every 5 minutes, across all your shops.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-amber btn-lg">Book a demo
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="customers.html#sample" class="btn btn-ghost btn-lg">See a live sample report</a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-pill" style="margin:0"><span class="dot"></span> Live</span>
+          1,100+ locations · refreshed every 5 min · 100% U.S.-based support
+        </div>
+      </div>
+
+      <!-- LIVE DASHBOARD MOCK (real metrics) -->
+      <div class="hero-media">
+        <div class="dash" role="img" aria-label="myAnalyst portfolio dashboard preview">
+          <div class="dash-bar"><i></i><i></i><i></i><span class="dash-title">myAnalyst · Portfolio · 41 stores · live</span></div>
+          <div class="dash-kpis">
+            <div class="kpi"><div class="k-label">Net Sales (today)</div><div class="k-value" data-tick data-base="48640" data-prefix="$" data-decimals="0">$48,640</div><div class="k-delta up">▲ 6.2% vs LY</div></div>
+            <div class="kpi"><div class="k-label">Cars</div><div class="k-value" data-tick data-base="412" data-decimals="0">412</div><div class="k-delta up">▲ 4.1% vs LY</div></div>
+            <div class="kpi"><div class="k-label">Avg Ticket</div><div class="k-value" data-tick data-base="79.40" data-prefix="$" data-decimals="2">$79.40</div><div class="k-delta up">▲ 3.2%</div></div>
+          </div>
+          <div class="dash-charts">
+            <div class="chart-card">
+              <div class="cc-title">Net Sales · last 14 days</div>
+              <svg class="spark-area" viewBox="0 0 300 92" preserveAspectRatio="none" aria-hidden="true">
+                <defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1dac92" stop-opacity="0.55"/><stop offset="100%" stop-color="#1dac92" stop-opacity="0"/></linearGradient></defs>
+                <path d="M0,70 L20,64 L40,68 L60,55 L80,58 L100,46 L120,50 L140,38 L160,42 L180,30 L200,34 L220,24 L240,28 L260,18 L280,22 L300,12 L300,92 L0,92 Z" fill="url(#ga)"/>
+                <path d="M0,70 L20,64 L40,68 L60,55 L80,58 L100,46 L120,50 L140,38 L160,42 L180,30 L200,34 L220,24 L240,28 L260,18 L280,22 L300,12" fill="none" stroke="#1dac92" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="300" cy="12" r="3.5" fill="#fff" stroke="#1dac92" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="chart-card" style="display:flex;flex-direction:column">
+              <div class="cc-title">Store Health</div>
+              <div class="score-ring" style="width:104px;height:104px;margin:4px auto 0">
+                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#2c2a20" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#1dac92" stroke-width="4.5" stroke-dasharray="78 22" stroke-linecap="round"/></svg>
+                <div class="sc-center"><div class="sc-grade" style="color:#5fcdb8;font-size:1.9rem">B</div><div class="sc-num">78 / 100</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="signal-alert" aria-hidden="true">
+            <span class="sa-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            <div><div class="sa-title">Signal · Store 305</div><div class="sa-text">Behind budget pace at 11:00 AM. Texted to the District Manager.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGO WALL ============ -->
+  <section class="logowall">
+    <div class="container">
+      <p>Trusted across quick-lube, tire &amp; auto-service franchise groups</p>
+      <div class="logos">
+        <span>Jiffy Lube</span><span>Take 5</span><span>Valvoline</span><span>Midas</span><span>Meineke</span><span>Grease Monkey</span><span>Big O Tires</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE PROBLEM ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">The multi-unit problem</span>
+        <h2 class="section-title">Your POS already knows. It just won't tell you — across 40 stores, by 8am.</h2>
+        <p class="lead">Most operators rebuild the same numbers by hand every morning. myAnalyst reads the data the moment your day closes, scores every store, and flags what needs you first.</p>
+      </div>
+      <div class="ba" style="margin-top:clamp(40px,5vw,64px)">
+        <div class="ba-card ba-before reveal">
+          <span class="tag" style="background:var(--danger-bg);color:var(--crimson)">Before</span>
+          <h3 style="margin-top:1rem">Exports, logins, spreadsheets</h3>
+          <p style="color:var(--fg-2);margin-top:.5rem">Pull each store's POS report, re-key it, and the numbers are stale before the call starts.</p>
+          <div class="scatter">
+            <span>POS report ×41</span><span>Labor hours</span><span>Car counts</span><span>Void log</span><span>Daily cash</span><span>Repeat rate</span><span>Budget vs actual</span><span>Manager texts</span>
+          </div>
+        </div>
+        <div class="ba-arrow reveal d1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="ba-card ba-after reveal d2">
+          <span class="tag">After</span>
+          <h3 style="margin-top:1rem">One live picture, already scored</h3>
+          <p style="color:var(--d-fg-2);margin-top:.5rem">Every store consolidated, ranked, graded, and pacing against budget — before you walk in.</p>
+          <div class="unified">
+            <div class="u-row"><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> LiveStats refreshes every 5 minutes</div>
+            <div class="u-row"><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> A 0–100 Store Health grade per location</div>
+            <div class="u-row"><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Pacing vs budget, projected to month-end</div>
+            <div class="u-row"><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Signals text your managers automatically</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROOF STATS ============ -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="stats reveal">
+        <div class="stat"><div class="s-value"><span data-count="1100" data-decimals="0">1,100</span><span class="unit">+</span></div><div class="s-label">Locations served</div></div>
+        <div class="stat"><div class="s-value"><span class="unit">$</span><span data-count="2" data-decimals="0">2</span><span class="unit">B+</span></div><div class="s-label">Annual revenue analyzed</div></div>
+        <div class="stat"><div class="s-value"><span data-count="5" data-decimals="0">5</span><span class="unit">min</span></div><div class="s-label">Live data refresh</div></div>
+        <div class="stat"><div class="s-value"><span data-count="10" data-decimals="0">10</span><span class="unit">:1</span></div><div class="s-label">Average client ROI</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODULE LINEUP ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">One platform</span>
+        <h2 class="section-title">Far more than a dashboard</h2>
+        <p class="lead">Forty-plus reports and tools built specifically for how auto-service chains run — not a generic BI template.</p>
+      </div>
+      <div class="grid grid-4 reveal d1" style="margin-top:clamp(36px,4vw,56px)">
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m5 14V9m5 10V7m5 12V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>LiveStats</h3><p>Real-time store-by-store grid — sales, cars, labor, avg ticket — refreshed every 5 minutes with YoY deltas.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 7 14.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Store Health</h3><p>A 0–100 wellness score and A–F grade per store, built from five weighted pillars and chain percentiles.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Pacing &amp; Forecast</h3><p>Month-to-date pace vs budget with shape-adjusted projections and ahead / on-track / behind status.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg></div><h3>Geospatial Map</h3><p>Heatmaps, choropleths, and drive-time trade areas — see demand, guest origin, and retention by location.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Retention</h3><p>VIN- and household-level — on-track, due-soon, overdue, lapsed — with due-for-service lists and RFM segments.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Signals</h3><p>SMS &amp; MMS alerts that reach managers the moment a KPI crosses a threshold — no app to open.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M8 21h8m-4-4v4M6 4h12v6a6 6 0 0 1-12 0V4zM6 6H4v2a3 3 0 0 0 3 3m11-5h2v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Wall of Records</h3><p>All-time single-day store records and current-period rankings — friendly competition that drives the floor.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h10M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="12" r="2.2" stroke="currentColor" stroke-width="2"/></svg></div><h3>Report Builder</h3><p>Drag-and-drop custom dashboards and saved trackers — build exactly the view your team needs.</p></div>
+      </div>
+      <div class="center" style="margin-top:2.4rem"><a href="platform.html" class="btn-link">Explore the platform<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </section>
+
+  <!-- ============ STORE HEALTH DEEP DIVE ============ -->
+  <section class="dark-section section">
+    <div class="container">
+      <div class="pro-feature">
+        <div class="reveal">
+          <span class="eyebrow">Signature feature · Store Health</span>
+          <h2 class="section-title" style="margin-top:1rem">Know which store needs you — before you even look.</h2>
+          <p class="lead" style="margin-top:1rem">Every location gets a single 0–100 score and an A–F grade, built from five weighted pillars and ranked against the rest of your chain. Scan the whole portfolio in seconds; drill into any store in one click.</p>
+          <div class="hero-actions"><a href="platform.html#store-health" class="btn btn-primary btn-lg">How scoring works</a></div>
+        </div>
+        <div class="reveal d1">
+          <div class="card" style="background:var(--d-surface-2);border-color:var(--d-border)">
+            <div style="display:flex;align-items:center;gap:22px;margin-bottom:20px">
+              <div class="score-ring">
+                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#2c2a20" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#1dac92" stroke-width="4.5" stroke-dasharray="78 22" stroke-linecap="round"/></svg>
+                <div class="sc-center"><div class="sc-grade" style="color:#5fcdb8">B</div><div class="sc-num">78 / 100</div></div>
+              </div>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:1.1rem">Store 0142 · Rio Rancho</div>
+                <div style="color:var(--d-fg-3);font-size:.85rem;margin:.3rem 0 .6rem">Health · watch → improving</div>
+                <span class="spill ahead">▲ up 6 pts this week</span>
+              </div>
+            </div>
+            <div class="pillars">
+              <div class="pillar"><span class="pl-label">Growth · 25%</span><span class="pl-track"><span class="pl-fill" style="width:72%;background:var(--viz-1)"></span></span><span class="pl-val">72</span></div>
+              <div class="pillar"><span class="pl-label">Goal · 25%</span><span class="pl-track"><span class="pl-fill" style="width:64%;background:var(--viz-2)"></span></span><span class="pl-val">64</span></div>
+              <div class="pillar"><span class="pl-label">Loyalty · 20%</span><span class="pl-track"><span class="pl-fill" style="width:85%;background:var(--viz-1)"></span></span><span class="pl-val">85</span></div>
+              <div class="pillar"><span class="pl-label">Standing · 15%</span><span class="pl-track"><span class="pl-fill" style="width:81%;background:var(--viz-1)"></span></span><span class="pl-val">81</span></div>
+              <div class="pillar"><span class="pl-label">Operations · 15%</span><span class="pl-track"><span class="pl-fill" style="width:58%;background:var(--viz-2)"></span></span><span class="pl-val">58</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIVESTATS FEATURE ROW ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="feature-row flip reveal">
+        <div class="fr-copy">
+          <span class="tag">LiveStats</span>
+          <h2 class="section-title" style="margin-top:1rem">The whole chain, updating while you watch</h2>
+          <p class="lead" style="margin-top:.8rem">Today vs last year for every store, every five minutes — net sales, cars, full service, labor, avg ticket, revenue per hour. Outliers jump out in green and red.</p>
+          <ul class="fr-list">
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Year-over-year deltas, color-coded</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Group by Market, Regional Manager, or District Manager</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Drill into any store for the full picture</li>
+          </ul>
+        </div>
+        <div class="fr-media">
+          <div class="shot">
+            <div class="shot-bar"><i></i><i></i><i></i><span><span class="live-dot"></span>LiveStats · refreshed 0:12 ago</span></div>
+            <div class="shot-body">
+              <div class="livegrid-wrap">
+                <table class="livegrid">
+                  <thead><tr><th>Store</th><th>Net Sales</th><th>Cars</th><th>Avg Ticket</th><th>vs LY</th></tr></thead>
+                  <tbody>
+                    <tr><td>0142 Rio Rancho</td><td>$6,240</td><td>78</td><td>$80.00</td><td class="pos">▲ 9.4%</td></tr>
+                    <tr><td>0188 Albuquerque</td><td>$5,910</td><td>74</td><td>$79.86</td><td class="pos">▲ 5.1%</td></tr>
+                    <tr><td>0205 Santa Fe</td><td>$5,030</td><td>69</td><td>$72.90</td><td class="pos">▲ 2.3%</td></tr>
+                    <tr><td>0305 Las Cruces</td><td>$4,120</td><td>61</td><td>$67.54</td><td class="neg">▼ 6.0%</td></tr>
+                    <tr><td>0411 Farmington</td><td>$3,880</td><td>55</td><td>$70.55</td><td class="neg">▼ 3.2%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERSONAS ============ -->
+  <section class="dark-section section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Built for the whole org</span>
+        <h2 class="section-title">From the corner office to the bay</h2>
+        <div class="hier" style="justify-content:center;margin-top:1.4rem">
+          <span class="lvl">VP</span><span class="arrow">→</span><span class="lvl">Regional Manager</span><span class="arrow">→</span><span class="lvl">District Manager</span><span class="arrow">→</span><span class="lvl">Store</span>
+        </div>
+      </div>
+      <div class="grid grid-4 reveal d1" style="margin-top:2.6rem">
+        <div class="persona"><div class="p-role">VP / Owner</div><h3>The whole chain, at a glance</h3><p>Portfolio totals, Store Health ranking, and the attention feed — the few things that need you today.</p></div>
+        <div class="persona"><div class="p-role">Regional Manager</div><h3>Spot the outliers fast</h3><p>LiveStats across the region, rankings to coach with, and retention lists to hand to stores.</p></div>
+        <div class="persona"><div class="p-role">District Manager</div><h3>Pacing &amp; accountability</h3><p>Budget pace by store, Signals when a shop falls behind, and one-click store drill-downs.</p></div>
+        <div class="persona"><div class="p-role">Store Manager</div><h3>Today's numbers, live</h3><p>Sales, cars, and labor so far today, invoice lookup, and the records board to chase.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEET PRO / INSIGHTS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="pro-feature">
+        <div class="reveal">
+          <span class="eyebrow">myAnalyst Pro</span>
+          <h2 class="section-title" style="margin-top:1rem">An analyst that reads every store, every night.</h2>
+          <p class="lead" style="margin-top:1rem">Pro watches your data around the clock and surfaces what matters — sales anomalies, new store records, households overdue for service, and how the month is tracking against last year — then sends it to your inbox in plain English.</p>
+          <ul class="fr-list" style="margin-top:1.4rem">
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sales anomaly detection vs your 120-day median</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Overdue-household alerts with at-risk revenue</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>MTD-vs-LY tracking and new all-time records</li>
+          </ul>
+          <div class="hero-actions"><a href="pro.html" class="btn btn-primary btn-lg">Meet Pro</a></div>
+        </div>
+        <div class="reveal d1">
+          <div class="report">
+            <div class="report-head"><span class="seal" style="background:#fff;border:1px solid var(--border-2)"><img src="assets/img/logo-icon.png" alt="" style="width:26px;height:26px"/></span><div><h4>Insights · this week</h4><div class="rh-sub">Auto-detected across 41 stores</div></div></div>
+            <div class="report-body">
+              <div class="insight"><span class="badge ops">Record</span><div><h5>Store 0142 set a new single-day high</h5><p>$8,940 net sales — its best day on record, beating the prior peak by 4%.</p></div></div>
+              <div class="insight"><span class="badge lp">Retention</span><div><h5>Store 0305 has 47 overdue households</h5><p>≈ $8,400 of at-risk revenue. Due-for-service list is ready to export.</p></div></div>
+              <div class="insight"><span class="badge fin">Anomaly</span><div><h5>Sales at Store 0411 fell 15% below its median</h5><p>Flagged Tuesday — worth a look at labor and car count for the day.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INDUSTRY SELECTOR ============ -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Auto service first — multi-unit always</span>
+        <h2 class="section-title">Tuned to your metrics, not generic charts</h2>
+        <p class="lead">Purpose-built for quick-lube, tire, and repair — and configurable for any multi-location operator.</p>
+      </div>
+      <div class="ind-tabs reveal" style="margin-top:2rem">
+        <button class="ind-tab active" data-ind="autocare">Auto Care</button>
+        <button class="ind-tab" data-ind="carwash">Car Wash</button>
+        <button class="ind-tab" data-ind="qsr">QSR</button>
+        <button class="ind-tab" data-ind="retail">Retail / C-Store</button>
+        <button class="ind-tab" data-ind="fitness">Fitness</button>
+        <button class="ind-tab" data-ind="homeservices">Home Services</button>
+      </div>
+      <div class="grid grid-2 reveal d1" style="align-items:center;gap:clamp(28px,4vw,56px)">
+        <div class="shot">
+          <div class="shot-bar"><i></i><i></i><i></i><span class="ind-title mono">Auto Care</span></div>
+          <div class="shot-body">
+            <div class="lkpi ind-panel-metrics">
+              <div class="b"><small>Avg Revenue / Order</small><strong>$78.40</strong><span class="d up">+6.2%</span></div>
+              <div class="b"><small>Car Count</small><strong>1,284</strong><span class="d up">+4.1%</span></div>
+              <div class="b"><small>Labor %</small><strong>27.6%</strong><span class="d up">-1.3%</span></div>
+            </div>
+            <svg viewBox="0 0 320 110" preserveAspectRatio="none" style="width:100%;height:120px" aria-hidden="true">
+              <defs><linearGradient id="ind-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1dac92" stop-opacity=".4"/><stop offset="100%" stop-color="#1dac92" stop-opacity="0"/></linearGradient></defs>
+              <path d="M0,82 L40,76 L80,80 L120,62 L160,66 L200,48 L240,52 L280,34 L320,38 L320,110 L0,110 Z" fill="url(#ind-g)"/>
+              <path d="M0,82 L40,76 L80,80 L120,62 L160,66 L200,48 L240,52 L280,34 L320,38" fill="none" stroke="#1dac92" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <h3 class="ind-name">Built for how you actually operate</h3>
+          <p class="ind-note lead" style="margin-top:.8rem">ARO, car count, bay productivity, technician efficiency, and coupon ROI — the numbers quick-lube and repair operators actually run on.</p>
+          <a href="industries.html" class="btn-link" style="margin-top:1.2rem">See all industries<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="quote reveal">
+        <div class="q-mark">&ldquo;</div>
+        <blockquote>I used to spend Monday mornings rebuilding numbers from every store. Now I open myAnalyst, see who's red, and the system already texted my DM. It changed how I run the chain.</blockquote>
+        <div class="q-author">
+          <span class="q-avatar">KM</span>
+          <div style="text-align:left"><div class="q-name">VP of Operations</div><div class="q-role">Quick-lube franchise group · 41 locations</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2 class="section-title">See your stores, scored and live.</h2>
+        <p class="lead">Book a 30-minute demo and we'll stand it up on your own POS data — or browse a live sample report first.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-amber btn-lg">Book a demo</a>
+          <a href="customers.html#sample" class="btn btn-ghost btn-lg">See a sample report</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand"><img src="assets/img/logo-dark.png" alt="myAnalyst" class="brand-logo" /></a>
+          <p class="footer-blurb" style="margin-top:1rem">Real-time analytics, health scoring, and alerts for multi-unit auto-service operators. Built by operators, for operators.</p>
+        </div>
+        <div class="footer-col"><h5>Product</h5><a href="platform.html">Platform</a><a href="pro.html">myAnalyst Pro</a><a href="add-ons.html">Add-ons</a><a href="pricing.html">Pricing</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="customers.html#sample">Sample report</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h5>Get in touch</h5><a href="tel:18438089716">843-808-9716</a><a href="#">2513 N. Oak St, Suite 305<br/>Myrtle Beach, SC</a><a href="contact.html" class="btn btn-primary" style="margin-top:.8rem;display:inline-flex">Book a demo</a></div>
+      </div>
+      <div class="footer-assoc"><span>Auto Care Association</span><span>PAMA</span><span>JLAF</span><span>IMDA</span><span>International Carwash Association</span><span>MDA</span></div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> myAnalyst. All rights reserved.</span><span>Myrtle Beach, SC · U.S.-based support</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

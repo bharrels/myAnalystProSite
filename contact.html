@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Demo — myAnalyst</title>
+  <meta name="description" content="Book a 30-minute demo of myAnalyst. We'll show you your own numbers, consolidated and ranked. 843-808-9716 · Myrtle Beach, SC." />
+  <link rel="icon" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo.png" alt="myAnalyst" class="brand-logo" /></a>
+      <nav class="nav-links" aria-label="Primary"><a href="platform.html">Platform</a><a href="pro.html">Pro</a><a href="add-ons.html">Add-ons</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="pricing.html">Pricing</a></nav>
+      <div class="nav-cta"><a href="customers.html#sample" class="btn btn-ghost">See a sample report</a><a href="contact.html" class="btn btn-primary">Book a demo</a><button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button></div>
+    </div>
+  </header>
+  <div class="mobile-drawer"><a href="platform.html">Platform</a><a href="pro.html">Pro</a><a href="add-ons.html">Add-ons</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="pricing.html">Pricing</a><a href="contact.html" class="btn btn-primary">Book a demo</a></div>
+
+  <section class="section" style="padding-top:clamp(48px,6vw,80px)">
+    <div class="container">
+      <div class="grid grid-2" style="gap:clamp(32px,5vw,72px);align-items:start">
+        <!-- Left: copy + info -->
+        <div class="reveal">
+          <span class="eyebrow">Book a demo</span>
+          <h1 class="display" style="font-size:clamp(2.2rem,5vw,3.4rem);margin-top:1rem">See your business clearly — in 30 minutes.</h1>
+          <p class="lead" style="margin-top:1rem">Tell us a little about your operation and we'll walk you through myAnalyst on your own numbers. No slides, no pressure.</p>
+
+          <div class="contact-info" style="margin-top:2.4rem">
+            <div class="ci"><span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><small>Call us</small><a href="tel:18438089716">843-808-9716</a></div></div>
+            <div class="ci"><span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg></span><div><small>Visit</small><span>2513 N. Oak St, Suite 305<br/>Myrtle Beach, SC</span></div></div>
+            <div class="ci"><span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><small>Support</small><span>100% U.S.-based</span></div></div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="reveal d1">
+          <div class="card" style="box-shadow:var(--shadow-lg)">
+            <div class="form-success" role="status">Thanks — we got it. A member of our team will reach out within one business day to schedule your demo.</div>
+            <!-- NOTE: front-end only. See README.md to wire to Formspree / PHP mail on Hostinger. -->
+            <form class="demo-form" novalidate>
+              <div class="field-row">
+                <div class="field"><label for="fname">First name</label><input id="fname" name="fname" type="text" autocomplete="given-name" required /></div>
+                <div class="field"><label for="lname">Last name</label><input id="lname" name="lname" type="text" autocomplete="family-name" required /></div>
+              </div>
+              <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization" required /></div>
+              <div class="field-row">
+                <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+                <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label for="industry">Industry</label>
+                  <select id="industry" name="industry">
+                    <option value="">Select…</option>
+                    <option>Auto Care</option><option>Car Wash</option><option>Hospitality</option><option>QSR / Fast Food</option><option>Fitness</option><option>Retail / C-Store</option><option>Home Services</option><option>Other</option>
+                  </select>
+                </div>
+                <div class="field"><label for="locations">Locations</label>
+                  <select id="locations" name="locations">
+                    <option value="">Select…</option>
+                    <option>2–5</option><option>6–15</option><option>16–50</option><option>50+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field"><label for="message">What would you like to see? <span style="color:var(--fg-3);font-weight:500">(optional)</span></label><textarea id="message" name="message" rows="3"></textarea></div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Request my demo</button>
+              <p class="form-note">By submitting, you agree to be contacted about myAnalyst. We never share your data.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div><a href="index.html" class="brand"><img src="assets/img/logo-dark.png" alt="myAnalyst" class="brand-logo" /></a><p class="footer-blurb" style="margin-top:1rem">Real-time analytics, health scoring, and alerts for multi-unit auto-service operators. Built by operators, for operators.</p></div>
+        <div class="footer-col"><h5>Product</h5><a href="platform.html">Platform</a><a href="pro.html">myAnalyst Pro</a><a href="add-ons.html">Add-ons</a><a href="pricing.html">Pricing</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="customers.html#sample">Sample report</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h5>Get in touch</h5><a href="tel:18438089716">843-808-9716</a><a href="#">2513 N. Oak St, Suite 305<br/>Myrtle Beach, SC</a><a href="contact.html" class="btn btn-primary" style="margin-top:.8rem;display:inline-flex">Book a demo</a></div>
+      </div>
+      <div class="footer-assoc"><span>Auto Care Association</span><span>PAMA</span><span>JLAF</span><span>IMDA</span><span>International Carwash Association</span><span>MDA</span></div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> myAnalyst. All rights reserved.</span><span>Myrtle Beach, SC · U.S.-based support</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
