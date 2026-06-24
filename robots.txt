@@ -1,0 +1,35 @@
+# robots.txt — myAnalyst (a product of SiteTech Systems)
+# Replace the domain below if the production host changes.
+
+User-agent: *
+Allow: /
+
+# AI / answer-engine crawlers — explicitly welcomed (being cited is a goal)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.myanalystpro.com/sitemap.xml

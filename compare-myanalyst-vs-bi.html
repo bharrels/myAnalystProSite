@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>myAnalyst vs. generic BI dashboards (Power BI, Tableau) &amp; spreadsheets</title>
+  <meta name="description" content="Should multi-unit operators build dashboards in Power BI or Tableau, keep using spreadsheets, or use a purpose-built platform? An honest comparison for auto-service and multi-location operators." />
+  <link rel="canonical" href="https://www.myanalystpro.com/compare-myanalyst-vs-bi.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#08090a" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="myAnalyst" />
+  <meta property="og:title" content="myAnalyst vs. generic BI dashboards (Power BI, Tableau) &amp; spreadsheets" />
+  <meta property="og:description" content="Should multi-unit operators build dashboards in Power BI or Tableau, keep using spreadsheets, or use a purpose-built platform? An honest comparison for auto-service and multi-location operators." />
+  <meta property="og:url" content="https://www.myanalystpro.com/compare-myanalyst-vs-bi.html" />
+  <meta property="og:image" content="https://www.myanalystpro.com/assets/img/og-default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="myAnalyst vs. generic BI dashboards (Power BI, Tableau) &amp; spreadsheets" />
+  <meta name="twitter:description" content="Should multi-unit operators build dashboards in Power BI or Tableau, keep using spreadsheets, or use a purpose-built platform? An honest comparison for auto-service and multi-location operators." />
+  <meta name="twitter:image" content="https://www.myanalystpro.com/assets/img/og-default.png" />
+  <link rel="icon" href="assets/img/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260624e" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.myanalystpro.com/#organization",
+        "name": "SiteTech Systems",
+        "alternateName": "myAnalyst",
+        "url": "https://www.myanalystpro.com/",
+        "logo": "https://www.myanalystpro.com/assets/img/logo-icon.png",
+        "description": "SiteTech Systems builds myAnalyst, real-time analytics, Store Health scoring, budget pacing, retention intelligence, and SMS alerts for multi-unit auto-service and other multi-location operators.",
+        "telephone": "+1-843-808-9716",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2513 N. Oak St, Suite 305",
+          "addressLocality": "Myrtle Beach",
+          "addressRegion": "SC",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-843-808-9716",
+          "contactType": "sales",
+          "areaServed": "US",
+          "availableLanguage": "English"
+        },
+        "areaServed": "US"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.myanalystpro.com/#website",
+        "url": "https://www.myanalystpro.com/",
+        "name": "myAnalyst",
+        "publisher": { "@id": "https://www.myanalystpro.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.myanalystpro.com/compare-myanalyst-vs-bi.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can myAnalyst replace Power BI or Tableau?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For most multi-unit operational reporting, yes | myAnalyst comes pre-modeled for POS, payroll, and QuickBooks data and ships LiveStats, Store Health, pacing, and retention out of the box, so there is no data model to build. Power BI and Tableau remain excellent general-purpose tools when you need fully custom modeling or want to blend non-operational data sources. If you keep them, myAnalyst can feed clean data into Power BI or Tableau through the Data Pipelines add-on."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I still need a data analyst or BI developer with myAnalyst?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. myAnalyst is pre-modeled for multi-unit POS data and maintained by the myAnalyst team, so you do not have to build or maintain a data model, write queries, or own the report pipeline. Most clients are live in days, not quarters. With Power BI, Tableau, or spreadsheets, someone on your side typically owns modeling and ongoing maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can myAnalyst feed our existing BI tools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The Data Pipelines add-on pushes data out to Salesforce, HubSpot, BI tools such as Power BI and Tableau, and franchisor portals, so you can keep an existing executive dashboard while myAnalyst handles the operational reporting and modeling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast can myAnalyst be up and running compared with building dashboards ourselves?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "myAnalyst connects read-only to your existing POS, payroll, and QuickBooks and most clients are live in days, not quarters. Building equivalent dashboards in Power BI or Tableau usually takes weeks to months of modeling, and spreadsheets are an ongoing, never-finished build that has to be re-keyed each period."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is myAnalyst data real-time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "myAnalyst refreshes data every 5 minutes. Generic BI dashboards refresh on whatever schedule you build and maintain, and spreadsheets are only as current as the last manual export."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.myanalystpro.com/compare-myanalyst-vs-bi.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.myanalystpro.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "https://www.myanalystpro.com/resources.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "myAnalyst vs. BI",
+            "item": "https://www.myanalystpro.com/compare-myanalyst-vs-bi.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="platform.html">Platform</a>
+        <a href="pro.html">Pro</a>
+        <a href="add-ons.html">Add-ons</a>
+        <a href="industries.html">Industries</a>
+        <a href="customers.html">Customers</a>
+        <a href="resources.html">Resources</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="customers.html#sample" class="btn btn-ghost">See a sample report</a>
+        <a href="contact.html" class="btn btn-primary">Book a demo</a>
+        <button class="nav-toggle" aria-label="Menu" aria-controls="mobile-drawer" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="platform.html">Platform</a><a href="pro.html">Pro</a><a href="add-ons.html">Add-ons</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="resources.html">Resources</a><a href="pricing.html">Pricing</a>
+    <a href="contact.html" class="btn btn-primary">Book a demo</a>
+  </div>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <nav class="container crumbs" aria-label="Breadcrumb" style="padding-top:1.1rem"><a href="index.html">Home</a><span class="sep">›</span><a href="resources.html">Resources</a><span class="sep">›</span><span aria-current="page">myAnalyst vs. BI</span></nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow" style="justify-content:center">Comparison</span>
+      <h1 class="display" style="margin-top:1rem">myAnalyst vs. generic BI<br/><span class="text-grad">&amp; spreadsheets.</span></h1>
+      <p class="lead" style="margin:1.2rem auto 0;max-width:60ch">Power BI, Tableau, and spreadsheets are general-purpose tools, flexible enough to model almost anything, which is exactly why someone on your side has to build and maintain the model. myAnalyst is pre-modeled for multi-unit POS, payroll, and QuickBooks data, so the dashboards a chain actually runs on are there on day one. Here is the honest trade-off.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn btn-amber btn-lg" href="contact.html">Book a demo</a>
+        <a class="btn btn-ghost btn-lg" href="platform.html">Explore the platform</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARISON TABLE ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Side by side</span>
+        <h2 class="section-title">Three ways to report on a multi-unit chain</h2>
+        <p class="lead">A purpose-built platform, a general-purpose BI tool you configure yourself, and the spreadsheets most operators start with.</p>
+      </div>
+      <div class="cmp-wrap reveal" style="margin-top:clamp(28px,4vw,48px)">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th>Capability</th>
+              <th class="col-us">myAnalyst</th>
+              <th>Generic BI (Power BI / Tableau)</th>
+              <th>Spreadsheets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pre-modeled for POS data</td>
+              <td class="col-us"><span class="yes">Yes</span>, connects read-only to POS, payroll, and QuickBooks with the data already modeled for multi-unit operators.</td>
+              <td><span class="no">No</span>, flexible enough to model POS data, but you build and own the model.</td>
+              <td><span class="no">No</span>, you re-key exports by hand each period.</td>
+            </tr>
+            <tr>
+              <td>Time to first dashboard</td>
+              <td class="col-us"><span class="yes">Days</span>, most clients are live in days, not quarters.</td>
+              <td>Weeks to months of data modeling and report building.</td>
+              <td>Ongoing, never truly finished; rebuilt every reporting period.</td>
+            </tr>
+            <tr>
+              <td>Built-in Store Health scoring</td>
+              <td class="col-us"><span class="yes">Yes</span>, a 0 to 100 score and A to F grade per store from five weighted pillars, ranked against your chain.</td>
+              <td><span class="no">No</span>, you would have to design and build the scoring model yourself.</td>
+              <td><span class="no">No</span></td>
+            </tr>
+            <tr>
+              <td>Real-time 5-minute refresh</td>
+              <td class="col-us"><span class="yes">Yes</span>, data refreshes every 5 minutes.</td>
+              <td>Refreshes on whatever schedule you build and maintain.</td>
+              <td><span class="no">No</span>, only as current as the last manual export.</td>
+            </tr>
+            <tr>
+              <td>Budget pacing &amp; forecasting</td>
+              <td class="col-us"><span class="yes">Yes</span>, MTD pace vs budget with linear and shape-adjusted projections and confidence bands.</td>
+              <td>Possible to build, but the pacing and forecast logic is yours to create.</td>
+              <td>Manual formulas; brittle and easy to break.</td>
+            </tr>
+            <tr>
+              <td>VIN / household retention</td>
+              <td class="col-us"><span class="yes">Yes</span>, VIN-level lifecycle, household identity resolution, CLV, RFM segments, and at-risk revenue.</td>
+              <td><span class="no">No</span>, no built-in identity resolution; you would engineer it.</td>
+              <td><span class="no">No</span></td>
+            </tr>
+            <tr>
+              <td>SMS / MMS alerts (Signals)</td>
+              <td class="col-us"><span class="yes">Yes</span>, the Signals add-on texts managers when a KPI crosses a threshold, with escalation routing.</td>
+              <td><span class="no">No</span>, alerting is typically email or in-tool, and requires custom setup.</td>
+              <td><span class="no">No</span></td>
+            </tr>
+            <tr>
+              <td>Data pipeline to BI tools</td>
+              <td class="col-us"><span class="yes">Yes</span>, the Data Pipelines add-on can <em>feed</em> Power BI and Tableau (and Salesforce, HubSpot, franchisor portals).</td>
+              <td><span class="yes">Yes</span>, connecting to other sources is what BI tools are built to do.</td>
+              <td><span class="no">No</span>, typically a manual export / import.</td>
+            </tr>
+            <tr>
+              <td>Maintenance burden</td>
+              <td class="col-us"><span class="yes">Low</span>, the model is maintained by the myAnalyst team.</td>
+              <td>You own the model, refreshes, and break/fix as your POS evolves.</td>
+              <td>High, manual, fragile, and dependent on whoever built the file.</td>
+            </tr>
+            <tr>
+              <td>U.S.-based support included</td>
+              <td class="col-us"><span class="yes">Yes</span>, 100% U.S.-based support.</td>
+              <td>Varies by vendor and plan.</td>
+              <td><span class="no">No</span>, there is no vendor; you support yourself.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="proof-note reveal" style="margin-top:1.4rem">To be fair to BI tools: Power BI and Tableau are genuinely powerful and flexible. If you need fully custom modeling, want to blend in non-operational data, or already have a strong BI team, they are excellent, and myAnalyst can feed them clean, modeled data through <a href="add-ons.html">Data Pipelines</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHEN EACH MAKES SENSE ============ -->
+  <section class="dark-section section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">An honest recommendation</span>
+        <h2 class="section-title">When a BI tool makes sense, and when myAnalyst does</h2>
+        <p class="lead">The right answer depends on what you are building and who maintains it.</p>
+      </div>
+      <div class="grid grid-2 reveal d1" data-stagger style="margin-top:clamp(32px,4vw,52px)">
+        <div class="card hover">
+          <div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m5 14V9m5 10V7m5 12V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>When a BI tool makes sense</h3>
+          <ul class="fr-list" style="margin-top:1rem">
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>You need fully custom modeling or a one-off analysis no template can cover.</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>You are blending operational data with many non-operational sources.</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>You already have a BI team that owns modeling and maintenance.</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>You want an executive dashboard, and myAnalyst can feed it via <a href="add-ons.html">Data Pipelines</a>.</li>
+          </ul>
+        </div>
+        <div class="card hover">
+          <div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 7 14.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>When myAnalyst makes sense</h3>
+          <ul class="fr-list" style="margin-top:1rem">
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>You run a multi-unit chain and want store-by-store reporting without building a data model.</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>You want live numbers, Store Health, pacing, and retention in days, not quarters.</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>You do not want to own a BI pipeline or hire an analyst to maintain it.</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>You want SMS alerts and U.S.-based support included, not configured from scratch.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="center" style="margin-top:2.4rem"><a href="pricing.html" class="btn-link">See how pricing works<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">FAQ</span>
+        <h2 class="section-title">Common questions about myAnalyst vs. BI tools</h2>
+      </div>
+      <div class="faq reveal" style="margin-top:clamp(28px,3.5vw,44px)">
+        <details class="faq-item">
+          <summary>Can myAnalyst replace Power BI or Tableau?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
+          <div class="fq-body"><p>For most multi-unit operational reporting, yes | myAnalyst comes pre-modeled for POS, payroll, and QuickBooks data and ships LiveStats, Store Health, pacing, and retention out of the box, so there is no data model to build. Power BI and Tableau remain excellent general-purpose tools when you need fully custom modeling or want to blend non-operational data sources. If you keep them, myAnalyst can feed clean data into Power BI or Tableau through the <a href="add-ons.html">Data Pipelines</a> add-on.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I still need a data analyst or BI developer with myAnalyst?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
+          <div class="fq-body"><p>No. myAnalyst is pre-modeled for multi-unit POS data and maintained by the myAnalyst team, so you do not have to build or maintain a data model, write queries, or own the report pipeline. Most clients are live in days, not quarters. With Power BI, Tableau, or spreadsheets, someone on your side typically owns modeling and ongoing maintenance.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can myAnalyst feed our existing BI tools?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
+          <div class="fq-body"><p>Yes. The <a href="add-ons.html">Data Pipelines</a> add-on pushes data out to Salesforce, HubSpot, BI tools such as Power BI and Tableau, and franchisor portals, so you can keep an existing executive dashboard while myAnalyst handles the operational reporting and modeling.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How fast can myAnalyst be up and running compared with building dashboards ourselves?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
+          <div class="fq-body"><p>myAnalyst connects read-only to your existing POS, payroll, and QuickBooks and most clients are live in days, not quarters. Building equivalent dashboards in Power BI or Tableau usually takes weeks to months of modeling, and spreadsheets are an ongoing, never-finished build that has to be re-keyed each period.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Is myAnalyst data real-time?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
+          <div class="fq-body"><p>myAnalyst refreshes data every 5 minutes. Generic BI dashboards refresh on whatever schedule you build and maintain, and spreadsheets are only as current as the last manual export.</p></div>
+        </details>
+      </div>
+      <div class="center" style="margin-top:2rem"><a href="faq.html" class="btn-link">See all FAQs<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2 class="section-title">See it on your own POS data.</h2>
+        <p class="lead">Book a 30-minute demo and we will stand myAnalyst up on your data, already modeled, scored, and live, so you can compare it to whatever you run today.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-amber btn-lg">Book a demo</a>
+          <a href="platform.html" class="btn btn-ghost btn-lg">Explore the platform</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div><h4>Get multi-unit benchmarks &amp; product updates</h4><p>Operator-focused insights for auto service, car wash, QSR, and more. No spam, unsubscribe anytime.</p></div>
+        <form class="lead-form" aria-label="Newsletter signup">
+          <label for="lead-email" class="sr-only">Work email</label>
+          <input id="lead-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+          <p class="lead-msg" role="status">Thanks, you're on the list.</p>
+        </form>
+      </div>
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+          <p class="footer-blurb" style="margin-top:1rem">myAnalyst, real-time analytics, Store Health scoring, and alerts for multi-unit auto-service operators. A product of SiteTech Systems. Built by operators, for operators.</p>
+          <address class="footer-address" style="margin-top:1.2rem">
+            <a href="tel:18438089716">843-808-9716</a><br/>
+            2513 N. Oak St, Suite 305<br/>Myrtle Beach, SC
+          </address>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;display:inline-flex">Book a demo</a>
+        </div>
+        <div class="footer-col"><h5>Product</h5><a href="platform.html">Platform</a><a href="pro.html">myAnalyst Pro</a><a href="add-ons.html">Add-ons</a><a href="auto-service-analytics.html">Auto-service analytics</a><a href="multi-location-dashboard-software.html">Multi-location dashboards</a><a href="pricing.html">Pricing</a></div>
+        <div class="footer-col"><h5>Resources</h5><a href="resources.html">Resources hub</a><a href="faq.html">FAQ</a><a href="glossary.html">Glossary</a><a href="store-health-score.html">Store Health score</a><a href="compare-myanalyst-vs-bi.html">myAnalyst vs. BI tools</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="customers.html#sample">Sample report</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
+      </div>
+      <div class="footer-assoc"><span>Auto Care Association</span><span>PAMA</span><span>JLAF</span><span>IMDA</span><span>International Carwash Association</span><span>MDA</span></div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> myAnalyst, a product of SiteTech Systems. All rights reserved.</span><span>Myrtle Beach, SC · U.S.-based support</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=20260624e" defer></script>
+</body>
+</html>

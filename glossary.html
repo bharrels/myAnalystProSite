@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-unit operations &amp; analytics glossary | myAnalyst</title>
+  <meta name="description" content="Plain-English definitions of the auto-service and multi-location analytics terms operators search: ARO, car count, Store Health, RFM, capture rate, daypart, and more." />
+  <link rel="canonical" href="https://www.myanalystpro.com/glossary.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#08090a" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="myAnalyst" />
+  <meta property="og:title" content="Multi-unit operations &amp; analytics glossary | myAnalyst" />
+  <meta property="og:description" content="Plain-English definitions of the auto-service and multi-location analytics terms operators search: ARO, car count, Store Health, RFM, capture rate, daypart, and more." />
+  <meta property="og:url" content="https://www.myanalystpro.com/glossary.html" />
+  <meta property="og:image" content="https://www.myanalystpro.com/assets/img/og-default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Multi-unit operations &amp; analytics glossary | myAnalyst" />
+  <meta name="twitter:description" content="Plain-English definitions of the auto-service and multi-location analytics terms operators search: ARO, car count, Store Health, RFM, capture rate, daypart, and more." />
+  <meta name="twitter:image" content="https://www.myanalystpro.com/assets/img/og-default.png" />
+  <link rel="icon" href="assets/img/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260624e" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.myanalystpro.com/#organization",
+        "name": "SiteTech Systems",
+        "alternateName": "myAnalyst",
+        "url": "https://www.myanalystpro.com/",
+        "logo": "https://www.myanalystpro.com/assets/img/logo-icon.png",
+        "description": "SiteTech Systems builds myAnalyst, real-time analytics, Store Health scoring, budget pacing, retention intelligence, and SMS alerts for multi-unit auto-service and other multi-location operators.",
+        "telephone": "+1-843-808-9716",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2513 N. Oak St, Suite 305",
+          "addressLocality": "Myrtle Beach",
+          "addressRegion": "SC",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-843-808-9716",
+          "contactType": "sales",
+          "areaServed": "US",
+          "availableLanguage": "English"
+        },
+        "areaServed": "US"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.myanalystpro.com/#website",
+        "url": "https://www.myanalystpro.com/",
+        "name": "myAnalyst",
+        "publisher": { "@id": "https://www.myanalystpro.com/#organization" }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://www.myanalystpro.com/glossary.html#termset",
+        "name": "Multi-unit operations & analytics glossary",
+        "url": "https://www.myanalystpro.com/glossary.html",
+        "description": "Plain-English definitions of the auto-service and multi-location analytics terms operators use across myAnalyst, branded features and industry KPIs alike.",
+        "hasDefinedTerm": [
+          {
+            "@type": "DefinedTerm",
+            "name": "Store Health score",
+            "termCode": "store-health",
+            "description": "A single 0 to 100 score and A to F grade for each location, built from five weighted pillars and ranked against the rest of the chain over a rolling 91-day window.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#store-health"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "LiveStats",
+            "termCode": "livestats",
+            "description": "myAnalyst's real-time, store-by-store grid of net sales, cars, labor, average ticket, and revenue per hour, refreshed every five minutes with color-coded year-over-year deltas.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#livestats"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Pacing & Forecast",
+            "termCode": "pacing-forecast",
+            "description": "A month-to-date pace versus budget with linear and shape-adjusted projections, confidence bands, an ahead/on-track/behind status, and the dollars still needed to reach goal.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#pacing-forecast"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Signals",
+            "termCode": "signals",
+            "description": "myAnalyst's SMS and MMS alert add-on that texts managers the moment a chosen metric crosses a threshold, with custom rules by metric, location, and recipient plus escalation routing.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#signals"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "ARO (Average Repair Order)",
+            "termCode": "aro",
+            "description": "The average dollar amount of a single repair order, total service revenue divided by the number of orders, a core profitability metric for auto-service operators.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#aro"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Average Ticket",
+            "termCode": "average-ticket",
+            "description": "The average revenue per transaction, net sales divided by the number of orders or cars, used to gauge upsell and service-mix performance.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#average-ticket"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Car Count",
+            "termCode": "car-count",
+            "description": "The number of vehicles serviced in a period at a given location, a primary volume measure for quick-lube, tire, and repair shops.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#car-count"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Labor %",
+            "termCode": "labor-pct",
+            "description": "Labor cost expressed as a percentage of net sales, the central efficiency ratio operators watch to keep payroll in line with revenue.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#labor-pct"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Revenue per Hour",
+            "termCode": "revenue-per-hour",
+            "description": "Net sales divided by labor hours worked, showing how much revenue each staffed hour produces at a location.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#revenue-per-hour"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Repeat Rate",
+            "termCode": "repeat-rate",
+            "description": "The share of guests who return for another visit within a defined window, a key indicator of loyalty and retention.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#repeat-rate"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "RFM (Recency, Frequency, Monetary)",
+            "termCode": "rfm",
+            "description": "A segmentation method that groups customers by how recently they visited, how often they visit, and how much they spend, used to prioritize retention and marketing.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#rfm"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "CLV (Customer Lifetime Value)",
+            "termCode": "clv",
+            "description": "The total revenue a customer is expected to generate over the life of the relationship, used to weigh acquisition and retention spending.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#clv"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "VIN-level retention",
+            "termCode": "vin-retention",
+            "description": "Tracking each vehicle's service lifecycle by its Vehicle Identification Number, classifying it as on-track, due-soon, overdue, or lapsed.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#vin-retention"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Capture Rate",
+            "termCode": "capture-rate",
+            "description": "The share of potential traffic or eligible vehicles a location actually converts into paying customers, widely used in car-wash and high-traffic retail settings.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#capture-rate"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Membership Mix",
+            "termCode": "membership-mix",
+            "description": "The proportion of revenue or volume coming from recurring memberships versus one-time purchases, a leading retention signal for car-wash unlimited plans.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#membership-mix"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "RevPAR",
+            "termCode": "revpar",
+            "description": "Revenue per available room, a hospitality metric combining occupancy and average daily rate to measure how well rooms are monetized.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#revpar"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Daypart",
+            "termCode": "daypart",
+            "description": "A defined slice of the operating day, such as breakfast, lunch, or dinner, analyzed separately to manage staffing, throughput, and sales.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#daypart"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Food Cost %",
+            "termCode": "food-cost-pct",
+            "description": "The cost of ingredients expressed as a percentage of food sales, the central margin control for QSR and fast-food operators.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#food-cost-pct"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Throughput",
+            "termCode": "throughput",
+            "description": "The number of transactions or guests a location serves in a period, often paired with drive-thru times to measure speed of service.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#throughput"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Shrink",
+            "termCode": "shrink",
+            "description": "Inventory loss from theft, error, or waste, expressed as a percentage of sales, a core loss-prevention metric in retail and convenience stores.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#shrink"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Drive-time Isochrone",
+            "termCode": "drive-time-isochrone",
+            "description": "A map boundary enclosing every point reachable within a set travel time from a location, used to define realistic trade areas on the Geospatial Map.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#drive-time-isochrone"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Choropleth",
+            "termCode": "choropleth",
+            "description": "A map that shades geographic areas by the value of a metric, making spatial patterns such as gross sales or guest count easy to compare.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#choropleth"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Trade Area",
+            "termCode": "trade-area",
+            "description": "The geographic region from which a location draws most of its customers, typically drawn as a polygon or drive-time boundary for site and demand analysis.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#trade-area"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Void",
+            "termCode": "void",
+            "description": "A canceled or reversed transaction at the point of sale, monitored as a loss-prevention and data-quality signal.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#void"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Over/Short",
+            "termCode": "over-short",
+            "description": "The difference between expected and counted cash at close, where over means more cash than recorded and short means less, a key cash-control check.",
+            "inDefinedTermSet": "https://www.myanalystpro.com/glossary.html#termset",
+            "url": "https://www.myanalystpro.com/glossary.html#over-short"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.myanalystpro.com/glossary.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myanalystpro.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Glossary", "item": "https://www.myanalystpro.com/glossary.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="platform.html">Platform</a>
+        <a href="pro.html">Pro</a>
+        <a href="add-ons.html">Add-ons</a>
+        <a href="industries.html">Industries</a>
+        <a href="customers.html">Customers</a>
+        <a href="resources.html">Resources</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="customers.html#sample" class="btn btn-ghost">See a sample report</a>
+        <a href="contact.html" class="btn btn-primary">Book a demo</a>
+        <button class="nav-toggle" aria-label="Menu" aria-controls="mobile-drawer" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="platform.html">Platform</a><a href="pro.html">Pro</a><a href="add-ons.html">Add-ons</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="resources.html">Resources</a><a href="pricing.html">Pricing</a>
+    <a href="contact.html" class="btn btn-primary">Book a demo</a>
+  </div>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <nav class="container crumbs" aria-label="Breadcrumb" style="padding-top:1.1rem"><a href="index.html">Home</a><span class="sep">›</span><span aria-current="page">Glossary</span></nav>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow" style="justify-content:center">Glossary</span>
+      <h1 class="display" style="margin-top:1rem">The operator's<br/><span class="text-grad">analytics glossary.</span></h1>
+      <p class="lead" style="margin:1.2rem auto 0;max-width:60ch">Plain-English definitions of the terms multi-unit operators actually use | myAnalyst's branded features alongside the auto-service and multi-location KPIs that run the business. Every entry has its own link, so you can cite or share a single definition.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn btn-amber btn-lg" href="contact.html">Book a demo</a>
+        <a class="btn btn-ghost btn-lg" href="platform.html">Explore the platform</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JUMP NOTE ============ -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="lead" style="margin:0 auto;max-width:60ch">Jump in two ways: <a class="btn-link" href="#store-health" style="display:inline-flex">branded features<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a> such as Store Health, LiveStats, Pacing &amp; Forecast, and Signals, or the <a class="btn-link" href="#aro" style="display:inline-flex">industry KPIs<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a> that follow, from ARO to Over/Short.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BRANDED TERMS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">myAnalyst features</span>
+        <h2 class="section-title">Branded terms</h2>
+        <p class="lead">The signature features you'll see across the platform, defined.</p>
+      </div>
+      <dl class="glossary reveal" style="margin-top:clamp(28px,4vw,48px)">
+        <div class="gloss-item" id="store-health">
+          <dt>Store Health score</dt>
+          <dd>A single 0 to 100 score and A to F grade for every location, built from five weighted pillars and ranked against the rest of your chain over a rolling 91-day window. It turns dozens of metrics into one number so you can scan a whole portfolio in seconds, <a href="store-health-score.html">see exactly how scoring works</a>.</dd>
+        </div>
+        <div class="gloss-item" id="pillar-growth">
+          <dt>Growth pillar <span class="term-abbr">(25%)</span></dt>
+          <dd>The largest <a href="store-health-score.html">Store Health</a> pillar, weighted 25%, measuring how a store's sales are trending against its own recent history. Sustained year-over-year momentum lifts the pillar; decline pulls it down.</dd>
+        </div>
+        <div class="gloss-item" id="pillar-goal">
+          <dt>Goal pillar <span class="term-abbr">(25%)</span></dt>
+          <dd>A 25%-weighted <a href="store-health-score.html">Store Health</a> pillar that measures how well a store is hitting its budget and targets. It rewards locations that pace ahead of plan and penalizes those falling behind.</dd>
+        </div>
+        <div class="gloss-item" id="pillar-loyalty">
+          <dt>Loyalty pillar <span class="term-abbr">(20%)</span></dt>
+          <dd>A 20%-weighted <a href="store-health-score.html">Store Health</a> pillar reflecting customer retention and repeat behavior at a store, how well it keeps guests coming back rather than relying on new traffic.</dd>
+        </div>
+        <div class="gloss-item" id="pillar-standing">
+          <dt>Standing pillar <span class="term-abbr">(15%)</span></dt>
+          <dd>A 15%-weighted <a href="store-health-score.html">Store Health</a> pillar capturing where a store ranks relative to the rest of the chain on chain-relative percentiles, so high performers and laggards surface against their peers.</dd>
+        </div>
+        <div class="gloss-item" id="pillar-operations">
+          <dt>Operations pillar <span class="term-abbr">(15%)</span></dt>
+          <dd>A 15%-weighted <a href="store-health-score.html">Store Health</a> pillar covering operational quality and discipline, items like labor control and data-capture cleanliness that show how tightly a store is run day to day.</dd>
+        </div>
+        <div class="gloss-item" id="livestats">
+          <dt>LiveStats</dt>
+          <dd>myAnalyst's real-time, store-by-store grid of net sales, cars, full service, labor hours and dollars, average ticket, and revenue per hour, refreshed every five minutes with color-coded year-over-year deltas. You can group it by Market, Regional Manager, or District Manager and drill into any single store. <a href="platform.html">See it on the platform</a>.</dd>
+        </div>
+        <div class="gloss-item" id="pacing-forecast">
+          <dt>Pacing &amp; Forecast</dt>
+          <dd>A month-to-date pace versus budget paired with linear and shape-adjusted projections and confidence bands. Each location reads as ahead, on track, or behind, with the exact dollars still needed to reach goal. <a href="platform.html">Explore the platform</a>.</dd>
+        </div>
+        <div class="gloss-item" id="signals">
+          <dt>Signals</dt>
+          <dd>myAnalyst's SMS and MMS alert add-on that texts the right manager the moment a metric crosses a threshold, no app to open. Rules are customizable by metric, location, and recipient, with escalation routing and daily summaries. <a href="add-ons.html">See Signals and other add-ons</a>.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ INDUSTRY & ANALYTICS TERMS ============ -->
+  <section class="dark-section section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">KPIs &amp; analytics</span>
+        <h2 class="section-title">Industry &amp; analytics terms</h2>
+        <p class="lead">The metrics and concepts used across <a href="auto-service-analytics.html">auto-service</a> and every other multi-location industry myAnalyst serves.</p>
+      </div>
+      <dl class="glossary reveal" style="margin-top:clamp(28px,4vw,48px)">
+        <div class="gloss-item" id="aro">
+          <dt>ARO <span class="term-abbr">(Average Repair Order)</span></dt>
+          <dd>The average dollar amount of a single repair order, total service revenue divided by the number of orders. It is one of the core profitability metrics for <a href="auto-service-analytics.html">auto-service operators</a>, since small gains in ARO compound across every car.</dd>
+        </div>
+        <div class="gloss-item" id="average-ticket">
+          <dt>Average Ticket</dt>
+          <dd>The average revenue per transaction, net sales divided by the number of orders or cars. Operators watch it to gauge upsell and service-mix performance over time.</dd>
+        </div>
+        <div class="gloss-item" id="car-count">
+          <dt>Car Count</dt>
+          <dd>The number of vehicles serviced in a period at a location. It is the primary volume measure for quick-lube, tire, and repair shops, and a key input to revenue per hour and labor planning.</dd>
+        </div>
+        <div class="gloss-item" id="labor-pct">
+          <dt>Labor %</dt>
+          <dd>Labor cost expressed as a percentage of net sales. It is the central efficiency ratio operators use to keep payroll in line with revenue, and a recurring driver in the Operations pillar of <a href="store-health-score.html">Store Health</a>.</dd>
+        </div>
+        <div class="gloss-item" id="revenue-per-hour">
+          <dt>Revenue per Hour</dt>
+          <dd>Net sales divided by labor hours worked, showing how much revenue each staffed hour produces. It pairs car count and labor into a single productivity figure that surfaces in <a href="platform.html">LiveStats</a>.</dd>
+        </div>
+        <div class="gloss-item" id="repeat-rate">
+          <dt>Repeat Rate</dt>
+          <dd>The share of guests who return for another visit within a defined window. A higher repeat rate signals stronger loyalty and is a leading indicator of long-term revenue.</dd>
+        </div>
+        <div class="gloss-item" id="coupon-roi">
+          <dt>Coupon ROI</dt>
+          <dd>The return on a coupon or discount offer, the incremental revenue it drives relative to its cost. It tells operators which promotions actually pay for themselves rather than discounting customers who would have visited anyway.</dd>
+        </div>
+        <div class="gloss-item" id="bay-productivity">
+          <dt>Bay Productivity</dt>
+          <dd>How much work each service bay completes in a period, such as cars or revenue per bay. It highlights whether a shop's physical capacity is being fully used or left idle.</dd>
+        </div>
+        <div class="gloss-item" id="technician-efficiency">
+          <dt>Technician Efficiency</dt>
+          <dd>A measure of how productively technicians convert their hours into completed, billable work. It helps operators balance staffing against demand and spot training or scheduling gaps.</dd>
+        </div>
+        <div class="gloss-item" id="rfm">
+          <dt>RFM <span class="term-abbr">(Recency, Frequency, Monetary)</span></dt>
+          <dd>A segmentation method that groups customers by how recently they visited, how often they visit, and how much they spend. myAnalyst's Retention module builds RFM segments so you can prioritize the guests most worth winning back.</dd>
+        </div>
+        <div class="gloss-item" id="clv">
+          <dt>CLV <span class="term-abbr">(Customer Lifetime Value)</span></dt>
+          <dd>The total revenue a customer is expected to generate over the life of the relationship. It helps operators weigh how much to invest in acquiring and retaining each guest.</dd>
+        </div>
+        <div class="gloss-item" id="vin-retention">
+          <dt>VIN-level retention</dt>
+          <dd>Tracking each vehicle's service lifecycle by its Vehicle Identification Number, classifying it as on-track, due-soon, overdue, or lapsed. It lets auto-service operators export precise due-for-service lists and quantify the revenue at risk.</dd>
+        </div>
+        <div class="gloss-item" id="household-retention">
+          <dt>Household-level retention</dt>
+          <dd>Retention measured across an entire household rather than a single vehicle or person, using identity resolution to link related customers. It gives a truer picture of loyalty when one household services several vehicles.</dd>
+        </div>
+        <div class="gloss-item" id="capture-rate">
+          <dt>Capture Rate</dt>
+          <dd>The share of potential traffic or eligible vehicles a location converts into paying customers. It is a defining metric for car-wash and other high-traffic sites where passing demand is large.</dd>
+        </div>
+        <div class="gloss-item" id="membership-mix">
+          <dt>Membership Mix</dt>
+          <dd>The proportion of revenue or volume coming from recurring memberships versus one-time purchases. For car-wash unlimited plans it is a leading retention signal, since members visit more and churn less.</dd>
+        </div>
+        <div class="gloss-item" id="chemical-cost-per-car">
+          <dt>Chemical Cost per Car</dt>
+          <dd>The cost of soaps, waxes, and other chemicals consumed per vehicle washed. It is a core margin control for car-wash operators, where small per-car savings scale across high volumes.</dd>
+        </div>
+        <div class="gloss-item" id="revpar">
+          <dt>RevPAR <span class="term-abbr">(Revenue per Available Room)</span></dt>
+          <dd>A hospitality metric that combines occupancy and average daily rate to measure how well available rooms are monetized. It captures both how full a property is and how much each room earns.</dd>
+        </div>
+        <div class="gloss-item" id="adr">
+          <dt>ADR <span class="term-abbr">(Average Daily Rate)</span></dt>
+          <dd>The average revenue earned per occupied room per night. ADR isolates pricing performance, separate from how many rooms are filled.</dd>
+        </div>
+        <div class="gloss-item" id="occupancy">
+          <dt>Occupancy</dt>
+          <dd>The percentage of available rooms that are occupied over a period. Read alongside ADR, it explains the two levers behind RevPAR.</dd>
+        </div>
+        <div class="gloss-item" id="daypart">
+          <dt>Daypart</dt>
+          <dd>A defined slice of the operating day, such as breakfast, lunch, or dinner, analyzed separately. Dayparting helps QSR and fast-food operators match staffing and throughput to demand across the day.</dd>
+        </div>
+        <div class="gloss-item" id="food-cost-pct">
+          <dt>Food Cost %</dt>
+          <dd>The cost of ingredients expressed as a percentage of food sales. It is the central margin control for QSR and fast-food operators, where a point of food cost moves real money.</dd>
+        </div>
+        <div class="gloss-item" id="throughput">
+          <dt>Throughput</dt>
+          <dd>The number of transactions or guests a location serves in a period. Often paired with drive-thru times, it measures speed of service and a site's capacity to handle volume.</dd>
+        </div>
+        <div class="gloss-item" id="basket-size">
+          <dt>Basket Size</dt>
+          <dd>The average number of items or dollars per transaction in retail and convenience stores. A larger basket means each visit is worth more, independent of how many customers come in.</dd>
+        </div>
+        <div class="gloss-item" id="shrink">
+          <dt>Shrink</dt>
+          <dd>Inventory loss from theft, error, or waste, expressed as a percentage of sales. It is a core loss-prevention metric in retail and convenience operations.</dd>
+        </div>
+        <div class="gloss-item" id="drive-time-isochrone">
+          <dt>Drive-time Isochrone</dt>
+          <dd>A map boundary enclosing every point reachable within a set travel time from a location. The Geospatial Map uses isochrones to define realistic trade areas based on how far customers will actually drive.</dd>
+        </div>
+        <div class="gloss-item" id="choropleth">
+          <dt>Choropleth</dt>
+          <dd>A map that shades geographic areas by the value of a metric, making spatial patterns easy to compare. myAnalyst uses choropleths to visualize measures like gross sales and guest count across regions.</dd>
+        </div>
+        <div class="gloss-item" id="trade-area">
+          <dt>Trade Area</dt>
+          <dd>The geographic region from which a location draws most of its customers, drawn as a polygon or drive-time boundary. Trade areas underpin site selection, demand analysis, and guest-origin mapping.</dd>
+        </div>
+        <div class="gloss-item" id="void">
+          <dt>Void</dt>
+          <dd>A canceled or reversed transaction at the point of sale. myAnalyst's Auditing &amp; Compliance module monitors voids as both a loss-prevention and a data-quality signal.</dd>
+        </div>
+        <div class="gloss-item" id="over-short">
+          <dt>Over/Short</dt>
+          <dd>The difference between expected and counted cash at close, over means more cash than recorded, short means less. It is a key cash-control check tracked in Auditing &amp; Compliance.</dd>
+        </div>
+      </dl>
+      <div class="center" style="margin-top:2.4rem"><a href="faq.html" class="btn-link">Still have questions? Read the FAQ<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2 class="section-title">See these metrics on your own data.</h2>
+        <p class="lead">Book a 30-minute demo and we'll stand up myAnalyst on your POS, ARO, car count, Store Health, and the rest, live across every location.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-amber btn-lg">Book a demo</a>
+          <a href="resources.html" class="btn btn-ghost btn-lg">Browse resources</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div><h4>Get multi-unit benchmarks &amp; product updates</h4><p>Operator-focused insights for auto service, car wash, QSR, and more. No spam, unsubscribe anytime.</p></div>
+        <form class="lead-form" aria-label="Newsletter signup">
+          <label for="lead-email" class="sr-only">Work email</label>
+          <input id="lead-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+          <p class="lead-msg" role="status">Thanks, you're on the list.</p>
+        </form>
+      </div>
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+          <p class="footer-blurb" style="margin-top:1rem">myAnalyst, real-time analytics, Store Health scoring, and alerts for multi-unit auto-service operators. A product of SiteTech Systems. Built by operators, for operators.</p>
+          <address class="footer-address" style="margin-top:1.2rem">
+            <a href="tel:18438089716">843-808-9716</a><br/>
+            2513 N. Oak St, Suite 305<br/>Myrtle Beach, SC
+          </address>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;display:inline-flex">Book a demo</a>
+        </div>
+        <div class="footer-col"><h5>Product</h5><a href="platform.html">Platform</a><a href="pro.html">myAnalyst Pro</a><a href="add-ons.html">Add-ons</a><a href="auto-service-analytics.html">Auto-service analytics</a><a href="multi-location-dashboard-software.html">Multi-location dashboards</a><a href="pricing.html">Pricing</a></div>
+        <div class="footer-col"><h5>Resources</h5><a href="resources.html">Resources hub</a><a href="faq.html">FAQ</a><a href="glossary.html">Glossary</a><a href="store-health-score.html">Store Health score</a><a href="compare-myanalyst-vs-bi.html">myAnalyst vs. BI tools</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="customers.html#sample">Sample report</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
+      </div>
+      <div class="footer-assoc"><span>Auto Care Association</span><span>PAMA</span><span>JLAF</span><span>IMDA</span><span>International Carwash Association</span><span>MDA</span></div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> myAnalyst, a product of SiteTech Systems. All rights reserved.</span><span>Myrtle Beach, SC · U.S.-based support</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=20260624e" defer></script>
+</body>
+</html>
