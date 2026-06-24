@@ -451,17 +451,4 @@
     document.querySelectorAll(".dash, .shot, .report").forEach(function (m) { dm.observe(m); });
   }
 
-  /* ---------- Magnetic CTA buttons ---------- */
-  if (!reduceMotion && finePointer) {
-    document.querySelectorAll(".btn-amber, .hero-actions .btn-primary, .cta-band .btn-ghost").forEach(function (btn) {
-      var raf = null, lx = 0, ly = 0;
-      btn.addEventListener("pointermove", function (e) {
-        var r = btn.getBoundingClientRect();
-        lx = e.clientX - (r.left + r.width / 2); ly = e.clientY - (r.top + r.height / 2);
-        if (raf) return;
-        raf = requestAnimationFrame(function () { raf = null; btn.style.transform = "translate(" + (lx * 0.25).toFixed(1) + "px," + (ly * 0.4).toFixed(1) + "px)"; });
-      });
-      btn.addEventListener("pointerleave", function () { btn.style.transform = ""; });
-    });
-  }
 })();

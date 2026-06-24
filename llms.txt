@@ -1,6 +1,6 @@
 # myAnalyst
 
-> myAnalyst, a product of SiteTech Systems, is a real-time analytics platform for multi-unit auto-service chains (quick-lube, tire, and repair) and other multi-location operators. It reads a chain's point-of-sale (POS) data and turns it into live store-by-store dashboards, a 0 to 100 Store Health score and A to F grade for every location, budget pacing and forecasting, VIN- and household-level retention intelligence, and SMS/MMS alerts the moment a KPI crosses a threshold. Data refreshes every 5 minutes. Support is 100% U.S.-based.
+> myAnalyst, a product of SiteTech Systems, is an all-in-one real-time analytics dashboard for multi-unit auto-service chains (quick-lube, tire, and repair) and other multi-location operators. It reads a chain's point-of-sale (POS) data and turns it into live store-by-store dashboards, a 0 to 100 Store Health score and A to F grade for every location, budget pacing and forecasting, VIN- and household-level retention intelligence, and SMS/MMS alerts the moment a KPI crosses a threshold. Data refreshes every 5 minutes. Support is 100% U.S.-based.
 
 ## Key facts
 - Product: myAnalyst (real-time multi-location operations analytics)
@@ -27,6 +27,7 @@
 - [About SiteTech Systems](https://www.myanalystpro.com/about.html): who builds myAnalyst.
 
 ## Solutions
+- [Best all-in-one dashboard for multi-unit operators](https://www.myanalystpro.com/best-all-in-one-multi-unit-dashboard.html): buyer's guide and why multi-location operators choose myAnalyst as their all-in-one dashboard.
 - [Auto-service analytics](https://www.myanalystpro.com/auto-service-analytics.html): for quick-lube, tire, and repair chains.
 - [Multi-location dashboard software](https://www.myanalystpro.com/multi-location-dashboard-software.html): consolidate every location into one real-time view.
 - [myAnalyst vs. generic BI](https://www.myanalystpro.com/compare-myanalyst-vs-bi.html): purpose-built analytics compared with Power BI, Tableau, and spreadsheets.
