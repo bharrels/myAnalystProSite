@@ -1660,3 +1660,21 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 .fr-media .pillar .pl-fill { transition: width .55s var(--ease-emphasis), background .3s var(--ease); }
 .fr-media .score-ring .sc-grade, .fr-media .score-ring .sc-num { transition: color .3s var(--ease); }
 .fr-media .score-ring circle { transition: stroke-dasharray .6s var(--ease-emphasis), stroke .3s var(--ease); }
+
+/* =============================================================
+   Refinement pass: FAQ accordion polish + glossary 2-col cards
+   ============================================================= */
+/* FAQ accordion: hover, open accent rail, filled icon on open (all .faq pages) */
+.faq-item:hover { border-color: var(--border-strong); }
+.faq-item summary:hover { color: var(--teal-600); }
+.faq-item[open] { box-shadow: inset 3px 0 0 var(--teal), var(--shadow-sm); }
+.faq-item[open] summary { color: var(--fg-1); }
+.faq-item[open] .fq-ico { background: var(--teal); color: #fff; }
+
+/* Glossary: scannable two-column card grid with chip abbreviations */
+.glossary { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.gloss-item { display: flex; flex-direction: column; }
+.gloss-item:hover { border-color: var(--teal); box-shadow: var(--shadow-sm); transform: translateY(-3px); }
+.gloss-item dt { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem; }
+.gloss-item dt .term-abbr { font-family: var(--font-mono); font-size: .7rem; font-weight: 700; background: var(--success-bg); color: var(--teal-600); padding: .12rem .42rem; border-radius: 6px; }
+@media (max-width: 720px) { .glossary { grid-template-columns: 1fr; } }
