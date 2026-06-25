@@ -12,14 +12,14 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   var STORES = [
-    { id: "0142", name: "Rio Rancho",   net: 6240, cars: 78, ticket: 80.0, labor: 26.1, revhr: 148, ly: 9.4,  health: 86, grade: "A", status: "Healthy",  pillars: [88, 84, 90, 85, 79] },
-    { id: "0188", name: "Albuquerque",  net: 5910, cars: 74, ticket: 79.9, labor: 27.4, revhr: 139, ly: 5.1,  health: 81, grade: "B", status: "Healthy",  pillars: [80, 78, 85, 82, 74] },
-    { id: "0205", name: "Santa Fe",     net: 5030, cars: 69, ticket: 72.9, labor: 28.9, revhr: 131, ly: 2.3,  health: 74, grade: "B", status: "Watch",    pillars: [72, 70, 79, 76, 68] },
-    { id: "0261", name: "Los Lunas",    net: 4760, cars: 64, ticket: 74.4, labor: 27.0, revhr: 134, ly: 3.6,  health: 77, grade: "B", status: "Healthy",  pillars: [76, 74, 80, 78, 71] },
-    { id: "0305", name: "Las Cruces",   net: 4120, cars: 61, ticket: 67.5, labor: 31.8, revhr: 104, ly: -6.0, health: 58, grade: "D", status: "At risk",  pillars: [54, 49, 66, 61, 52] },
-    { id: "0377", name: "Roswell",      net: 3990, cars: 58, ticket: 68.8, labor: 30.2, revhr: 112, ly: -1.4, health: 64, grade: "C", status: "Watch",    pillars: [60, 58, 70, 66, 60] },
-    { id: "0411", name: "Farmington",   net: 3880, cars: 55, ticket: 70.6, labor: 29.7, revhr: 118, ly: -3.2, health: 61, grade: "C", status: "Watch",    pillars: [58, 55, 68, 63, 57] },
-    { id: "0455", name: "Gallup",       net: 3510, cars: 52, ticket: 67.5, labor: 30.9, revhr: 109, ly: 1.2,  health: 67, grade: "C", status: "Watch",    pillars: [64, 62, 72, 68, 61] }
+    { id: "3104", name: "Morgantown",   net: 6240, cars: 78, ticket: 80.0, labor: 26.1, revhr: 148, ly: 9.4,  health: 86, grade: "A", status: "Healthy",  pillars: [88, 84, 90, 85, 79] },
+    { id: "2087", name: "Holler Lane",  net: 5910, cars: 74, ticket: 79.9, labor: 27.4, revhr: 139, ly: 5.1,  health: 81, grade: "B", status: "Healthy",  pillars: [80, 78, 85, 82, 74] },
+    { id: "5521", name: "Frankland",     net: 5030, cars: 69, ticket: 72.9, labor: 28.9, revhr: 131, ly: 2.3,  health: 74, grade: "B", status: "Watch",    pillars: [72, 70, 79, 76, 68] },
+    { id: "4789", name: "Georgetown",    net: 4760, cars: 64, ticket: 74.4, labor: 27.0, revhr: 134, ly: 3.6,  health: 77, grade: "B", status: "Healthy",  pillars: [76, 74, 80, 78, 71] },
+    { id: "4410", name: "Poplar",   net: 4120, cars: 61, ticket: 67.5, labor: 31.8, revhr: 104, ly: -6.0, health: 58, grade: "D", status: "At risk",  pillars: [54, 49, 66, 61, 52] },
+    { id: "2206", name: "Nitro",      net: 3990, cars: 58, ticket: 68.8, labor: 30.2, revhr: 112, ly: -1.4, health: 64, grade: "C", status: "Watch",    pillars: [60, 58, 70, 66, 60] },
+    { id: "3318", name: "Dent",   net: 3880, cars: 55, ticket: 70.6, labor: 29.7, revhr: 118, ly: -3.2, health: 61, grade: "C", status: "Watch",    pillars: [58, 55, 68, 63, 57] },
+    { id: "5140", name: "Bridgeport",       net: 3510, cars: 52, ticket: 67.5, labor: 30.9, revhr: 109, ly: 1.2,  health: 67, grade: "C", status: "Watch",    pillars: [64, 62, 72, 68, 61] }
   ];
   var PILLAR_LABELS = ["Growth", "Goal", "Loyalty", "Standing", "Operations"];
   var PACING = [13, 26, 40, 52, 66, 79, 93, 106, 119, 133, 146, 160, 173, 182]; // cumulative MTD net sales ($K)
@@ -254,11 +254,11 @@
   var hosts = document.querySelectorAll("[data-invoice]");
   if (!hosts.length) return;
   var INV = {
-    "INV-10482": { store: "0142 Rio Rancho", date: "Jun 12, 2026", cust: "J. M.", vehicle: "2019 Toyota Camry · 84,210 mi", advisor: "Marcus T.", pay: "Visa ••4417",
+    "INV-10482": { store: "3104 Morgantown", date: "Jun 12, 2026", cust: "Demo customer", vehicle: "Sample sedan · ~60,000 mi", advisor: "Brendan K.", pay: "Card ••0000",
       items: [["Full synthetic oil change", 79.99], ["Tire rotation", 24.99], ["Engine air filter", 19.99]] },
-    "0142-8891": { store: "0142 Rio Rancho", date: "Jun 12, 2026", cust: "R. P.", vehicle: "2021 Honda CR-V · 41,880 mi", advisor: "Dana K.", pay: "Mastercard ••0913",
+    "3104-8891": { store: "3104 Morgantown", date: "Jun 12, 2026", cust: "Demo customer", vehicle: "Sample crossover · ~40,000 mi", advisor: "Dana R.", pay: "Card ••0000",
       items: [["Conventional oil change", 49.99], ["Wiper blades", 27.98], ["Cabin air filter", 22.99]] },
-    "INV-10517": { store: "0188 Albuquerque", date: "Jun 13, 2026", cust: "S. L.", vehicle: "2018 Ford F-150 · 102,540 mi", advisor: "Priya N.", pay: "Amex ••2200",
+    "INV-10517": { store: "2087 Holler Lane", date: "Jun 13, 2026", cust: "Demo customer", vehicle: "Sample pickup · ~100,000 mi", advisor: "Tyler R.", pay: "Card ••0000",
       items: [["High-mileage oil change", 89.99], ["Coolant flush", 109.99], ["Battery replacement", 179.99]] }
   };
   var KEYS = Object.keys(INV);
@@ -316,9 +316,9 @@
   var hosts = document.querySelectorAll("[data-signals]");
   if (!hosts.length) return;
   var RULES = [
-    { title: "Labor over plan", sub: "If a store runs over 4% over labor plan", kind: "warn", body: "Store 0305: Labor 4.2% over plan before 11am. Sent to the GM." },
-    { title: "Voids spike", sub: "On 5 or more voids in an hour", kind: "bad", body: "Harbor: 6 voids in the last hour, above threshold. Escalated to the owner." },
-    { title: "Behind budget pace", sub: "If a store falls behind pace", kind: "warn", body: "Store 0142: Behind budget pace at 11:00am. Texted to the District Manager." },
+    { title: "Labor over plan", sub: "If a store runs over 4% over labor plan", kind: "warn", body: "Store 4410: Labor 4.2% over plan before 11am. Sent to the GM." },
+    { title: "Voids spike", sub: "On 5 or more voids in an hour", kind: "bad", body: "Bridgeport: 6 voids in the last hour, above threshold. Escalated to the owner." },
+    { title: "Behind budget pace", sub: "If a store falls behind pace", kind: "warn", body: "Store 3104: Behind budget pace at 11:00am. Texted to the District Manager." },
     { title: "Daily summary", sub: "A morning recap to your phone", kind: "good", body: "Daily summary: portfolio sales $41.2K, up 8.4% vs last week. 9 of 12 stores above plan." }
   ];
   hosts.forEach(function (host) {

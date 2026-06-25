@@ -64,7 +64,7 @@
   });
 
   /* ---------- Map: hover the guest-origin points ---------- */
-  var NAMES = ["0188 Albuquerque", "0205 Santa Fe", "0305 Las Cruces", "0411 Farmington", "0142 Rio Rancho", "0233 Rio West"];
+  var NAMES = ["2087 Holler Lane", "5521 Frankland", "4410 Poplar", "3318 Dent", "3104 Morgantown", "1002 NYC"];
   document.querySelectorAll('.shot svg circle[fill="#3d7ff2"]').forEach(function (c, i) {
     c.classList.add("map-pt");
     var t = document.createElementNS("http://www.w3.org/2000/svg", "title");
@@ -115,10 +115,10 @@
   if (!arc || !grade || !num || pillars.length < 5) return;
 
   var STORES = [
-    { n: "Store 0142 · Rio Rancho", sc: 78, g: "B", c: "#2dd4b0", status: "Healthy · top quartile", p: [72, 64, 85, 81, 58] },
-    { n: "Store 0188 · Albuquerque", sc: 91, g: "A", c: "#1dac92", status: "Healthy · chain leader", p: [100, 84, 88, 89, 84] },
-    { n: "Store 0305 · Las Cruces", sc: 58, g: "C", c: "#fcb041", status: "Watch · slipping", p: [54, 49, 62, 57, 48] },
-    { n: "Store 0411 · Farmington", sc: 41, g: "D", c: "#e12a56", status: "At risk · needs attention", p: [38, 32, 50, 44, 36] }
+    { n: "Store 3104 · Morgantown", sc: 78, g: "B", c: "#2dd4b0", status: "Healthy · top quartile", p: [72, 64, 85, 81, 58] },
+    { n: "Store 2087 · Holler Lane", sc: 91, g: "A", c: "#1dac92", status: "Healthy · chain leader", p: [100, 84, 88, 89, 84] },
+    { n: "Store 4410 · Poplar", sc: 58, g: "C", c: "#fcb041", status: "Watch · slipping", p: [54, 49, 62, 57, 48] },
+    { n: "Store 3318 · Dent", sc: 41, g: "D", c: "#e12a56", status: "At risk · needs attention", p: [38, 32, 50, 44, 36] }
   ];
 
   var chips = document.createElement("div");

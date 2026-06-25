@@ -150,10 +150,10 @@
     var hosts = document.querySelectorAll("[data-mapboard]");
     if (!hosts.length) return;
     var STORES = [
-      { store: "0142", name: "Rio Rancho", x: 168, y: 96, pct3: 68, zip: "87124", pull: "3.1 mi", guests: 4120, sales: 1.00, ret: 0.74 },
-      { store: "0188", name: "Albuquerque", x: 232, y: 72, pct3: 61, zip: "87110", pull: "3.8 mi", guests: 3880, sales: 0.86, ret: 0.69 },
-      { store: "0205", name: "Santa Fe", x: 250, y: 138, pct3: 57, zip: "87505", pull: "4.4 mi", guests: 3210, sales: 0.71, ret: 0.66 },
-      { store: "0305", name: "Las Cruces", x: 96, y: 132, pct3: 52, zip: "88011", pull: "5.2 mi", guests: 2740, sales: 0.58, ret: 0.61 }
+      { store: "3104", name: "Morgantown", x: 168, y: 96, pct3: 68, zip: "North end", pull: "3.1 mi", guests: 4120, sales: 1.00, ret: 0.74 },
+      { store: "2087", name: "Holler Lane", x: 232, y: 72, pct3: 61, zip: "Riverside", pull: "3.8 mi", guests: 3880, sales: 0.86, ret: 0.69 },
+      { store: "5521", name: "Frankland", x: 250, y: 138, pct3: 57, zip: "West side", pull: "4.4 mi", guests: 3210, sales: 0.71, ret: 0.66 },
+      { store: "4410", name: "Poplar", x: 96, y: 132, pct3: 52, zip: "Uptown", pull: "5.2 mi", guests: 2740, sales: 0.58, ret: 0.61 }
     ];
     var LAYERS = { sales: { c: "#15a98c", l: "Gross sales" }, guests: { c: "#3d7ff2", l: "Guest count" }, retention: { c: "#fcb041", l: "Retention" } };
     var ORIGINS = [[120, 64], [210, 70], [150, 124], [206, 116], [132, 98], [190, 50], [240, 100], [100, 80], [180, 140], [220, 130]];
@@ -224,15 +224,15 @@
     if (!hosts.length) return;
     var LIFE = [["ontrack", "On-track", "var(--viz-1)"], ["duesoon", "Due-soon", "var(--viz-4)"], ["overdue", "Overdue", "var(--viz-2)"], ["lapsed", "Lapsed", "var(--viz-3)"]];
     var STORES = [
-      { store: "0142", name: "Rio Rancho", life: { ontrack: 61, duesoon: 19, overdue: 13, lapsed: 7 }, atrisk: 6200, overdueN: 38, repeat: 64, clv: 1180,
+      { store: "3104", name: "Morgantown", life: { ontrack: 61, duesoon: 19, overdue: 13, lapsed: 7 }, atrisk: 6200, overdueN: 38, repeat: 64, clv: 1180,
         rfm: { champions: 412, loyal: 690, atrisk: 224, hibernating: 168 },
-        due: [["Reyes household", "Overdue 14d", "$420 CLV"], ["Nguyen household", "Due in 5d", "$960 CLV"], ["Carter household", "Overdue 31d", "$380 CLV"]] },
-      { store: "0188", name: "Albuquerque", life: { ontrack: 57, duesoon: 21, overdue: 15, lapsed: 7 }, atrisk: 7100, overdueN: 41, repeat: 59, clv: 1090,
+        due: [["Household A", "Overdue 14d", "$420 CLV"], ["Household B", "Due in 5d", "$960 CLV"], ["Household C", "Overdue 31d", "$380 CLV"]] },
+      { store: "2087", name: "Holler Lane", life: { ontrack: 57, duesoon: 21, overdue: 15, lapsed: 7 }, atrisk: 7100, overdueN: 41, repeat: 59, clv: 1090,
         rfm: { champions: 358, loyal: 612, atrisk: 268, hibernating: 196 },
-        due: [["Flores household", "Overdue 9d", "$510 CLV"], ["Park household", "Due in 3d", "$1,120 CLV"], ["Webb household", "Overdue 22d", "$340 CLV"]] },
-      { store: "0305", name: "Las Cruces", life: { ontrack: 54, duesoon: 21, overdue: 16, lapsed: 9 }, atrisk: 8400, overdueN: 47, repeat: 55, clv: 1020,
+        due: [["Household D", "Overdue 9d", "$510 CLV"], ["Household E", "Due in 3d", "$1,120 CLV"], ["Household F", "Overdue 22d", "$340 CLV"]] },
+      { store: "4410", name: "Poplar", life: { ontrack: 54, duesoon: 21, overdue: 16, lapsed: 9 }, atrisk: 8400, overdueN: 47, repeat: 55, clv: 1020,
         rfm: { champions: 296, loyal: 548, atrisk: 312, hibernating: 244 },
-        due: [["Diaz household", "Overdue 18d", "$470 CLV"], ["Klein household", "Due in 2d", "$880 CLV"], ["Osei household", "Overdue 40d", "$300 CLV"]] }
+        due: [["Household G", "Overdue 18d", "$470 CLV"], ["Household H", "Due in 2d", "$880 CLV"], ["Household I", "Overdue 40d", "$300 CLV"]] }
     ];
     var SEG = { champions: { c: "var(--success)", l: "Champions" }, loyal: { c: "var(--info)", l: "Loyal" }, atrisk: { c: "var(--warning)", l: "At-risk" }, hibernating: { c: "var(--danger)", l: "Hibernating" } };
 
