@@ -24,18 +24,24 @@
   // deterministic-ish pseudo random so it differs by index but is stable
   function pr(i, s) { var x = Math.sin((i + 1) * (s || 12.9898)) * 43758.5453; return x - Math.floor(x); }
 
+  // Keep motifs in the left/right white-space gutters so they never sit
+  // behind the centered headline. Even index = left gutter, odd = right.
+  function gutterLeft(i, lo, hi) {
+    var left = (i % 2) === 0;
+    var t = pr(i, 33.7);
+    return left ? (lo + t * (hi - lo)) : (100 - hi + t * (hi - lo));
+  }
   for (var k = 0; k < n; k++) {
     var s = document.createElement("span");
     s.style.setProperty("--i", k);
-    // scatter the free-floating themes
     if (fx === "nodes" || fx === "map") {
-      s.style.left = (6 + pr(k, 12.9) * 88).toFixed(1) + "%";
-      s.style.top = (8 + pr(k, 78.2) * 78).toFixed(1) + "%";
+      s.style.left = gutterLeft(k, 2.5, 19).toFixed(1) + "%";
+      s.style.top = (10 + pr(k, 78.2) * 76).toFixed(1) + "%";
       s.style.setProperty("--d", (pr(k, 3.7) * 6).toFixed(2) + "s");
-      s.style.setProperty("--sz", (4 + pr(k, 5.1) * 7).toFixed(1) + "px");
+      s.style.setProperty("--sz", (5 + pr(k, 5.1) * 8).toFixed(1) + "px");
     } else if (fx === "docs") {
-      s.style.left = (10 + pr(k, 22.1) * 78).toFixed(1) + "%";
-      s.style.top = (12 + pr(k, 41.3) * 64).toFixed(1) + "%";
+      s.style.left = gutterLeft(k, 3, 17).toFixed(1) + "%";
+      s.style.top = (12 + pr(k, 41.3) * 62).toFixed(1) + "%";
       s.style.setProperty("--d", (pr(k, 9.4) * 5).toFixed(2) + "s");
     }
     layer.appendChild(s);

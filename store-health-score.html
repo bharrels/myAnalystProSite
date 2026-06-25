@@ -133,21 +133,20 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="platform.html">Platform</a>
         <a href="pro.html">Pro</a>
-        <a href="add-ons.html">Add-ons</a>
+        <a href="add-ons.html">Add-ons</a><a href="integrations.html">Integrations</a>
         <a href="industries.html">Industries</a>
-        <a href="customers.html">Customers</a>
+<a href="customers.html">Customers</a>
         <a href="resources.html">Resources</a>
         <a href="pricing.html">Pricing</a>
       </nav>
       <div class="nav-cta">
-        <a href="customers.html#sample" class="btn btn-ghost">See a sample report</a>
         <a href="contact.html" class="btn btn-primary">Book a demo</a>
         <button class="nav-toggle" aria-label="Menu" aria-controls="mobile-drawer" aria-expanded="false"><span></span></button>
       </div>
     </div>
   </header>
   <div class="mobile-drawer" id="mobile-drawer">
-    <a href="platform.html">Platform</a><a href="pro.html">Pro</a><a href="add-ons.html">Add-ons</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="resources.html">Resources</a><a href="pricing.html">Pricing</a>
+    <a href="platform.html">Platform</a><a href="pro.html">Pro</a><a href="add-ons.html">Add-ons</a><a href="integrations.html">Integrations</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="resources.html">Resources</a><a href="pricing.html">Pricing</a>
     <a href="contact.html" class="btn btn-primary">Book a demo</a>
   </div>
 
@@ -170,20 +169,26 @@
   <!-- ============ EXPLAINER ============ -->
   <section class="section">
     <div class="container">
-      <article class="prose">
-        <p><strong>A Store Health score is a 0 to 100 rating and A to F grade myAnalyst assigns to every location, built from five weighted pillars and ranked against your own chain.</strong> Read one number and one letter instead of dozens of reports, then drill into the pillars behind it. Because it is chain-relative, it answers the question every multi-unit leader has: which of my stores are healthy, which need watching, and which are at risk right now?</p>
-
-        <h2>The five pillars</h2>
-        <p>Each pillar is scored 0 to 100, then combined using the weights below. Growth and Goal together make up half the score, because sustained growth and hitting budget are the clearest signs of a healthy location.</p>
-        <ul>
-          <li><strong>Growth · 25%</strong>, Is the store growing? How the location is trending versus its own past.</li>
-          <li><strong>Goal · 25%</strong>, Is it hitting budget and goals? Performance against the targets you set.</li>
-          <li><strong>Loyalty · 20%</strong>, Are guests coming back? Retention and repeat behavior.</li>
-          <li><strong>Standing · 15%</strong>, Where does it stand in the chain? Competitive position among peers.</li>
-          <li><strong>Operations · 15%</strong>, Is it running clean? Operational discipline and execution day to day.</li>
-        </ul>
-        <p>See all five pillars on a single store card, the same view operators use inside myAnalyst:</p>
-      </article>
+      <div class="section-head center reveal" style="max-width:680px">
+        <span class="eyebrow" style="justify-content:center">The five pillars</span>
+        <h2 class="section-title">One number. Five drivers. Every store, ranked.</h2>
+        <p class="lead">Each location is scored 0–100 on five weighted pillars, then graded A–F against your own chain. Tap a store below to see the drivers behind its grade, live.</p>
+      </div>
+      <!-- five weighted pillars at a glance -->
+      <div class="pillar-weights reveal d1" style="margin-top:1.8rem">
+        <span class="pw teal"><b>Growth</b><i>25%</i></span>
+        <span class="pw teal"><b>Goal</b><i>25%</i></span>
+        <span class="pw blue"><b>Loyalty</b><i>20%</i></span>
+        <span class="pw amber"><b>Standing</b><i>15%</i></span>
+        <span class="pw crimson"><b>Operations</b><i>15%</i></span>
+      </div>
+      <!-- the real, interactive Store Health board (demo data) -->
+      <div class="hero-stage reveal-scale" style="margin-top:clamp(28px,4vw,44px)">
+        <div class="appshot">
+          <div class="appshot-bar"><i></i><i></i><i></i><span class="hs-cap mono">myanalyst &middot; Store Health</span><span class="appshot-live">Demo data</span></div>
+          <div data-shboard></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -226,25 +231,33 @@
   <!-- ============ HOW IT'S CALCULATED + STATUS + EXAMPLE ============ -->
   <section class="section">
     <div class="container">
-      <article class="prose">
-        <h2>How it's calculated</h2>
-        <p>Each pillar is scored on a <strong>chain-relative percentile</strong>: myAnalyst ranks every location against the rest of your chain. An 85 means the store is near the top on that pillar; a 58 means lower-middle. Percentiles run over a <strong>rolling 91-day window</strong>, so the score reflects roughly the last quarter, not a single day or a stale snapshot.</p>
-        <p>The five scores are then combined by weight (Growth 25%, Goal 25%, Loyalty 20%, Standing 15%, Operations 15%) into one 0 to 100 number, then mapped to a familiar <strong>A to F grade</strong>. Because everything is ranked inside your own chain, each location is graded against its true peers, your other stores, not an outside benchmark.</p>
-
-        <h2>Status and trends</h2>
-        <p>Each store also carries a plain-language status, <strong>healthy</strong>, <strong>watch</strong>, or <strong>at-risk</strong>, so you can triage the portfolio in seconds. myAnalyst plots a <strong>12-week trend</strong> for every score and surfaces <strong>movers</strong>: the locations rising or falling fastest. A "watch" store climbing six points in a week tells a different story than one quietly sliding.</p>
-
-        <h2>A worked example</h2>
-        <p>Take <strong>Store 0142</strong> in the card above. Its five pillar scores:</p>
-        <ul>
-          <li><strong>Growth, 72.</strong> Trending up, upper half of the chain.</li>
-          <li><strong>Goal, 64.</strong> Behind on budget; one of two pillars dragging the score down.</li>
-          <li><strong>Loyalty, 85.</strong> Strong repeat behavior, its best pillar.</li>
-          <li><strong>Standing, 81.</strong> Strong competitive position in the chain.</li>
-          <li><strong>Operations, 58.</strong> Lowest pillar, the clearest opportunity to lift the grade.</li>
-        </ul>
-        <p>Weighted together, those roll up to <strong>78 out of 100, a B</strong>, status "watch" but improving (up six points this week). The takeaway is immediate: strong on Loyalty and Standing, and the fastest way from B to A is to fix Operations and close the Goal gap. That is the point of the score, it does not just rate the store, it points at what to fix. Browse the <a href="glossary.html">glossary</a> for terms, or see how Store Health sits alongside LiveStats, Pacing, and Retention on the <a href="platform.html#store-health">platform overview</a>.</p>
-      </article>
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">How it's calculated</span>
+        <h2 class="section-title">From five pillars to one grade</h2>
+        <p class="lead">Each pillar is a chain-relative percentile over a rolling 91 days, so every store is judged against its true peers: your other stores.</p>
+      </div>
+      <div class="calc-flow reveal d1">
+        <div class="cf-pillars">
+          <span class="cf-p"><b>Growth</b><i>×25%</i></span>
+          <span class="cf-p"><b>Goal</b><i>×25%</i></span>
+          <span class="cf-p"><b>Loyalty</b><i>×20%</i></span>
+          <span class="cf-p"><b>Standing</b><i>×15%</i></span>
+          <span class="cf-p"><b>Operations</b><i>×15%</i></span>
+        </div>
+        <span class="cf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="cf-result">
+          <div class="score-ring">
+            <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="rgba(15,14,11,.08)" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#1dac92" stroke-width="4.5" stroke-dasharray="78 22" stroke-linecap="round"/></svg>
+            <div class="sc-center"><div class="sc-grade" style="color:var(--teal-600)">B</div><div class="sc-num">78</div></div>
+          </div>
+          <div class="cf-res-label">Weighted 0–100 score, mapped to an A–F grade</div>
+        </div>
+      </div>
+      <div class="grid grid-3 reveal d2" data-stagger style="margin-top:clamp(28px,3.5vw,44px)">
+        <div class="card"><span class="spill" style="background:var(--success-bg);color:var(--teal-600)">Healthy</span><h3 style="margin-top:.8rem;font-size:1.05rem">Triage in seconds</h3><p style="color:var(--fg-2);font-size:.92rem;margin-top:.4rem">Every store carries a plain status, healthy, watch, or at-risk, so you know where to look first.</p></div>
+        <div class="card"><span class="spill" style="background:var(--warning-bg);color:var(--amber)">12-week trend</span><h3 style="margin-top:.8rem;font-size:1.05rem">Direction, not just score</h3><p style="color:var(--fg-2);font-size:.92rem;margin-top:.4rem">A watch store up six points reads very differently than one quietly sliding. We plot the trend for every score.</p></div>
+        <div class="card"><span class="spill" style="background:var(--info-bg);color:var(--info)">Movers</span><h3 style="margin-top:.8rem;font-size:1.05rem">Who's rising &amp; falling</h3><p style="color:var(--fg-2);font-size:.92rem;margin-top:.4rem">The fastest climbers and droppers surface automatically, so coaching goes where it counts.</p></div>
+      </div>
     </div>
   </section>
 
@@ -312,7 +325,7 @@
           </address>
           <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;display:inline-flex">Book a demo</a>
         </div>
-        <div class="footer-col"><h5>Product</h5><a href="platform.html">Platform</a><a href="pro.html">myAnalyst Pro</a><a href="add-ons.html">Add-ons</a><a href="auto-service-analytics.html">Auto-service analytics</a><a href="multi-location-dashboard-software.html">Multi-location dashboards</a><a href="pricing.html">Pricing</a></div>
+        <div class="footer-col"><h5>Product</h5><a href="platform.html">Platform</a><a href="pro.html">myAnalyst Pro</a><a href="add-ons.html">Add-ons</a><a href="integrations.html">Integrations</a><a href="auto-service-analytics.html">Auto-service analytics</a><a href="multi-location-dashboard-software.html">Multi-location dashboards</a><a href="pricing.html">Pricing</a></div>
         <div class="footer-col"><h5>Resources</h5><a href="resources.html">Resources hub</a><a href="best-all-in-one-multi-unit-dashboard.html">Best all-in-one dashboard</a><a href="faq.html">FAQ</a><a href="glossary.html">Glossary</a><a href="store-health-score.html">Store Health score</a><a href="compare-myanalyst-vs-bi.html">myAnalyst vs. BI tools</a></div>
         <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="customers.html#sample">Sample report</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
       </div>
@@ -323,5 +336,6 @@
 
   <script src="assets/js/main.js?v=20260625b" defer></script>
   <script src="assets/js/herofx.js?v=20260625b" defer></script>
+  <script src="assets/js/board.js?v=20260625b" defer></script>
 </body>
 </html>
