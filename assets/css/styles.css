@@ -1678,3 +1678,113 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 .gloss-item dt { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem; }
 .gloss-item dt .term-abbr { font-family: var(--font-mono); font-size: .7rem; font-weight: 700; background: var(--success-bg); color: var(--teal-600); padding: .12rem .42rem; border-radius: 6px; }
 @media (max-width: 720px) { .glossary { grid-template-columns: 1fr; } }
+
+/* =============================================================
+   Deep-dive interactive boards: Pacing, Map, Retention
+   (built by boards.js; scoped under .appboard token overrides)
+   ============================================================= */
+/* shared segmented controls used across the three boards */
+.appboard .pc-modes button, .appboard .pc-filters button,
+.appboard .gm-layers button, .appboard .gm-modes button,
+.appboard .rt-switch button {
+  font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer;
+  padding: 6px 13px; border-radius: 999px; border: 1px solid var(--border-1);
+  background: var(--bg-2); color: var(--fg-2);
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.appboard .pc-modes button:hover, .appboard .pc-filters button:hover,
+.appboard .gm-layers button:hover, .appboard .gm-modes button:hover,
+.appboard .rt-switch button:hover { border-color: var(--border-strong); }
+.appboard .pc-filters button.on, .appboard .gm-modes button.on { background: var(--fg-1); color: var(--bg-2); border-color: var(--fg-1); }
+.appboard .pc-modes button.on, .appboard .gm-layers button.on, .appboard .rt-switch button.on { border-color: var(--info); color: var(--info); background: var(--info-bg); }
+.appboard .rt-switch button.on { border-color: var(--warning); color: var(--amber); background: var(--warning-bg); }
+.appboard .gm-layers button i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.appboard .pc-row i, .appboard .rt-switch button i, .appboard .pc-mute { font-style: normal; color: var(--fg-3); font-weight: 600; }
+
+/* ---------- Pacing & Forecast ---------- */
+.appboard .pc-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+.appboard .pc-title { font-size: 15px; font-weight: 700; color: var(--fg-1); }
+.appboard .pc-sub2 { font-size: 12.5px; color: var(--fg-2); margin-top: 3px; }
+.appboard .pc-modes { display: flex; gap: 7px; }
+.appboard .pc-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; margin-bottom: 14px; }
+.appboard .pc-k { background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--r-lg); padding: 13px 15px; }
+.appboard .pc-k small { font-size: 11px; color: var(--fg-3); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.appboard .pc-k b { display: block; font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--fg-1); letter-spacing: -.03em; margin: 4px 0 2px; }
+.appboard .pc-sub { font-size: 11.5px; color: var(--fg-3); font-weight: 600; }
+.appboard .pc-chart { background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--r-lg); padding: 14px 16px 12px; }
+.appboard .pc-svg { width: 100%; height: 200px; display: block; }
+.appboard .pc-legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 11.5px; color: var(--fg-3); margin-top: 8px; }
+.appboard .pc-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.appboard .pc-legend i { width: 12px; height: 3px; border-radius: 2px; display: inline-block; }
+.appboard .pc-legend i.dash { background-image: repeating-linear-gradient(90deg, var(--amber) 0 4px, transparent 4px 7px) !important; }
+.appboard .pc-filters { display: flex; gap: 7px; flex-wrap: wrap; margin: 16px 0 12px; }
+.appboard .pc-rows { display: flex; flex-direction: column; gap: 8px; }
+.appboard .pc-row { display: grid; grid-template-columns: 1.4fr .8fr .8fr auto; align-items: center; gap: 10px; text-align: left; width: 100%; cursor: pointer;
+  background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--r-lg); padding: 11px 14px; transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease; font: inherit; }
+.appboard .pc-row:hover { border-color: var(--border-strong); transform: translateY(-1px); }
+.appboard .pc-row.sel { border-color: var(--info); box-shadow: inset 3px 0 0 var(--info); }
+.appboard .pc-rn b { font-size: 13.5px; font-weight: 700; color: var(--fg-1); }
+.appboard .pc-rn i { display: block; font-size: 11px; }
+.appboard .pc-rv { font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--fg-2); }
+.appboard .pc-rv i { display: block; font-size: 10px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+.appboard .pc-pill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 700; border: 1px solid; white-space: nowrap; justify-self: end; }
+.appboard .pc-pill i { font-size: 9px; font-style: normal; }
+
+/* ---------- Geospatial Map ---------- */
+.appboard .gm-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+.appboard .gm-layers, .appboard .gm-modes { display: flex; gap: 7px; flex-wrap: wrap; }
+.appboard .gm-stage { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border-2); }
+.appboard .gm-svg { width: 100%; height: auto; display: block; }
+.appboard .gm-pin { transition: transform .15s ease; }
+.appboard .gm-read { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; margin-top: 14px; }
+.appboard .gm-r { background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--r-lg); padding: 12px 14px; }
+.appboard .gm-r small { font-size: 11px; color: var(--fg-3); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.appboard .gm-r b { display: block; font-size: 1.05rem; font-weight: 700; color: var(--fg-1); margin-top: 4px; }
+
+/* ---------- Retention ---------- */
+.appboard .rt-switch { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 16px; }
+.appboard .rt-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 16px; }
+.appboard .rt-life, .appboard .rt-side, .appboard .rt-risk { background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--r-lg); padding: 16px 18px; }
+.appboard .rt-cap { font-size: 13px; font-weight: 700; color: var(--fg-1); margin-bottom: 12px; display: flex; align-items: baseline; gap: 8px; }
+.appboard .rt-cap span { font-size: 11px; font-weight: 600; color: var(--fg-3); text-transform: uppercase; letter-spacing: .04em; }
+.appboard .rt-stack { display: flex; height: 12px; border-radius: 999px; overflow: hidden; background: var(--bg-3); margin-bottom: 16px; }
+.appboard .rt-seg { height: 100%; width: 0; transition: width .7s cubic-bezier(.16,1,.3,1); }
+.appboard .rt-bars { display: flex; flex-direction: column; gap: 11px; }
+.appboard .rt-bar { display: grid; grid-template-columns: 86px 1fr 38px; align-items: center; gap: 10px; }
+.appboard .rt-bl { font-size: 12px; font-weight: 600; color: var(--fg-2); display: inline-flex; align-items: center; gap: 7px; }
+.appboard .rt-bl i { width: 9px; height: 9px; border-radius: 3px; display: inline-block; }
+.appboard .rt-bt { height: 6px; background: var(--bg-3); border-radius: 999px; overflow: hidden; }
+.appboard .rt-bf { display: block; height: 100%; width: 0; border-radius: 999px; transition: width .7s cubic-bezier(.16,1,.3,1); }
+.appboard .rt-bar b { font-family: var(--font-mono); font-size: 12.5px; font-weight: 700; color: var(--fg-1); text-align: right; }
+.appboard .rt-rfm { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.appboard .rt-cell { background: var(--bg-3); border-radius: var(--r-md, 10px); padding: 11px 13px; border-left: 3px solid var(--sc); }
+.appboard .rt-cell b { font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--fg-1); }
+.appboard .rt-cell small { display: block; font-size: 11px; color: var(--fg-3); font-weight: 600; margin-top: 1px; }
+.appboard .rt-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.appboard .rt-stats div { background: var(--bg-3); border-radius: var(--r-md, 10px); padding: 11px 13px; text-align: center; }
+.appboard .rt-stats b { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700; color: var(--fg-1); }
+.appboard .rt-stats small { display: block; font-size: 10.5px; color: var(--fg-3); font-weight: 600; }
+.appboard .rt-risk { margin-top: 16px; background: var(--warning-bg); border-color: transparent; }
+.appboard .rt-riskhead { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13.5px; color: var(--fg-2); }
+.appboard .rt-riskhead strong { color: var(--amber); }
+.appboard .rt-export { margin-left: auto; font-size: 12px; font-weight: 700; color: var(--info); background: var(--bg-2); border: 1px solid var(--border-2); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.appboard .rt-list { display: flex; flex-direction: column; gap: 7px; margin-top: 12px; }
+.appboard .rt-li { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 11px; background: var(--bg-2); border: 1px solid var(--border-2); border-radius: var(--r-md, 10px); padding: 9px 12px; }
+.appboard .rt-av { width: 28px; height: 28px; border-radius: 50%; background: var(--info-bg); color: var(--info); display: grid; place-items: center; font-weight: 800; font-size: 12px; }
+.appboard .rt-name { font-size: 13px; font-weight: 600; color: var(--fg-1); }
+.appboard .rt-due { font-size: 11.5px; font-weight: 700; color: var(--amber); }
+.appboard .rt-clv { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--fg-2); }
+
+@media (max-width: 720px) {
+  .appboard .pc-kpis, .appboard .gm-read { grid-template-columns: repeat(2, 1fr); }
+  .appboard .rt-grid { grid-template-columns: 1fr; }
+  .appboard .pc-row { grid-template-columns: 1.2fr .8fr auto; }
+  .appboard .pc-row .pc-rv:nth-of-type(2) { display: none; }
+}
+
+/* Deep-dive "learn more" link under each platform feature row */
+.fr-link { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.5rem; font-weight: 700; font-size: .95rem; color: var(--teal-600); }
+.fr-link svg { width: 17px; height: 17px; transition: transform .2s ease; }
+.fr-link:hover { color: var(--teal); }
+.fr-link:hover svg { transform: translateX(4px); }
