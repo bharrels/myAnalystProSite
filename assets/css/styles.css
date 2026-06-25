@@ -1394,10 +1394,13 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 /* grid — drifting data grid (platform/dashboards) */
 .phfx-grid::before { content: ""; position: absolute; inset: -12%; background-image: linear-gradient(rgba(21,169,140,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(21,169,140,.12) 1px, transparent 1px); background-size: 46px 46px; -webkit-mask: radial-gradient(46% 58% at 50% 40%, transparent 0%, transparent 46%, #000 86%); mask: radial-gradient(46% 58% at 50% 40%, transparent 0%, transparent 46%, #000 86%); animation: fxDrift 16s linear infinite; }
 
-/* bars — chart bars along the bottom edge (kept low so they never reach the headline) */
-.phfx-bars { display: flex; align-items: flex-end; justify-content: center; gap: 14px; padding: 0 6%; }
-.phfx-bars span { width: 30px; align-self: flex-end; height: 0; border-radius: 8px 8px 0 0; background: linear-gradient(180deg, rgba(21,169,140,.24), rgba(21,169,140,.02)); animation: fxBar 1s var(--ease-emphasis) forwards; animation-delay: calc(var(--i) * .08s); }
-.phfx-bars span:nth-child(1){--h:16%;} .phfx-bars span:nth-child(2){--h:26%;} .phfx-bars span:nth-child(3){--h:20%;} .phfx-bars span:nth-child(4){--h:34%;} .phfx-bars span:nth-child(5){--h:28%;} .phfx-bars span:nth-child(6){--h:40%;} .phfx-bars span:nth-child(7){--h:31%;}
+/* bars — chart bars tucked into the left/right gutters so they frame the hero
+   and never sit behind the centered headline, lead, or buttons */
+.phfx-bars { display: block; padding: 0; }
+.phfx-bars span { position: absolute; bottom: 0; width: 18px; height: 0; border-radius: 7px 7px 0 0; background: linear-gradient(180deg, rgba(21,169,140,.22), rgba(21,169,140,.02)); animation: fxBar 1s var(--ease-emphasis) forwards; animation-delay: calc(var(--i) * .08s); }
+.phfx-bars span:nth-child(1){--h:30%; left:2.5%;} .phfx-bars span:nth-child(2){--h:48%; left:5.6%;} .phfx-bars span:nth-child(3){--h:34%; left:8.7%;} .phfx-bars span:nth-child(4){--h:20%; left:11.8%;} .phfx-bars span:nth-child(5){--h:36%; right:8.7%;} .phfx-bars span:nth-child(6){--h:50%; right:5.6%;} .phfx-bars span:nth-child(7){--h:28%; right:2.5%;}
+@media (max-width: 860px){ .phfx-bars span:nth-child(3), .phfx-bars span:nth-child(4), .phfx-bars span:nth-child(5){ display:none; } }
+@media (max-width: 560px){ .phfx-bars span{ display:none; } }
 
 /* nodes / map — scattered live locations */
 .phfx-nodes span, .phfx-map span { position: absolute; width: var(--sz,5px); height: var(--sz,5px); border-radius: 50%; background: var(--teal); box-shadow: 0 0 9px rgba(21,169,140,.55); opacity: .5; animation: fxFloat2 var(--d,5s) ease-in-out infinite; }
