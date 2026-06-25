@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260624e" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260625b" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -107,7 +107,7 @@
             "name": "Can myAnalyst report drive-thru and service times for my QSR stores?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. myAnalyst reads timing data captured at your POS, order, total, and pay timestamps, and turns it into store-by-store drive-thru and service-time reports by daypart, so you can see which stores are slowing down at lunch and which are holding their window times."
+              "text": "Yes. myAnalyst reads the timing data your POS captures, order, total, and pay timestamps, and turns it into store-by-store drive-thru and service-time reports by daypart. See which stores slow down at lunch and which hold their window times."
             }
           },
           {
@@ -154,7 +154,7 @@
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="platform.html">Platform</a>
         <a href="pro.html">Pro</a>
@@ -180,11 +180,11 @@
   <nav class="container crumbs" aria-label="Breadcrumb" style="padding-top:1.1rem"><a href="index.html">Home</a><span class="sep">›</span><a href="industries.html">Industries</a><span class="sep">›</span><span aria-current="page">QSR reports</span></nav>
 
   <!-- ============ HERO ============ -->
-  <section class="page-hero">
+  <section class="page-hero" data-hero-fx="bars">
     <div class="container">
       <span class="eyebrow" style="justify-content:center">QSR &amp; fast food · report reference</span>
       <h1 class="display" style="margin-top:1rem">Every QSR report myAnalyst runs,<br/><span class="text-grad">store by store.</span></h1>
-      <p class="lead" style="margin:1.2rem auto 0;max-width:62ch">A deep reference for quick-service and fast-food operators: every report myAnalyst produces from your POS, avg ticket, throughput, drive-thru times, daypart performance, food cost %, labor, voids and discounts, and franchisor reporting, organized by the team that uses it and refreshed every 5 minutes across all your stores.</p>
+      <p class="lead" style="margin:1.2rem auto 0;max-width:62ch">Every report myAnalyst runs from your POS, avg ticket, throughput, drive-thru times, daypart, food cost %, labor, voids and discounts, and franchisor reporting, refreshed every 5 minutes across all your stores.</p>
       <div class="hero-actions" style="justify-content:center">
         <a class="btn btn-amber btn-lg" href="contact.html">Book a demo</a>
         <a class="btn btn-ghost btn-lg" href="platform.html">See the platform</a>
@@ -199,7 +199,7 @@
         <div class="fr-copy">
           <span class="tag">How to read this page</span>
           <h2 class="section-title" style="margin-top:1rem">One live picture for the whole brand</h2>
-          <p class="lead" style="margin-top:.8rem">myAnalyst reads your point-of-sale read-only and refreshes every 5 minutes, so the reports below reflect live trading instead of yesterday's export. Each report is grouped by the team that lives in it, Operations, Cost &amp; Finance, Loss Prevention, Franchisor Reporting, plus the cross-cutting tools every store touches: Store Health, Pacing, the Wall of Records, and Signals.</p>
+          <p class="lead" style="margin-top:.8rem">myAnalyst reads your POS read-only and refreshes every 5 minutes, so these reports reflect live trading, not yesterday's export. Reports are grouped by the team that uses them, Operations, Cost &amp; Finance, Loss Prevention, and Franchisor Reporting, plus cross-cutting tools every store touches: Store Health, Pacing, the Wall of Records, and Signals.</p>
           <ul class="fr-list">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Built on QSR metrics: avg ticket, throughput, food cost %, daypart, labor %</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Group by Market, Regional Manager, or franchise entity</li>
@@ -233,15 +233,15 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Operations</span>
         <h2 class="section-title">Speed, ticket, and labor, by store and daypart</h2>
-        <p class="lead">The numbers your above-store leaders and shift managers run on every day. Each pulls live from <a class="btn-link" href="platform.html">LiveStats</a> and rolls up by store, market, or franchise entity.</p>
+        <p class="lead">The numbers above-store leaders and shift managers run on daily. Each pulls live from <a class="btn-link" href="platform.html">LiveStats</a> and rolls up by store, market, or franchise entity.</p>
       </div>
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m5 14V9m5 10V7m5 12V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Avg Ticket &amp; Net Sales by Store</h3><p>Net sales, transaction count, and average ticket (~$11.85) for every location with year-over-year deltas, color-coded so the outliers jump out. See which stores are upselling combos and which are leaving the second item on the table.</p></div>
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Throughput &amp; Transactions per Hour</h3><p>Transactions per operating hour (~92/hr) by store and by daypart, so you can see capacity at the peak. Spot the stores that stall at lunch rush and the ones holding 100+/hr through the noon hour.</p></div>
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Drive-Thru &amp; Service Times</h3><p>Average order-to-pay and total service time pulled from POS timestamps, by store and daypart. Flags windows that creep past target at peak so you can staff the line before it backs up.</p></div>
-        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Daypart Performance</h3><p>Sales, transactions, and avg ticket split by breakfast, lunch, afternoon, dinner, and late-night. Compare each store's daypart mix to the brand so you know where the breakfast business is being won or lost.</p></div>
-        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Labor % &amp; Productivity</h3><p>Labor cost as a percent of net sales by store, plus sales-per-labor-hour and transactions-per-labor-hour. See which stores are overstaffed in the slow hours and which are running lean through peak.</p></div>
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h10M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="12" r="2.2" stroke="currentColor" stroke-width="2"/></svg></div><h3>Custom Operations Trackers</h3><p>Use the <a class="btn-link" href="platform.html">Report Builder</a> to assemble exactly the operations view your team needs, combo attach rate, upsell mix, average items per ticket, and save it as a tracker your DMs open every morning.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m5 14V9m5 10V7m5 12V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Avg Ticket &amp; Net Sales by Store</h3><p>Net sales, transactions, and average ticket (~$11.85) per location with year-over-year deltas, color-coded so outliers stand out. See which stores upsell combos and which leave the second item on the table.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Throughput &amp; Transactions per Hour</h3><p>Transactions per operating hour (~92/hr) by store and daypart. Spot the stores that stall at lunch rush and the ones holding 100+/hr through noon.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Drive-Thru &amp; Service Times</h3><p>Average order-to-pay and total service time from POS timestamps, by store and daypart. Flags windows that creep past target at peak so you can staff up before the line backs up.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Daypart Performance</h3><p>Sales, transactions, and avg ticket by breakfast, lunch, afternoon, dinner, and late-night. Compare each store's daypart mix to the brand to see where breakfast business is won or lost.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Labor % &amp; Productivity</h3><p>Labor cost as a percent of net sales by store, plus sales-per-labor-hour and transactions-per-labor-hour. See which stores are overstaffed in slow hours and which run lean through peak.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h10M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="12" r="2.2" stroke="currentColor" stroke-width="2"/></svg></div><h3>Custom Operations Trackers</h3><p>Use the <a class="btn-link" href="platform.html">Report Builder</a> to build the exact operations view your team needs, combo attach rate, upsell mix, average items per ticket, and save it as a tracker your DMs open every morning.</p></div>
       </div>
     </div>
   </section>
@@ -253,7 +253,7 @@
         <div class="fr-copy">
           <span class="tag">LiveStats · Operations</span>
           <h2 class="section-title" style="margin-top:1rem">The whole brand, updating while you watch</h2>
-          <p class="lead" style="margin-top:.8rem">Today vs last year for every store, every five minutes, net sales, transactions, avg ticket, throughput, and labor %. The table below is a sample of how the Operations grid reads for a QSR portfolio.</p>
+          <p class="lead" style="margin-top:.8rem">Today vs last year for every store, every five minutes: net sales, transactions, avg ticket, throughput, and labor %. Below is a sample Operations grid for a QSR portfolio.</p>
           <div class="hero-actions"><a href="multi-location-dashboard-software.html" class="btn btn-primary btn-lg">Multi-location dashboards</a></div>
         </div>
         <div class="fr-media">
@@ -285,12 +285,12 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Cost &amp; Finance</span>
         <h2 class="section-title">Margin, tender mix, and the cash drawer</h2>
-        <p class="lead">Where the profit actually lands. These reports come from the <a class="btn-link" href="platform.html">Financials</a> module and track food cost (~29.4% of net sales), how guests pay, and every dollar that moves in and out of the drawer.</p>
+        <p class="lead">Where the profit lands. From the <a class="btn-link" href="platform.html">Financials</a> module: food cost (~29.4% of net sales), how guests pay, and every dollar in and out of the drawer.</p>
       </div>
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Food Cost % &amp; Margin</h3><p>Cost of goods as a percent of net sales by store, tracked against a ~29.4% target and flagged when a location drifts. Pair it with avg ticket and throughput to see whether a margin miss is waste, mix, or portioning.</p></div>
-        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/></svg></div><h3>Means of Payment &amp; Tender Mix</h3><p>Sales split by tender, cash, credit, debit, mobile, gift, and third-party delivery, by store and daypart. See how fast cash is shrinking and where delivery commissions are eating into a store's effective ticket.</p></div>
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 8h7a2.5 2.5 0 0 1 0 5H9a2.5 2.5 0 0 0 0 5h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Paid In / Paid Out &amp; Credit Memos</h3><p>Every paid-in and paid-out, plus credit memos, logged by store, drawer, and reason. Gives finance a clean trail for petty-cash spend and refunds without re-keying register tapes.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Food Cost % &amp; Margin</h3><p>Cost of goods as a percent of net sales by store, tracked against a ~29.4% target and flagged when a location drifts. Pair with avg ticket and throughput to see whether a miss is waste, mix, or portioning.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/></svg></div><h3>Means of Payment &amp; Tender Mix</h3><p>Sales by tender, cash, credit, debit, mobile, gift, and third-party delivery, by store and daypart. See how fast cash is shrinking and where delivery commissions eat into effective ticket.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 8h7a2.5 2.5 0 0 1 0 5H9a2.5 2.5 0 0 0 0 5h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Paid In / Paid Out &amp; Credit Memos</h3><p>Every paid-in, paid-out, and credit memo logged by store, drawer, and reason. A clean trail for petty-cash spend and refunds, no re-keying register tapes.</p></div>
       </div>
     </div>
   </section>
@@ -301,15 +301,15 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Loss Prevention &amp; Auditing</span>
         <h2 class="section-title">Catch leakage before it becomes a habit</h2>
-        <p class="lead">The <a class="btn-link" href="platform.html">Auditing &amp; Compliance</a> module turns the events your POS already logs into ranked exception reports, by store, by drawer, and by employee, so a pattern surfaces in days, not at year-end.</p>
+        <p class="lead">The <a class="btn-link" href="platform.html">Auditing &amp; Compliance</a> module turns events your POS already logs into ranked exception reports, by store, drawer, and employee, so patterns surface in days, not at year-end.</p>
       </div>
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Voids &amp; Discounts Audit</h3><p>Voids and manual discounts ranked by store and employee, with rate per transaction and dollar value. Surfaces the cashier whose discount rate runs triple the brand average and the manager-override patterns that need a conversation.</p></div>
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Over / Short by Drawer</h3><p>Cash over/short for every drawer close, ranked by store and operator. Repeat shorts on the same drawer or the same shift float to the top automatically.</p></div>
-        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M8 8l8 8M16 8l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Aborted &amp; Cancelled Sales</h3><p>Orders rung and cancelled before tender, by store, register, and employee. A spike in aborted sales on a single drawer is a classic tell, this report makes it visible.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Voids &amp; Discounts Audit</h3><p>Voids and manual discounts ranked by store and employee, with rate per transaction and dollar value. Surfaces the cashier running triple the brand discount rate and the manager-override patterns that need a conversation.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Over / Short by Drawer</h3><p>Cash over/short for every drawer close, ranked by store and operator. Repeat shorts on the same drawer or shift float to the top automatically.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M8 8l8 8M16 8l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Aborted &amp; Cancelled Sales</h3><p>Orders rung and cancelled before tender, by store, register, and employee. A spike on a single drawer is a classic tell, and this report makes it visible.</p></div>
         <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h14v16l-7-3-7 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div><h3>Open / Close &amp; No-Sale Log</h3><p>Drawer opens, closes, and no-sale events with timestamps and operator. Pairs with over/short to show whether a shortage lines up with an unusual no-sale pattern.</p></div>
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg></div><h3>Data-Capture Quality</h3><p>Tracks how completely each store is capturing the data that matters, loyalty IDs, daypart tags, drawer assignments. Clean capture is what makes every other report trustworthy.</p></div>
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Invoice Lookup</h3><p>Search any individual transaction across every store by amount, time, drawer, or tender, the fast way to settle a guest dispute or chase down a specific exception flagged in an audit report.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg></div><h3>Data-Capture Quality</h3><p>Tracks how completely each store captures the data that matters, loyalty IDs, daypart tags, drawer assignments. Clean capture makes every other report trustworthy.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Invoice Lookup</h3><p>Search any transaction across every store by amount, time, drawer, or tender. The fast way to settle a guest dispute or chase down an exception flagged in an audit.</p></div>
       </div>
     </div>
   </section>
@@ -320,13 +320,13 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Franchisor Reporting</span>
         <h2 class="section-title">Report up to the brand without re-keying</h2>
-        <p class="lead">If you run a franchise, the hardest reporting is the kind you owe someone else. The <a class="btn-link" href="add-ons.html">Data Pipelines</a> add-on automates it, consolidated, validated, and on a schedule.</p>
+        <p class="lead">The hardest reporting is the kind you owe someone else. The <a class="btn-link" href="add-ons.html">Data Pipelines</a> add-on automates it, consolidated, validated, and on a schedule.</p>
       </div>
       <div class="grid grid-2 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="17" r="2.4" stroke="currentColor" stroke-width="2"/></svg></div><h3>Franchisor Portal Data Pipeline</h3><p>A scheduled feed that pushes your net sales, transaction counts, daypart splits, and tender mix to the franchisor portal or BI tool in the format the brand requires, so you stop exporting and re-typing every period.</p></div>
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="4" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="8.5" y="14" width="7" height="6" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M6.5 11v1.5a1.5 1.5 0 0 0 1.5 1.5M17.5 11v1.5a1.5 1.5 0 0 1-1.5 1.5" stroke="currentColor" stroke-width="2"/></svg></div><h3>Multi-Entity Consolidation</h3><p>Roll several franchise entities, DBAs, or LLCs into one consolidated set of totals, net sales, food cost %, labor %, and avg ticket, while still letting each entity report on its own. One number for the brand, full detail for you.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="17" r="2.4" stroke="currentColor" stroke-width="2"/></svg></div><h3>Franchisor Portal Data Pipeline</h3><p>A scheduled feed that pushes net sales, transaction counts, daypart splits, and tender mix to the franchisor portal or BI tool in the brand's required format. No more exporting and re-typing every period.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="4" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="8.5" y="14" width="7" height="6" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M6.5 11v1.5a1.5 1.5 0 0 0 1.5 1.5M17.5 11v1.5a1.5 1.5 0 0 1-1.5 1.5" stroke="currentColor" stroke-width="2"/></svg></div><h3>Multi-Entity Consolidation</h3><p>Roll several franchise entities, DBAs, or LLCs into one set of totals, net sales, food cost %, labor %, and avg ticket, while each entity still reports on its own. One number for the brand, full detail for you.</p></div>
       </div>
-      <p class="proof-note reveal" style="margin-top:1.6rem">Pipelines connect to common targets including Salesforce, HubSpot, franchisor portals, and BI tools. Ask us about your brand's reporting format on a demo.</p>
+      <p class="proof-note reveal" style="margin-top:1.6rem">Pipelines connect to Salesforce, HubSpot, franchisor portals, and BI tools. Ask about your brand's reporting format on a demo.</p>
     </div>
   </section>
 
@@ -336,24 +336,24 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Store Health &amp; Pacing</span>
         <h2 class="section-title">One score per store, and where the month lands</h2>
-        <p class="lead">The cross-cutting tools that turn all of the above into a decision. <a class="btn-link" href="store-health-score.html">Store Health</a> scores every location 0 to 100; Pacing projects each store to month-end against budget.</p>
+        <p class="lead">The tools that turn everything above into a decision. <a class="btn-link" href="store-health-score.html">Store Health</a> scores every location 0 to 100; Pacing projects each store to month-end against budget.</p>
       </div>
       <div class="grid grid-2 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 7 14.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Store Health Score</h3><p>A 0 to 100 score and A to F grade per store from five weighted pillars, Growth 25%, Goal 25%, Loyalty 20%, Standing 15%, Operations 15%, ranked against the rest of your brand. Scan the whole portfolio in seconds and drill into any store in one click.</p></div>
-        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Pacing &amp; Forecast vs Budget</h3><p>Month-to-date sales pace against budget with shape-adjusted projections and an ahead / on-track / behind status per store, so you know on the 12th whether a store will make its number, not on the 1st of next month.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 7 14.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Store Health Score</h3><p>A 0 to 100 score and A to F grade per store from five weighted pillars, Growth 25%, Goal 25%, Loyalty 20%, Standing 15%, Operations 15%, ranked against your brand. Scan the portfolio in seconds, drill into any store in one click.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Pacing &amp; Forecast vs Budget</h3><p>Month-to-date pace against budget with shape-adjusted projections and an ahead / on-track / behind status per store. Know on the 12th whether a store will make its number, not on the 1st of next month.</p></div>
       </div>
       <div class="pro-feature" style="margin-top:clamp(40px,5vw,64px)">
         <div class="reveal">
           <span class="eyebrow">Signature feature · Store Health</span>
           <h2 class="section-title" style="margin-top:1rem">Know which store needs you, before you even look.</h2>
-          <p class="lead" style="margin-top:1rem">Every QSR location gets a single 0 to 100 score built from the same metrics on this page, then ranked against the rest of your brand. The sample below shows how a store reads when throughput and labor are strong but operations need attention.</p>
+          <p class="lead" style="margin-top:1rem">Every QSR location gets a single 0 to 100 score built from the metrics on this page, ranked against your brand. The sample below shows a store with strong throughput and labor but operations that need attention.</p>
           <div class="hero-actions"><a href="store-health-score.html" class="btn btn-primary btn-lg">How scoring works</a></div>
         </div>
         <div class="reveal d1">
           <div class="card" style="background:var(--elevated);border-color:var(--border-2)">
             <div style="display:flex;align-items:center;gap:22px;margin-bottom:20px">
               <div class="score-ring">
-                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#1dac92" stroke-width="4.5" stroke-dasharray="81 19" stroke-linecap="round"/></svg>
+                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="rgba(15,14,11,.08)" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#1dac92" stroke-width="4.5" stroke-dasharray="81 19" stroke-linecap="round"/></svg>
                 <div class="sc-center"><div class="sc-grade" style="color:var(--teal-600)">B</div><div class="sc-num">81 / 100</div></div>
               </div>
               <div>
@@ -381,11 +381,25 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Records &amp; alerts</span>
         <h2 class="section-title">Drive the floor and never miss the moment</h2>
-        <p class="lead">Two reports your stores feel every day, the friendly competition of the records board and the SMS <a class="btn-link" href="add-ons.html">Signals</a> that reach a manager without anyone opening a dashboard.</p>
+        <p class="lead">Two reports your stores feel every day: the records board's friendly competition and SMS <a class="btn-link" href="add-ons.html">Signals</a> that reach a manager without anyone opening a dashboard.</p>
       </div>
       <div class="grid grid-2 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M8 21h8m-4-4v4M6 4h12v6a6 6 0 0 1-12 0V4zM6 6H4v2a3 3 0 0 0 3 3m11-5h2v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Wall of Records &amp; Rankings</h3><p>All-time single-day sales and transaction records per store, plus current-period rankings on net sales, avg ticket, and throughput. The leaderboard managers actually chase, and the one your top stores want to defend.</p></div>
-        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Signals SMS Alerts</h3><p>Threshold alerts texted to the right manager the moment a KPI moves, a store behind budget pace at 11:00 AM, a void rate spiking on one drawer, or a daypart running cold. No app to open, no dashboard to refresh.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M8 21h8m-4-4v4M6 4h12v6a6 6 0 0 1-12 0V4zM6 6H4v2a3 3 0 0 0 3 3m11-5h2v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Wall of Records &amp; Rankings</h3><p>All-time single-day sales and transaction records per store, plus current-period rankings on net sales, avg ticket, and throughput. The leaderboard managers chase and top stores defend.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Signals SMS Alerts</h3><p>Threshold alerts texted to the right manager the moment a KPI moves, a store behind budget pace at 11:00 AM, a void rate spiking on one drawer, or a daypart running cold. No app, no dashboard to refresh.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INVOICE LOOKUP ============ -->
+  <section class="section" id="invoice-lookup">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Invoice lookup</span>
+        <h2 class="section-title">Pull any ticket in seconds</h2>
+        <p class="lead">Search a ticket, invoice, or VIN and see the full line items, advisor, and payment. Try it.</p>
+      </div>
+      <div class="reveal d1" style="max-width:600px;margin:clamp(28px,4vw,44px) auto 0">
+        <div data-invoice aria-label="Interactive invoice lookup"></div>
       </div>
     </div>
   </section>
@@ -400,7 +414,7 @@
       <div class="faq reveal" style="margin-top:2rem">
         <details class="faq-item">
           <summary>Can myAnalyst report drive-thru and service times for my QSR stores?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
-          <div class="fq-body"><p>Yes. myAnalyst reads the timing data captured at your POS, order, total, and pay timestamps, and turns it into store-by-store drive-thru and service-time reports by daypart, so you can see which stores are slowing down at lunch and which are holding their window times.</p></div>
+          <div class="fq-body"><p>Yes. myAnalyst reads the timing data your POS captures, order, total, and pay timestamps, and turns it into store-by-store drive-thru and service-time reports by daypart. See which stores slow down at lunch and which hold their window times.</p></div>
         </details>
         <details class="faq-item">
           <summary>Does myAnalyst calculate food cost %?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
@@ -426,8 +440,8 @@
         <h2 class="section-title">Related pages</h2>
       </div>
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:2rem">
-        <div class="card hover"><h3>The platform</h3><p>See every module behind these reports, LiveStats, Store Health, Pacing, Financials, Auditing, and the Report Builder.</p><a class="btn-link" href="platform.html">Explore the platform<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-        <div class="card hover"><h3>Multi-location dashboards</h3><p>How myAnalyst consolidates dozens of stores into one live, ranked view for above-store leaders.</p><a class="btn-link" href="multi-location-dashboard-software.html">Multi-location dashboards<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <div class="card hover"><h3>The platform</h3><p>Every module behind these reports: LiveStats, Store Health, Pacing, Financials, Auditing, and the Report Builder.</p><a class="btn-link" href="platform.html">Explore the platform<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <div class="card hover"><h3>Multi-location dashboards</h3><p>Consolidate dozens of stores into one live, ranked view for above-store leaders.</p><a class="btn-link" href="multi-location-dashboard-software.html">Multi-location dashboards<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
         <div class="card hover"><h3>Glossary &amp; industries</h3><p>Definitions for every metric on this page, plus the other industries myAnalyst is tuned for.</p><a class="btn-link" href="glossary.html">Open the glossary<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><br/><a class="btn-link" href="industries.html" style="margin-top:.6rem">All industries<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
     </div>
@@ -461,7 +475,7 @@
       </div>
       <div class="footer-top">
         <div>
-          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
           <p class="footer-blurb" style="margin-top:1rem">myAnalyst, real-time analytics, Store Health scoring, and alerts for multi-unit auto-service operators. A product of SiteTech Systems. Built by operators, for operators.</p>
           <address class="footer-address" style="margin-top:1.2rem">
             <a href="tel:18438089716">843-808-9716</a><br/>
@@ -478,6 +492,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260624e" defer></script>
+  <script src="assets/js/main.js?v=20260625b" defer></script>
+  <script src="assets/js/herofx.js?v=20260625b" defer></script>
+  <script src="assets/js/demo.js?v=20260625b" defer></script>
 </body>
 </html>

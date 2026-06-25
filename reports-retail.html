@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260624e" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260625b" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -108,7 +108,7 @@
             "name": "Can myAnalyst separate inside sales from fuel?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. myAnalyst reads your POS read-only and splits merchandise (inside) sales from fuel so you can track inside sales (around $58.4K per store), basket size (around $22.10), and inside margin (around 31.8%) on their own, while fuel volume and fuel margin (cents per gallon) get their own report. You can view either stream by store, by shift, or rolled up across the whole chain."
+              "text": "Yes. myAnalyst reads your POS read-only and splits merchandise (inside) sales from fuel. Track inside sales (around $58.4K per store), basket size (around $22.10), and inside margin (around 31.8%) on their own, while fuel volume and fuel margin in cents per gallon get their own report. View either stream by store, by shift, or across the whole chain."
             }
           },
           {
@@ -116,7 +116,7 @@
             "name": "How does myAnalyst help with c-store shrink and cash control?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The Auditing & Compliance and Financials modules surface shrink and inventory variance, voids, refunds, no-sales, over/short, discounts, and paid in / paid out by store, register, cashier, and shift. Signals can text a district manager the moment a register runs over/short past your threshold or a cashier's void rate spikes, so leakage is caught the same day instead of at month-end."
+              "text": "The Auditing & Compliance and Financials modules surface shrink and inventory variance, voids, refunds, no-sales, over/short, discounts, and paid in / paid out by store, register, cashier, and shift. Signals texts a district manager the moment a register runs over/short past your threshold or a cashier's void rate spikes, so leakage is caught the same day, not at month-end."
             }
           },
           {
@@ -154,7 +154,7 @@
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="platform.html">Platform</a>
         <a href="pro.html">Pro</a>
@@ -180,11 +180,11 @@
   <nav class="container crumbs" aria-label="Breadcrumb" style="padding-top:1.1rem"><a href="index.html">Home</a><span class="sep">›</span><a href="industries.html">Industries</a><span class="sep">›</span><span aria-current="page">Retail &amp; c-store reports</span></nav>
 
   <!-- ============ HERO ============ -->
-  <section class="page-hero">
+  <section class="page-hero" data-hero-fx="bars">
     <div class="container">
       <span class="eyebrow" style="justify-content:center">Retail &amp; c-store · report reference</span>
       <h1 class="display" style="margin-top:1rem">Every retail &amp; c-store report,<br/><span class="text-grad">by store and by shift.</span></h1>
-      <p class="lead" style="margin:1.2rem auto 0;max-width:62ch">A complete reference of every report myAnalyst builds for convenience-store and multi-location retail operators, inside sales, fuel margin, basket size, daypart mix, shrink, voids and over/short, Store Health, and pacing. Read-only from your POS, refreshed every 5 minutes, scored 0 to 100 for every location.</p>
+      <p class="lead" style="margin:1.2rem auto 0;max-width:62ch">Every report myAnalyst builds for c-store and multi-location retail. Read-only from your POS, refreshed every 5 minutes, scored 0 to 100 per location.</p>
       <div class="hero-actions" style="justify-content:center">
         <a class="btn btn-amber btn-lg" href="contact.html">Book a demo</a>
         <a class="btn btn-ghost btn-lg" href="platform.html">See the platform</a>
@@ -198,7 +198,7 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">How this page works</span>
         <h2 class="section-title">Eighteen retail reports, grouped by the team that runs them</h2>
-        <p class="lead">myAnalyst reads your point-of-sale read-only and turns it into store-by-store reports for Operations, Margin &amp; Finance, Loss Prevention, growth, and alerting. Below is every report we ship for convenience and retail, with the exact metrics each one shows. New to a term? Open the <a class="btn-link" href="glossary.html">glossary</a>. Want the full toolset? See the <a class="btn-link" href="platform.html">platform</a> or the <a class="btn-link" href="multi-location-dashboard-software.html">multi-location dashboard</a>.</p>
+        <p class="lead">myAnalyst reads your POS read-only and turns it into store-by-store reports for Operations, Margin &amp; Finance, Loss Prevention, growth, and alerting. New to a term? Open the <a class="btn-link" href="glossary.html">glossary</a>. Want the full toolset? See the <a class="btn-link" href="platform.html">platform</a> or the <a class="btn-link" href="multi-location-dashboard-software.html">multi-location dashboard</a>.</p>
       </div>
     </div>
   </section>
@@ -209,28 +209,28 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Operations</span>
         <h2 class="section-title">Inside sales, baskets &amp; dayparts</h2>
-        <p class="lead">The day-to-day store reports, what sold, how big the basket was, and which shift moved it, for every location, refreshed every 5 minutes from <a class="btn-link" href="platform.html">LiveStats</a>.</p>
+        <p class="lead">What sold, how big the basket was, and which shift moved it, for every location, refreshed every 5 minutes from <a class="btn-link" href="platform.html">LiveStats</a>.</p>
       </div>
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
         <div class="card hover">
           <div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m5 14V9m5 10V7m5 12V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
           <h3>Inside Sales by Store &amp; Shift</h3>
-          <p>Merchandise (inside) sales split from fuel, by store and shift, running about <strong>$58.4K</strong> per store with this-year-vs-last-year deltas, transaction count, and inside margin near <strong>31.8%</strong>. Roll up by district or rank the whole chain.</p>
+          <p>Merchandise (inside) sales split from fuel, by store and shift, around <strong>$58.4K</strong> per store, with this-year-vs-last-year deltas, transaction count, and inside margin near <strong>31.8%</strong>. Roll up by district or rank the chain.</p>
         </div>
         <div class="card hover">
           <div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.6" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="20" r="1.6" stroke="currentColor" stroke-width="2"/><path d="M6 6 5 3H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Basket Size &amp; Items-per-Basket</h3>
-          <p>Average <a class="btn-link" href="glossary.html#basket-size">basket size</a> (about <strong>$22.10</strong>), items per basket, and attach rate by store and shift. Spot the locations dragging the chain average down and coach the upsell.</p>
+          <p>Average <a class="btn-link" href="glossary.html#basket-size">basket size</a> (about <strong>$22.10</strong>), items per basket, and attach rate by store and shift. Spot the locations dragging the average down and coach the upsell.</p>
         </div>
         <div class="card hover">
           <div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Daypart Sales Mix</h3>
-          <p>Sales and traffic by <a class="btn-link" href="glossary.html#daypart">daypart</a>, morning rush, midday, evening, overnight, so you can match labor to demand and see which part of the day is soft at a given store.</p>
+          <p>Sales and traffic by <a class="btn-link" href="glossary.html#daypart">daypart</a>, morning rush, midday, evening, overnight. Match labor to demand and see which part of the day is soft at a given store.</p>
         </div>
         <div class="card hover">
           <div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
           <h3>Shift Performance &amp; Cashier Scorecard</h3>
-          <p>Sales, transactions, basket size, voids, and over/short per shift and per cashier. Rank operators across the chain and surface the clerks who need coaching versus the ones setting the pace.</p>
+          <p>Sales, transactions, basket size, voids, and over/short per shift and per cashier. Rank operators across the chain and surface who needs coaching.</p>
         </div>
       </div>
 
@@ -261,18 +261,18 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Margin &amp; Finance</span>
         <h2 class="section-title">Where the money actually comes from</h2>
-        <p class="lead">Fuel runs on pennies and inside runs on mix. These reports separate the two, expose category margin, and reconcile the till, drawn from the Financials module.</p>
+        <p class="lead">Fuel runs on pennies, inside runs on mix. The Financials module separates the two, exposes category margin, and reconciles the till.</p>
       </div>
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
         <div class="card hover">
           <div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Fuel Margin &amp; Volume</h3>
-          <p>Gallons sold, fuel sales, and fuel margin in cents per gallon by store and day, net of credit-card fees, so you can see street-price moves hit margin in near real time and compare pump performance across the chain.</p>
+          <p>Gallons sold, fuel sales, and fuel margin in cents per gallon by store and day, net of credit-card fees. See street-price moves hit margin in near real time and compare pumps across the chain.</p>
         </div>
         <div class="card hover">
           <div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h10M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="12" r="2.2" stroke="currentColor" stroke-width="2"/></svg></div>
           <h3>Category &amp; Department Margin</h3>
-          <p>Sales and gross margin by category, packaged beverage, tobacco, snacks, beer &amp; wine, foodservice, rolling to the blended inside margin near <strong>31.8%</strong>. See which department is carrying the store and which is eroding.</p>
+          <p>Sales and gross margin by category, packaged beverage, tobacco, snacks, beer &amp; wine, foodservice, rolling to a blended inside margin near <strong>31.8%</strong>. See which department carries the store and which erodes it.</p>
         </div>
         <div class="card hover">
           <div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/></svg></div>
@@ -282,7 +282,7 @@
         <div class="card hover">
           <div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 7h7a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Paid In / Paid Out &amp; Credit Memos</h3>
-          <p>Every drawer event, paid-ins, paid-outs, and credit memos, itemized by store, shift, and reason code. Catch undocumented cash leaving the till and reconcile vendor pay-outs against invoices.</p>
+          <p>Every drawer event, paid-ins, paid-outs, and credit memos, by store, shift, and reason code. Catch undocumented cash leaving the till and reconcile vendor pay-outs against invoices.</p>
         </div>
       </div>
 
@@ -307,28 +307,28 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Loss Prevention &amp; Auditing</span>
         <h2 class="section-title">Find the leakage before month-end</h2>
-        <p class="lead">Convenience runs on thin margins, so a few percent of shrink or a quiet void habit matters. The Auditing &amp; Compliance module flags it by store, register, cashier, and shift.</p>
+        <p class="lead">On thin margins, a few percent of shrink or a quiet void habit matters. The Auditing &amp; Compliance module flags it by store, register, cashier, and shift.</p>
       </div>
       <div class="grid grid-4 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
         <div class="card hover">
           <div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4v6c0 5-4 8-9 8s-9-3-9-8V7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Shrink &amp; Inventory Variance</h3>
-          <p><a class="btn-link" href="glossary.html#shrink">Shrink</a> as a percent of sales and dollars by store and category, with variance trended over time so a creeping problem is obvious before the physical count confirms it.</p>
+          <p><a class="btn-link" href="glossary.html#shrink">Shrink</a> as a percent of sales and in dollars by store and category, with variance trended over time so a creeping problem shows before the physical count confirms it.</p>
         </div>
         <div class="card hover">
           <div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M5 6h14M5 12h14M5 18h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 4l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Voids, Refunds &amp; No-Sales</h3>
-          <p><a class="btn-link" href="glossary.html#void">Void</a>, refund, and no-sale counts and dollars by cashier and shift, with rate vs the chain norm so an outlier clerk surfaces instead of hiding in the store total.</p>
+          <p><a class="btn-link" href="glossary.html#void">Void</a>, refund, and no-sale counts and dollars by cashier and shift, with rate vs the chain norm so an outlier clerk surfaces instead of hiding in the total.</p>
         </div>
         <div class="card hover">
           <div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
           <h3>Over / Short &amp; Cash Reconciliation</h3>
-          <p><a class="btn-link" href="glossary.html#over-short">Over/short</a> by drawer, cashier, and shift against expected cash, flag the registers and operators that consistently miss, and reconcile each shift's deposit.</p>
+          <p><a class="btn-link" href="glossary.html#over-short">Over/short</a> by drawer, cashier, and shift against expected cash. Flag the registers and operators that consistently miss, and reconcile each shift's deposit.</p>
         </div>
         <div class="card hover">
           <div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M7 7l10 10M9 4h7a4 4 0 0 1 4 4v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="6.5" r="2" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="17.5" r="2" stroke="currentColor" stroke-width="2"/></svg></div>
           <h3>Discounts &amp; Promotions Audit</h3>
-          <p>Manual discounts, employee discounts, and promo redemptions by cashier and shift, so margin given away at the register is visible and you can tell deliberate promotions from discount abuse.</p>
+          <p>Manual discounts, employee discounts, and promo redemptions by cashier and shift. See margin given away at the register and tell real promotions from discount abuse.</p>
         </div>
       </div>
     </div>
@@ -341,14 +341,14 @@
         <div class="reveal">
           <span class="eyebrow">Store Health &amp; Pacing</span>
           <h2 class="section-title" style="margin-top:1rem">One score that tells you which store to call first</h2>
-          <p class="lead" style="margin-top:1rem">Every location gets a 0 to 100 <a class="btn-link" href="store-health-score.html">Store Health</a> score and A to F grade from five weighted pillars, Growth 25%, Goal 25%, Loyalty 20%, Standing 15%, Operations 15%, ranked against the rest of your chain. Pair it with <a class="btn-link" href="glossary.html#pacing-forecast">Pacing &amp; Forecast</a> to see month-to-date pace vs budget, projected to month-end.</p>
+          <p class="lead" style="margin-top:1rem">Every location gets a 0 to 100 <a class="btn-link" href="store-health-score.html">Store Health</a> score and A to F grade from five weighted pillars, Growth 25%, Goal 25%, Loyalty 20%, Standing 15%, Operations 15%, ranked against your chain. Pair it with <a class="btn-link" href="glossary.html#pacing-forecast">Pacing &amp; Forecast</a> for month-to-date pace vs budget, projected to month-end.</p>
           <div class="hero-actions"><a href="store-health-score.html" class="btn btn-primary btn-lg">How scoring works</a></div>
         </div>
         <div class="reveal d1">
           <div class="card" style="background:var(--elevated);border-color:var(--border-2)">
             <div style="display:flex;align-items:center;gap:22px;margin-bottom:20px">
               <div class="score-ring">
-                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#1dac92" stroke-width="4.5" stroke-dasharray="74 26" stroke-linecap="round"/></svg>
+                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="rgba(15,14,11,.08)" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#1dac92" stroke-width="4.5" stroke-dasharray="74 26" stroke-linecap="round"/></svg>
                 <div class="sc-center"><div class="sc-grade" style="color:var(--teal-600)">B</div><div class="sc-num">74 / 100</div></div>
               </div>
               <div>
@@ -372,7 +372,7 @@
         <div class="card hover">
           <div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 7 14.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
           <h3>Store Health Score</h3>
-          <p>A 0 to 100 wellness score and A to F grade per store from the five weighted pillars, ranked against chain percentiles, so you scan the whole portfolio in seconds and drill into any store in one click.</p>
+          <p>A 0 to 100 wellness score and A to F grade per store from the five weighted pillars, ranked against chain percentiles. Scan the portfolio in seconds and drill into any store in one click.</p>
         </div>
         <div class="card hover">
           <div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -382,7 +382,7 @@
         <div class="card hover">
           <div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M8 21h8m-4-4v4M6 4h12v6a6 6 0 0 1-12 0V4zM6 6H4v2a3 3 0 0 0 3 3m11-5h2v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Wall of Records &amp; Rankings</h3>
-          <p>All-time single-day inside-sales and basket records, plus current-period rankings by store and cashier, friendly competition that drives the floor and the morning huddle.</p>
+          <p>All-time single-day inside-sales and basket records, plus current-period rankings by store and cashier. Friendly competition for the floor and the morning huddle.</p>
         </div>
       </div>
     </div>
@@ -400,12 +400,12 @@
         <div class="card hover">
           <div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg></div>
           <h3>Geospatial Trade-Area Map</h3>
-          <p>Heatmaps, choropleths, and drive-time <a class="btn-link" href="glossary.html#trade-area">trade areas</a> around each store, see customer origin, demand density, and where two locations cannibalize each other before you sign the next lease.</p>
+          <p>Heatmaps, choropleths, and drive-time <a class="btn-link" href="glossary.html#trade-area">trade areas</a> around each store. See customer origin, demand density, and where two locations cannibalize each other before the next lease.</p>
         </div>
         <div class="card hover">
           <div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div>
           <h3>Signals SMS Alerts</h3>
-          <p>SMS &amp; MMS alerts that reach a manager the moment a KPI crosses a threshold, a drawer running over/short past tolerance, a void-rate spike, or a store behind budget pace, with escalation routing and no app to open. <a class="btn-link" href="add-ons.html">An add-on.</a></p>
+          <p>SMS &amp; MMS alerts that reach a manager the moment a KPI crosses a threshold, a drawer over/short past tolerance, a void-rate spike, or a store behind pace, with escalation routing and no app to open. <a class="btn-link" href="add-ons.html">An add-on.</a></p>
         </div>
       </div>
 
@@ -418,8 +418,22 @@
         <div class="card hover">
           <div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h12l-1 7H7L6 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 14h6l1 7H8l1-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
           <h3>Invoice Lookup &amp; Pro Briefing</h3>
-          <p>Find any transaction by store, register, or amount in seconds, and with <a class="btn-link" href="pro.html">myAnalyst Pro</a>, an AI-written monthly briefing in plain English summarizes inside-sales trends, margin moves, and audit flags across every location.</p>
+          <p>Find any transaction by store, register, or amount in seconds. With <a class="btn-link" href="pro.html">myAnalyst Pro</a>, an AI-written monthly briefing sums up inside-sales trends, margin moves, and audit flags across every location in plain English.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INVOICE LOOKUP ============ -->
+  <section class="section" id="invoice-lookup">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Invoice lookup</span>
+        <h2 class="section-title">Pull any ticket in seconds</h2>
+        <p class="lead">Search a ticket, invoice, or VIN and see the full line items, advisor, and payment. Try it.</p>
+      </div>
+      <div class="reveal d1" style="max-width:600px;margin:clamp(28px,4vw,44px) auto 0">
+        <div data-invoice aria-label="Interactive invoice lookup"></div>
       </div>
     </div>
   </section>
@@ -434,11 +448,11 @@
       <div class="faq reveal d1" style="margin-top:2rem">
         <details class="faq-item">
           <summary>Can myAnalyst separate inside sales from fuel?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
-          <div class="fq-body"><p>Yes. myAnalyst reads your POS read-only and splits merchandise (inside) sales from fuel so you can track inside sales (around <strong>$58.4K</strong> per store), <a class="btn-link" href="glossary.html#basket-size">basket size</a> (around <strong>$22.10</strong>), and inside margin (around <strong>31.8%</strong>) on their own, while fuel volume and fuel margin in cents per gallon get their own report. View either stream by store, by shift, or rolled up across the whole chain.</p></div>
+          <div class="fq-body"><p>Yes. myAnalyst reads your POS read-only and splits merchandise (inside) sales from fuel. Track inside sales (around <strong>$58.4K</strong> per store), <a class="btn-link" href="glossary.html#basket-size">basket size</a> (around <strong>$22.10</strong>), and inside margin (around <strong>31.8%</strong>) on their own, while fuel volume and fuel margin in cents per gallon get their own report. View either stream by store, by shift, or across the whole chain.</p></div>
         </details>
         <details class="faq-item">
           <summary>How does myAnalyst help with c-store shrink and cash control?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
-          <div class="fq-body"><p>The Auditing &amp; Compliance and Financials modules surface <a class="btn-link" href="glossary.html#shrink">shrink</a> and inventory variance, <a class="btn-link" href="glossary.html#void">voids</a>, refunds, no-sales, <a class="btn-link" href="glossary.html#over-short">over/short</a>, discounts, and paid in / paid out by store, register, cashier, and shift. Signals can text a district manager the moment a register runs over/short past your threshold or a cashier's void rate spikes, so leakage is caught the same day instead of at month-end.</p></div>
+          <div class="fq-body"><p>The Auditing &amp; Compliance and Financials modules surface <a class="btn-link" href="glossary.html#shrink">shrink</a> and inventory variance, <a class="btn-link" href="glossary.html#void">voids</a>, refunds, no-sales, <a class="btn-link" href="glossary.html#over-short">over/short</a>, discounts, and paid in / paid out by store, register, cashier, and shift. Signals texts a district manager the moment a register runs over/short past your threshold or a cashier's void rate spikes, so leakage is caught the same day, not at month-end.</p></div>
         </details>
         <details class="faq-item">
           <summary>How often do the retail dashboards refresh?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
@@ -457,7 +471,7 @@
     <div class="container">
       <div class="cta-band reveal">
         <h2 class="section-title">See your stores, scored and live.</h2>
-        <p class="lead">Book a 30-minute demo and we'll stand myAnalyst up on your own POS, inside sales, fuel margin, baskets, shrink, and Store Health for every location. Or browse all the industries we serve.</p>
+        <p class="lead">Book a 30-minute demo and we'll stand myAnalyst up on your own POS, inside sales, fuel margin, baskets, shrink, and Store Health for every location.</p>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-amber btn-lg">Book a demo</a>
           <a href="industries.html" class="btn btn-ghost btn-lg">All industries</a>
@@ -480,7 +494,7 @@
       </div>
       <div class="footer-top">
         <div>
-          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
           <p class="footer-blurb" style="margin-top:1rem">myAnalyst, real-time analytics, Store Health scoring, and alerts for multi-unit auto-service operators. A product of SiteTech Systems. Built by operators, for operators.</p>
           <address class="footer-address" style="margin-top:1.2rem">
             <a href="tel:18438089716">843-808-9716</a><br/>
@@ -497,6 +511,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260624e" defer></script>
+  <script src="assets/js/main.js?v=20260625b" defer></script>
+  <script src="assets/js/herofx.js?v=20260625b" defer></script>
+  <script src="assets/js/demo.js?v=20260625b" defer></script>
 </body>
 </html>

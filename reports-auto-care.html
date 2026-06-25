@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260624e" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260625b" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -106,7 +106,7 @@
             "name": "Which auto service reports does myAnalyst build from my POS?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "myAnalyst reads your POS read-only and builds every report on this page from it, LiveStats (car count, ARO, average ticket, labor dollars, revenue per hour), service-time and bay/technician productivity, coupon ROI, guest-origin mapping, VIN- and household-level retention, means of payment, paid in/out, credit memos, voids and over/short auditing, Store Health scoring, budget pacing, the Wall of Records, and SMS Signals. Data refreshes every 5 minutes."
+              "text": "myAnalyst reads your POS read-only and builds every report here from it: LiveStats (car count, ARO, average ticket, labor dollars, revenue per hour), service-time and bay/technician productivity, coupon ROI, guest-origin mapping, VIN- and household-level retention, means of payment, paid in/out, credit memos, voids and over/short auditing, Store Health scoring, budget pacing, the Wall of Records, and SMS Signals. Data refreshes every 5 minutes."
             }
           },
           {
@@ -153,7 +153,7 @@
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="platform.html">Platform</a>
         <a href="pro.html">Pro</a>
@@ -179,11 +179,11 @@
   <nav class="container crumbs" aria-label="Breadcrumb" style="padding-top:1.1rem"><a href="index.html">Home</a><span class="sep">›</span><a href="industries.html">Industries</a><span class="sep">›</span><span aria-current="page">Auto service reports</span></nav>
 
   <!-- ============ HERO ============ -->
-  <section class="page-hero">
+  <section class="page-hero" data-hero-fx="bars">
     <div class="container">
       <span class="eyebrow" style="justify-content:center">Report reference · Auto service</span>
       <h1 class="display" style="margin-top:1rem">Every auto service report myAnalyst builds<br/><span class="text-grad">from your POS, by store</span></h1>
-      <p class="lead" style="margin:1.2rem auto 0;max-width:62ch">A deep reference for quick-lube, tire, and repair operators, every dashboard and report organized by department, from car count and ARO to VIN-level retention, voids, and budget pacing. Read-only from your POS, refreshed every 5 minutes.</p>
+      <p class="lead" style="margin:1.2rem auto 0;max-width:62ch">Every dashboard for quick-lube, tire, and repair, read-only from your POS and refreshed every 5 minutes.</p>
       <div class="hero-actions" style="justify-content:center"><a class="btn btn-amber btn-lg" href="contact.html">Book a demo</a><a class="btn btn-ghost btn-lg" href="platform.html">See the platform</a></div>
     </div>
   </section>
@@ -194,7 +194,7 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">How this reference is organized</span>
         <h2 class="section-title">Reports grouped by how an auto-service chain runs</h2>
-        <p class="lead">myAnalyst reads your point-of-sale system read-only and rebuilds it into live, store-by-store reporting, no exports, no re-keying. Below, every report is grouped by use case: Operations, Sales &amp; Marketing, Retention, Finance, Loss Prevention &amp; Auditing, plus cross-cutting Store Health, Pacing, the Wall of Records, and Signals. New to a term? See the <a href="glossary.html" class="btn-link" style="display:inline-flex">glossary<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+        <p class="lead">myAnalyst reads your POS read-only and rebuilds it into live, store-by-store reporting. Reports are grouped by use case: Operations, Sales &amp; Marketing, Retention, Finance, Loss Prevention &amp; Auditing, plus Store Health, Pacing, the Wall of Records, and Signals. New to a term? See the <a href="glossary.html" class="btn-link" style="display:inline-flex">glossary<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
       </div>
     </div>
   </section>
@@ -205,14 +205,14 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Operations</span>
         <h2 class="section-title">Run today's bays in real time</h2>
-        <p class="lead">The numbers a district or store manager checks before the first car is on the lift, and again at close.</p>
+        <p class="lead">The numbers managers check before the first car is on the lift, and again at close.</p>
       </div>
 
       <div class="feature-row reveal" style="margin-top:clamp(36px,4vw,56px)">
         <div class="fr-copy">
           <span class="tag">LiveStats</span>
           <h3 class="section-title" style="margin-top:1rem;font-size:clamp(1.5rem,3vw,2rem)">Store-by-store grid, every 5 minutes</h3>
-          <p class="lead" style="margin-top:.8rem">Today vs last year for every shop, net sales, car count (~1,284/store), ARO (~$78), average ticket, labor dollars, labor % (~27.6%), and revenue per hour. Outliers jump out in green and red, and you can group by Market, Regional Manager, or District Manager.</p>
+          <p class="lead" style="margin-top:.8rem">Today vs last year for every shop: net sales, car count (~1,284/store), ARO (~$78), average ticket, labor dollars, labor % (~27.6%), and revenue per hour. Outliers show in green and red. Group by Market, Regional Manager, or District Manager.</p>
           <ul class="fr-list">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Year-over-year deltas on every column, color-coded</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full-service mix and revenue per labor hour per store</li>
@@ -241,9 +241,9 @@
       </div>
 
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m5 14V9m5 10V7m5 12V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Sales &amp; car-count summary</h3><p>Net sales, car count, ARO, and average ticket per store and per group, today / WTD / MTD with prior-year comparisons, the daily scorecard for the whole chain.</p></div>
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Service-time &amp; throughput</h3><p>Average time in bay and cars-per-bay-hour by store and daypart, so you can see where throughput is choking and which shops turn vehicles fastest.</p></div>
-        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Bay &amp; technician productivity</h3><p>Revenue per hour, cars per technician, and technician efficiency ranked by store, see who is producing and where labor % (~27.6%) is running hot.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m5 14V9m5 10V7m5 12V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Sales &amp; car-count summary</h3><p>Net sales, car count, ARO, and average ticket per store and group, today / WTD / MTD vs prior year. The daily scorecard for the chain.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Service-time &amp; throughput</h3><p>Average time in bay and cars-per-bay-hour by store and daypart. See where throughput is choking and which shops turn vehicles fastest.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Bay &amp; technician productivity</h3><p>Revenue per hour, cars per technician, and efficiency ranked by store. See who is producing and where labor % (~27.6%) runs hot.</p></div>
       </div>
     </div>
   </section>
@@ -257,9 +257,9 @@
         <p class="lead">Tie spend and promotions to actual tickets, and see where your guests come from.</p>
       </div>
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Coupon &amp; promotion ROI</h3><p>Redemptions, discount dollars, incremental car count, and resulting ARO per offer and per store, coupon ROI you can defend, so you keep the promos that pay and kill the ones that don't.</p></div>
-        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg></div><h3>Guest-origin Customer Mapping</h3><p>Plot guest home ZIPs against each store's trade area to see true draw, overlap between shops, and underserved pockets, the basis for targeted mailers and the Real Estate add-on.</p></div>
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m5 14V9m5 10V7m5 12V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Daypart car-flow</h3><p>Car count and net sales by hour and day of week per store, staff the bays for the rush, spot soft middays, and time promotions to fill the slow hours.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Coupon &amp; promotion ROI</h3><p>Redemptions, discount dollars, incremental car count, and ARO per offer and store. Keep the promos that pay, kill the ones that don't.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg></div><h3>Guest-origin Customer Mapping</h3><p>Plot guest home ZIPs against each store's trade area to see true draw, shop overlap, and underserved pockets. Feeds targeted mailers and the Real Estate add-on.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m5 14V9m5 10V7m5 12V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Daypart car-flow</h3><p>Car count and net sales by hour and day of week per store. Staff for the rush, spot soft middays, and time promos to the slow hours.</p></div>
       </div>
     </div>
   </section>
@@ -277,7 +277,7 @@
         <div class="fr-copy">
           <span class="tag">Retention</span>
           <h3 class="section-title" style="margin-top:1rem;font-size:clamp(1.5rem,3vw,2rem)">Every vehicle, tagged by where it is in its cycle</h3>
-          <p class="lead" style="margin-top:.8rem">Each VIN is scored against its service interval and tagged on-track, due-soon, overdue, or lapsed. Roll vehicles up to a household to see total customer lifetime value, recency / frequency / monetary (RFM) segments, and the revenue at risk if overdue vehicles don't come back.</p>
+          <p class="lead" style="margin-top:.8rem">Each VIN is scored against its service interval and tagged on-track, due-soon, overdue, or lapsed. Roll vehicles up to a household for total customer lifetime value, recency / frequency / monetary (RFM) segments, and the revenue at risk if overdue vehicles don't return.</p>
           <ul class="fr-list">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>VIN lifecycle: on-track · due-soon · overdue · lapsed</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Household CLV and RFM segments</li>
@@ -310,9 +310,9 @@
       </div>
 
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Household CLV &amp; RFM</h3><p>Lifetime value per household and recency/frequency/monetary segments, find your best repeat customers and the ones slipping toward lapse before they're gone.</p></div>
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h10M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="12" r="2.2" stroke="currentColor" stroke-width="2"/></svg></div><h3>Due-for-service export</h3><p>A contactable list of vehicles due-soon or overdue by store, with last service date and recommended next service, ready for mail, email, or your SMS provider.</p></div>
-        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>At-risk revenue</h3><p>The dollar value of overdue and lapsed vehicles per store, projected from their historical ARO, quantifies exactly what reactivation is worth.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Household CLV &amp; RFM</h3><p>Lifetime value per household and recency/frequency/monetary segments. Find your best repeat customers and the ones slipping toward lapse.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h10M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="12" r="2.2" stroke="currentColor" stroke-width="2"/></svg></div><h3>Due-for-service export</h3><p>A contactable list of due-soon and overdue vehicles by store, with last service date and recommended next service. Ready for mail, email, or SMS.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>At-risk revenue</h3><p>The dollar value of overdue and lapsed vehicles per store, projected from their historical ARO. Shows what reactivation is worth.</p></div>
       </div>
     </div>
   </section>
@@ -323,12 +323,12 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Finance</span>
         <h2 class="section-title">Reconcile the day without the spreadsheet</h2>
-        <p class="lead">Tender, cash movements, and credit memos pulled straight from the POS, by store and by day.</p>
+        <p class="lead">Tender, cash movements, and credit memos straight from the POS, by store and day.</p>
       </div>
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/></svg></div><h3>Means of payment</h3><p>Cash, credit, debit, fleet, and house-account mix per store and per day, see tender shifts, fleet concentration, and where card fees are climbing.</p></div>
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 8h7a2.5 2.5 0 0 1 0 5H7m10 0h-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Paid in / paid out</h3><p>Every drawer paid-in and paid-out with reason codes by store and employee, track petty cash, supply runs, and the entries that don't reconcile.</p></div>
-        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Credit memos</h3><p>Refunds and credit memos by store, employee, and reason, flag spikes, repeat issuers, and the days where credits don't line up with the deposit.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/></svg></div><h3>Means of payment</h3><p>Cash, credit, debit, fleet, and house-account mix per store and day. Spot tender shifts, fleet concentration, and climbing card fees.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 8h7a2.5 2.5 0 0 1 0 5H7m10 0h-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Paid in / paid out</h3><p>Every drawer paid-in and paid-out with reason codes by store and employee. Track petty cash, supply runs, and entries that don't reconcile.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="M8 10h8M8 14h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><h3>Credit memos</h3><p>Refunds and credit memos by store, employee, and reason. Flag spikes, repeat issuers, and days where credits don't match the deposit.</p></div>
       </div>
     </div>
   </section>
@@ -339,12 +339,12 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Loss Prevention &amp; Auditing</span>
         <h2 class="section-title">See the leakage before it adds up</h2>
-        <p class="lead">Auditing &amp; Compliance reporting surfaces the exceptions worth coaching, by store and by employee.</p>
+        <p class="lead">Auditing &amp; Compliance reporting surfaces the exceptions worth coaching, by store and employee.</p>
       </div>
       <div class="grid grid-3 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M8 12h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div><h3>Voids &amp; over/short</h3><p>Void count and dollars and cash over/short by store, employee, and shift, with trend lines so a creeping pattern surfaces before it becomes a number you can't explain.</p></div>
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/></svg></div><h3>Discount audit</h3><p>Discount usage by type, employee, and store as a share of sales, catch over-discounting, off-policy manager comps, and the shops eroding ARO with markdowns.</p></div>
-        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Top-offs, warranty &amp; aborted sales</h3><p>Free top-offs, warranty / comeback claims, aborted sales, and data-capture quality by store, the operational exceptions that quietly cost margin and skew your numbers.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M8 12h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div><h3>Voids &amp; over/short</h3><p>Void count, void dollars, and cash over/short by store, employee, and shift, with trend lines so creeping patterns surface early.</p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/></svg></div><h3>Discount audit</h3><p>Discount usage by type, employee, and store as a share of sales. Catch over-discounting, off-policy comps, and shops eroding ARO with markdowns.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Top-offs, warranty &amp; aborted sales</h3><p>Free top-offs, warranty / comeback claims, aborted sales, and data-capture quality by store. The exceptions that quietly cost margin and skew your numbers.</p></div>
       </div>
     </div>
   </section>
@@ -355,14 +355,14 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Cross-cutting · Store Health &amp; Pacing</span>
         <h2 class="section-title">One score, and where the month lands</h2>
-        <p class="lead">Two reports every operator opens first: the 0 to 100 Store Health grade and the budget pace. See how the score is built on the <a href="store-health-score.html" class="btn-link" style="display:inline-flex">Store Health page<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+        <p class="lead">The two reports every operator opens first: the 0 to 100 Store Health grade and the budget pace. See how the score is built on the <a href="store-health-score.html" class="btn-link" style="display:inline-flex">Store Health page<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
       </div>
 
       <div class="pro-feature" style="margin-top:clamp(36px,4vw,56px)">
         <div class="reveal">
           <span class="eyebrow">Store Health</span>
           <h3 class="section-title" style="margin-top:1rem;font-size:clamp(1.5rem,3vw,2rem)">A 0 to 100 grade per store, from five weighted pillars</h3>
-          <p class="lead" style="margin-top:1rem">Each location gets one score and an A to F grade built from Growth (25%), Goal (25%), Loyalty (20%), Standing (15%), and Operations (15%), ranked against the rest of your chain. Scan the whole portfolio in seconds; click into any store to see which pillar is dragging.</p>
+          <p class="lead" style="margin-top:1rem">Each location gets one score and an A to F grade from five pillars: Growth (25%), Goal (25%), Loyalty (20%), Standing (15%), and Operations (15%), ranked against your chain. Scan the portfolio in seconds, then click into any store to see which pillar is dragging.</p>
           <ul class="fr-list" style="margin-top:1.2rem">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Chain percentile ranking on every pillar</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Week-over-week movement, up or down</li>
@@ -372,7 +372,7 @@
           <div class="card" style="background:var(--elevated);border-color:var(--border-2)">
             <div style="display:flex;align-items:center;gap:22px;margin-bottom:20px">
               <div class="score-ring">
-                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#1dac92" stroke-width="4.5" stroke-dasharray="78 22" stroke-linecap="round"/></svg>
+                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="rgba(15,14,11,.08)" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#1dac92" stroke-width="4.5" stroke-dasharray="78 22" stroke-linecap="round"/></svg>
                 <div class="sc-center"><div class="sc-grade" style="color:var(--teal-600)">B</div><div class="sc-num">78 / 100</div></div>
               </div>
               <div>
@@ -393,8 +393,8 @@
       </div>
 
       <div class="grid grid-2 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Pacing &amp; Forecast vs budget</h3><p>Month-to-date sales and car count vs budget per store, with shape-adjusted projections to month-end and an ahead / on-track / behind status, so you know which shops will miss while there's still time to act.</p></div>
-        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M5 21V8l7-5 7 5v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Budgets &amp; Goals tracking</h3><p>Goal attainment by store, market, and district against the budgets and goals you set, the same Goal pillar that feeds the Store Health score.</p></div>
+        <div class="card hover"><div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Pacing &amp; Forecast vs budget</h3><p>Month-to-date sales and car count vs budget per store, with shape-adjusted projections to month-end and an ahead / on-track / behind status. Catch misses while there's still time to act.</p></div>
+        <div class="card hover"><div class="c-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M5 21V8l7-5 7 5v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Budgets &amp; Goals tracking</h3><p>Goal attainment by store, market, and district against the budgets you set. The same Goal pillar that feeds the Store Health score.</p></div>
       </div>
     </div>
   </section>
@@ -405,11 +405,11 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Cross-cutting · Records &amp; Signals</span>
         <h2 class="section-title">Push the floor, and get pinged when it matters</h2>
-        <p class="lead">Two more reports that work across every department: friendly competition and automatic alerts.</p>
+        <p class="lead">Two reports that work across every department: friendly competition and automatic alerts.</p>
       </div>
       <div class="grid grid-2 reveal d1" data-stagger style="margin-top:clamp(36px,4vw,56px)">
-        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M8 21h8m-4-4v4M6 4h12v6a6 6 0 0 1-12 0V4zM6 6H4v2a3 3 0 0 0 3 3m11-5h2v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Wall of Records &amp; Rankings</h3><p>All-time single-day records for net sales, car count, and ARO, plus current-period rankings by store, technician, and district, the leaderboard that drives the bays.</p></div>
-        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Signals SMS alerts</h3><p>Threshold and anomaly alerts texted to the right manager the moment a number moves, behind budget pace, a void spike, a new record day, or a car-count drop. No app to open. <a href="add-ons.html" class="btn-link" style="display:inline-flex">An add-on<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p></div>
+        <div class="card hover"><div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M8 21h8m-4-4v4M6 4h12v6a6 6 0 0 1-12 0V4zM6 6H4v2a3 3 0 0 0 3 3m11-5h2v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Wall of Records &amp; Rankings</h3><p>All-time single-day records for net sales, car count, and ARO, plus current-period rankings by store, technician, and district. The leaderboard that drives the bays.</p></div>
+        <div class="card hover"><div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Signals SMS alerts</h3><p>Threshold and anomaly alerts texted to the right manager the moment a number moves: behind budget pace, a void spike, a record day, or a car-count drop. No app to open. <a href="add-ons.html" class="btn-link" style="display:inline-flex">An add-on<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p></div>
       </div>
       <div class="center" style="margin-top:2.4rem"><a href="platform.html" class="btn-link">Explore the full platform<svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
@@ -421,8 +421,22 @@
       <div class="cta-band reveal" style="background:var(--surface);border:1px solid var(--border-2)">
         <span class="eyebrow" style="justify-content:center">Build your own</span>
         <h2 class="section-title">Don't see the exact report? Build it.</h2>
-        <p class="lead">Every metric on this page is a field in the Report Builder. Drag and drop car count, ARO, labor %, voids, retention segments, and more into custom dashboards and saved trackers, the exact view your team needs, refreshed every 5 minutes. Pro adds an AI-written monthly briefing on top.</p>
+        <p class="lead">Every metric on this page is a field in the Report Builder. Drag and drop car count, ARO, labor %, voids, retention segments, and more into custom dashboards and saved trackers, refreshed every 5 minutes. Pro adds an AI-written monthly briefing.</p>
         <div class="hero-actions"><a href="platform.html" class="btn btn-primary btn-lg">See the Report Builder</a><a href="pro.html" class="btn btn-ghost btn-lg">Meet Pro</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INVOICE LOOKUP ============ -->
+  <section class="section" id="invoice-lookup">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Invoice lookup</span>
+        <h2 class="section-title">Pull any ticket in seconds</h2>
+        <p class="lead">Search a ticket, invoice, or VIN and see the full line items, advisor, and payment. Try it.</p>
+      </div>
+      <div class="reveal d1" style="max-width:600px;margin:clamp(28px,4vw,44px) auto 0">
+        <div data-invoice aria-label="Interactive invoice lookup"></div>
       </div>
     </div>
   </section>
@@ -435,7 +449,7 @@
         <h2 class="section-title">Auto service reporting questions</h2>
       </div>
       <div class="faq reveal d1" style="margin-top:clamp(28px,3vw,44px)">
-        <details class="faq-item"><summary>Which auto service reports does myAnalyst build from my POS?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary><div class="fq-body"><p>myAnalyst reads your POS read-only and builds every report on this page from it, LiveStats (car count, ARO, average ticket, labor dollars, revenue per hour), service-time and bay/technician productivity, coupon ROI, guest-origin mapping, VIN- and household-level retention, means of payment, paid in/out, credit memos, voids and over/short auditing, Store Health scoring, budget pacing, the Wall of Records, and SMS Signals. Data refreshes every 5 minutes.</p></div></details>
+        <details class="faq-item"><summary>Which auto service reports does myAnalyst build from my POS?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary><div class="fq-body"><p>myAnalyst reads your POS read-only and builds every report here from it: LiveStats (car count, ARO, average ticket, labor dollars, revenue per hour), service-time and bay/technician productivity, coupon ROI, guest-origin mapping, VIN- and household-level retention, means of payment, paid in/out, credit memos, voids and over/short auditing, Store Health scoring, budget pacing, the Wall of Records, and SMS Signals. Data refreshes every 5 minutes.</p></div></details>
         <details class="faq-item"><summary>How does myAnalyst calculate ARO and car count by store?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary><div class="fq-body"><p>ARO (Average Repair Order) is net sales divided by paid invoices, and car count is the number of vehicles serviced, both computed per store, per market, and per district directly from your closed POS tickets. Typical multi-unit auto-service stores run around a $78 ARO and roughly 1,284 cars per store, with year-over-year deltas color-coded in LiveStats. See the <a href="glossary.html">glossary</a> for term definitions.</p></div></details>
         <details class="faq-item"><summary>Can myAnalyst track repeat customers across vehicles and households?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary><div class="fq-body"><p>Yes. Retention reporting works at both the VIN level, tagging each vehicle on-track, due-soon, overdue, or lapsed against its service interval, and the household level, rolling multiple vehicles into one customer with RFM segments, customer lifetime value, and at-risk revenue. The due-for-service export turns overdue vehicles into a contactable list.</p></div></details>
         <details class="faq-item"><summary>Does myAnalyst help catch voids, discounts, and over/short at auto-service stores?<span class="fq-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary><div class="fq-body"><p>Yes. The Auditing &amp; Compliance reports surface voids, over/short, discount usage, top-offs, warranty claims, aborted sales, and data-capture quality by store and employee, so leakage and policy exceptions are easy to spot and coach. Signals can text a manager the moment a void or over/short threshold is crossed.</p></div></details>
@@ -448,7 +462,7 @@
     <div class="container">
       <div class="cta-band reveal">
         <h2 class="section-title">See every one of these reports on your own data.</h2>
-        <p class="lead">Book a 30-minute demo and we'll stand myAnalyst up on your POS, every report on this page, scored and live, across all your shops.</p>
+        <p class="lead">Book a 30-minute demo and we'll stand myAnalyst up on your POS, every report here scored and live across all your shops.</p>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-amber btn-lg">Book a demo</a>
           <a href="industries.html" class="btn btn-ghost btn-lg">All industries</a>
@@ -471,7 +485,7 @@
       </div>
       <div class="footer-top">
         <div>
-          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
           <p class="footer-blurb" style="margin-top:1rem">myAnalyst, real-time analytics, Store Health scoring, and alerts for multi-unit auto-service operators. A product of SiteTech Systems. Built by operators, for operators.</p>
           <address class="footer-address" style="margin-top:1.2rem">
             <a href="tel:18438089716">843-808-9716</a><br/>
@@ -488,6 +502,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260624e" defer></script>
+  <script src="assets/js/main.js?v=20260625b" defer></script>
+  <script src="assets/js/herofx.js?v=20260625b" defer></script>
+  <script src="assets/js/demo.js?v=20260625b" defer></script>
 </body>
 </html>

@@ -62,7 +62,7 @@
   });
 
   /* ---------- Scroll reveal ---------- */
-  var revealEls = document.querySelectorAll(".reveal");
+  var revealEls = document.querySelectorAll(".reveal, .reveal-scale");
   if (reduceMotion || !("IntersectionObserver" in window)) {
     revealEls.forEach(function (el) { el.classList.add("in"); });
   } else {
@@ -362,7 +362,7 @@
 
   /* ---------- Subtle 3D tilt on product frames ---------- */
   if (!reduceMotion && finePointer) {
-    var tiltEls = document.querySelectorAll(".hero-media .dash, .hero-media .report, .fr-media .shot, .fr-media .report");
+    var tiltEls = document.querySelectorAll(".hero-media .dash, .hero-media .report, .hero-media .appshot, .fr-media .shot, .fr-media .report");
     tiltEls.forEach(function (el) {
       var raf = null, lastE = null;
       el.addEventListener("pointermove", function (e) {
@@ -451,4 +451,46 @@
     document.querySelectorAll(".dash, .shot, .report").forEach(function (m) { dm.observe(m); });
   }
 
+})();
+
+/* ============================================================
+   Interactive ROI calculator ([data-roi])
+   ============================================================ */
+(function () {
+  "use strict";
+  var hosts = document.querySelectorAll("[data-roi]");
+  if (!hosts.length) return;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var PER = 2600; // $/location/yr, client-reported avg recovery (labor, voids, discount leakage)
+  function money(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
+  hosts.forEach(function (host) {
+    host.classList.add("roi");
+    host.innerHTML =
+      '<div class="roi-grid"><div class="roi-control">' +
+        '<h3>What could myAnalyst recover for you?</h3>' +
+        '<p class="lead" style="margin:.5rem 0 1.4rem;font-size:1rem">Drag to your number of locations. Estimated from client-reported recovery of labor, voids, and discount leakage.</p>' +
+        '<div class="roi-loclabel"><label for="roiRange">Locations</label><span class="n" data-loc>12</span></div>' +
+        '<input id="roiRange" type="range" min="2" max="250" value="12" step="1" aria-label="Number of locations" />' +
+        '<div class="roi-ticks"><span>2</span><span>250+</span></div>' +
+      '</div><div class="roi-result">' +
+        '<div class="roi-amount-label">Estimated annual recovery</div>' +
+        '<div class="roi-amount" data-amount>$0</div>' +
+        '<div class="roi-row"><div class="b"><strong data-month>$0</strong><small>per month</small></div><div class="b"><strong>~10x</strong><small>avg client ROI</small></div></div>' +
+        '<p class="roi-note">Illustrative estimate, not a guarantee. We size it on your real numbers in a demo.</p>' +
+        '<a href="contact.html" class="btn btn-amber" style="margin-top:1rem">See your number</a>' +
+      '</div></div>';
+    var range = host.querySelector("input"), locEl = host.querySelector("[data-loc]"),
+        amtEl = host.querySelector("[data-amount]"), moEl = host.querySelector("[data-month]");
+    function paintTrack(){ var p=(range.value-range.min)/(range.max-range.min)*100; range.style.background="linear-gradient(90deg,var(--teal) "+p+"%,var(--bg-3) "+p+"%)"; }
+    function setNow(){ var loc=+range.value; locEl.textContent=loc+(loc>=250?"+":""); var yr=loc*PER; amtEl.textContent=money(yr); moEl.textContent=money(yr/12); paintTrack(); }
+    function animateTo(){ var loc=+range.value; locEl.textContent=loc+(loc>=250?"+":""); var yr=loc*PER; paintTrack();
+      if(reduce){ amtEl.textContent=money(yr); moEl.textContent=money(yr/12); return; }
+      var start=null,dur=900; function step(ts){ if(start===null)start=ts; var k=Math.min((ts-start)/dur,1); var e=1-Math.pow(1-k,3); amtEl.textContent=money(yr*e); moEl.textContent=money(yr/12*e); if(k<1)requestAnimationFrame(step); } requestAnimationFrame(step); }
+    range.addEventListener("input", setNow);
+    if (!reduce && "IntersectionObserver" in window){
+      var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ animateTo(); io.unobserve(e.target); } }); },{threshold:.4});
+      io.observe(host);
+    }
+    setNow();
+  });
 })();

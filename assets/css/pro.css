@@ -1,0 +1,354 @@
+/* =============================================================
+   myAnalyst PRO — premium dark + gold theme (scoped to body.pro-page)
+   Loaded on top of styles.css, only on pro.html. Everything here is
+   namespaced under .pro-page so no other page is affected.
+   ============================================================= */
+.pro-page {
+  --pg-deep: #8a6310;   /* deep gold */
+  --pg-mid:  #c8902f;   /* gold */
+  --pg-1:    #f3c969;   /* bright gold */
+  --pg-glint:#fff3cf;   /* glint */
+  --pd-0:#08090b;       /* hero canvas */
+  --pd-1:#0e1217;       /* cards */
+  --pd-2:#151b22;       /* tiles */
+  --pd-line: rgba(255,255,255,.09);
+  --pd-line-2: rgba(255,255,255,.06);
+  --pd-fg-1:#f6f8fa;
+  --pd-fg-2:#aab3bf;
+  --pd-fg-3:#7d8794;
+}
+
+/* ---------- Gold shine (metallic sweep) ---------- */
+.pro-page .gold-shine {
+  background: linear-gradient(100deg,
+    var(--pg-deep) 0%, var(--pg-mid) 16%, var(--pg-1) 30%,
+    var(--pg-glint) 40%, var(--pg-1) 50%, var(--pg-mid) 66%,
+    var(--pg-1) 82%, var(--pg-deep) 100%);
+  background-size: 230% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  animation: pgShine 5.5s ease-in-out infinite;
+}
+@keyframes pgShine { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+/* ============================================================
+   Dark premium header (pro page only)
+   ============================================================ */
+.pro-page .site-header {
+  background: rgba(9,11,13,.78);
+  -webkit-backdrop-filter: saturate(150%) blur(16px); backdrop-filter: saturate(150%) blur(16px);
+  border-bottom: 1px solid var(--pd-line-2);
+}
+.pro-page .site-header.scrolled {
+  background: rgba(9,11,13,.95);
+  border-bottom-color: var(--pd-line);
+  box-shadow: 0 14px 40px -18px rgba(0,0,0,.7);
+}
+.pro-page .site-header::after {
+  background: linear-gradient(90deg, var(--pg-deep) 0%, var(--pg-1) 50%, var(--pg-deep) 100%);
+}
+/* brand lockup: white wordmark + gold PRO (compact so it clears the nav) */
+.pro-page .nav { gap: clamp(1.1rem, 2.2vw, 1.9rem); }
+.pro-page .nav-links { gap: clamp(.95rem, 1.4vw, 1.25rem); }
+.pro-page .brand-pro { display: inline-flex; align-items: center; gap: .5rem; flex: 0 0 auto; }
+.pro-page .brand-pro .brand-logo { height: 27px; width: auto; aspect-ratio: 1876 / 469; }
+.pro-page .brand-pro-tag {
+  font-weight: 800; font-size: .92rem; letter-spacing: .12em; line-height: 1; white-space: nowrap;
+  padding-left: .5rem; border-left: 1px solid rgba(255,255,255,.2);
+}
+/* nav */
+.pro-page .nav-links a { color: rgba(255,255,255,.78); }
+.pro-page .nav-links a:hover, .pro-page .nav-links a.active { color: #fff; }
+.pro-page .nav-links a::after { background: linear-gradient(90deg, var(--pg-mid), var(--pg-1)); }
+/* the current "Pro" link — gold shine, underline always on */
+.pro-page .nav-links a[href="pro.html"] {
+  font-weight: 700; letter-spacing: .01em;
+  background: linear-gradient(100deg, var(--pg-mid) 0%, var(--pg-1) 35%, var(--pg-glint) 50%, var(--pg-1) 65%, var(--pg-mid) 100%);
+  background-size: 230% 100%;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+  animation: pgShine 5.5s ease-in-out infinite;
+}
+.pro-page .nav-links a[href="pro.html"]::after { transform: scaleX(1); }
+/* nav CTAs on dark */
+.pro-page .nav-cta .btn-ghost { background: transparent; color: rgba(255,255,255,.85); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+.pro-page .nav-cta .btn-ghost:hover { background: rgba(255,255,255,.07); color: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,.32); }
+.pro-page .nav-cta .btn-primary {
+  background: linear-gradient(135deg, var(--pg-mid), var(--pg-1)); color: #2a1d05;
+  box-shadow: 0 10px 26px -10px rgba(243,201,105,.55);
+}
+.pro-page .nav-cta .btn-primary:hover { background: linear-gradient(135deg, var(--pg-1), var(--pg-glint)); color: #2a1d05; }
+.pro-page .nav-toggle span, .pro-page .nav-toggle span::before, .pro-page .nav-toggle span::after { background: #fff; }
+
+/* ============================================================
+   Buttons (pro)
+   ============================================================ */
+.pro-page .btn-gold {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--pg-mid) 0%, var(--pg-1) 55%, var(--pg-mid) 100%);
+  color: #2a1d05; font-weight: 700;
+  box-shadow: 0 12px 30px -10px rgba(243,201,105,.55), inset 0 1px 0 rgba(255,255,255,.5);
+}
+.pro-page .btn-gold:hover { background: linear-gradient(135deg, var(--pg-1) 0%, var(--pg-glint) 55%, var(--pg-1) 100%); color: #2a1d05; }
+.pro-page .btn-gold::after {
+  content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.65), transparent);
+  transform: skewX(-18deg); animation: pgSheen 4.5s ease-in-out infinite;
+}
+@keyframes pgSheen { 0% { left: -60%; } 22%,100% { left: 130%; } }
+.pro-page .btn-darkline { background: transparent; color: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,.24); }
+.pro-page .btn-darkline:hover { background: rgba(255,255,255,.06); box-shadow: inset 0 0 0 1px rgba(255,255,255,.4); }
+
+/* ============================================================
+   HERO — dark, cinematic, gold
+   ============================================================ */
+.pro-page .pro-hero {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: var(--pd-0); color: var(--pd-fg-1);
+  padding-block: clamp(96px, 13vw, 168px) clamp(72px, 9vw, 120px);
+}
+.pro-page .pro-hero-bg {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(60% 70% at 88% 8%, rgba(243,201,105,.18), transparent 60%),
+    radial-gradient(50% 60% at 96% 64%, rgba(200,144,47,.16), transparent 62%),
+    radial-gradient(48% 52% at 4% 96%, rgba(21,169,140,.10), transparent 64%),
+    linear-gradient(180deg, #0a0c0f 0%, #08090b 60%, #0a0b0e 100%);
+}
+.pro-page .pro-hero-bg::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 40%, #000, transparent 78%);
+  mask-image: radial-gradient(70% 70% at 50% 40%, #000, transparent 78%);
+}
+.pro-page .pro-hero-inner {
+  position: relative; display: grid; grid-template-columns: 1.02fr 1fr;
+  gap: clamp(36px, 5vw, 76px); align-items: center;
+}
+.pro-page .pro-pill {
+  display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.7rem;
+  padding: .45rem .95rem; border-radius: var(--r-pill);
+  background: rgba(243,201,105,.08); border: 1px solid rgba(243,201,105,.28);
+  color: var(--pg-1); font-size: .82rem; font-weight: 600; letter-spacing: .01em;
+}
+.pro-page .pro-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pg-1); box-shadow: 0 0 0 4px rgba(243,201,105,.16); }
+
+.pro-page .pro-h1 {
+  font-size: clamp(2.6rem, 5.4vw, 4.3rem); font-weight: 700; line-height: 1.04;
+  letter-spacing: -.035em; color: #fff;
+}
+/* cycling word (Quarter / Month / Day) with a hand-circled ring */
+.pro-page .cycle-wrap { position: relative; display: inline-block; padding: 0 .12em; }
+.pro-page .cycle {
+  display: inline-block; font-weight: 800;
+  transition: opacity .5s var(--ease), transform .5s var(--ease-emphasis);
+}
+.pro-page .cycle.swap { opacity: 0; transform: translateY(-.32em) rotate(-2deg); }
+.pro-page .cycle-ring {
+  position: absolute; left: -6%; top: -16%; width: 112%; height: 132%;
+  pointer-events: none; overflow: visible;
+}
+.pro-page .cycle-ring path {
+  fill: none; stroke: var(--pg-1); stroke-width: 3; stroke-linecap: round;
+  filter: drop-shadow(0 0 6px rgba(243,201,105,.4));
+  stroke-dasharray: 560; stroke-dashoffset: 560;
+  animation: pgDraw 1.1s var(--ease-emphasis) .5s forwards;
+}
+@keyframes pgDraw { to { stroke-dashoffset: 0; } }
+
+.pro-page .pro-lead { color: var(--pd-fg-2); max-width: 46ch; margin-top: 1.5rem; font-size: clamp(1.02rem, 1.4vw, 1.18rem); line-height: 1.6; }
+.pro-page .pro-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2.1rem; }
+.pro-page .pro-trust { margin-top: 1.7rem; color: var(--pd-fg-3); font-size: .85rem; letter-spacing: .02em; }
+
+/* entrance */
+@media (prefers-reduced-motion: no-preference) {
+  .pro-page .pro-hero-copy > * { opacity: 0; transform: translateY(16px); animation: pgRise .8s var(--ease-emphasis) forwards; }
+  .pro-page .pro-hero-copy > *:nth-child(1) { animation-delay: .05s; }
+  .pro-page .pro-hero-copy > *:nth-child(2) { animation-delay: .15s; }
+  .pro-page .pro-hero-copy > *:nth-child(3) { animation-delay: .25s; }
+  .pro-page .pro-hero-copy > *:nth-child(4) { animation-delay: .35s; }
+  .pro-page .pro-hero-copy > *:nth-child(5) { animation-delay: .45s; }
+  .pro-page .pro-hero-card { opacity: 0; transform: translateY(22px) scale(.98); animation: pgRise .9s var(--ease-emphasis) .3s forwards; }
+}
+@keyframes pgRise { to { opacity: 1; transform: none; } }
+
+/* ---------- Dark performance-report mock ---------- */
+.pro-page .pro-hero-card { position: relative; }
+.pro-page .pro-hero-card::before {
+  content: ""; position: absolute; inset: -16% -8% -20% -4%; z-index: -1; border-radius: 32px;
+  background: radial-gradient(60% 60% at 70% 30%, rgba(243,201,105,.22), transparent 70%);
+  filter: blur(50px);
+}
+.pro-page .pcard {
+  background: linear-gradient(180deg, #11161c 0%, #0d1116 100%);
+  border: 1px solid var(--pd-line); border-radius: 18px; padding: 18px;
+  box-shadow: 0 50px 120px -50px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,255,255,.05);
+}
+.pro-page .pcard-head { display: flex; align-items: center; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--pd-line-2); }
+.pro-page .pcard-ava { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; font-weight: 800; font-size: .78rem; color: #06281f;
+  background: linear-gradient(135deg, #2dd4b0, #1dac92); flex: 0 0 auto; }
+.pro-page .pcard-ttl { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.pro-page .pcard-ttl strong { color: #fff; font-size: .92rem; font-weight: 700; letter-spacing: -.01em; }
+.pro-page .pcard-ttl span { color: var(--pd-fg-3); font-size: .76rem; }
+.pro-page .pcard-ready { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: .74rem; font-weight: 700; color: #2dd4b0; white-space: nowrap; }
+.pro-page .pcard-ready i { width: 7px; height: 7px; border-radius: 50%; background: #2dd4b0; box-shadow: 0 0 0 4px rgba(45,212,176,.16); }
+.pro-page .pcard-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 14px 0; }
+.pro-page .pk { background: var(--pd-2); border: 1px solid var(--pd-line-2); border-radius: 11px; padding: 11px 12px; }
+.pro-page .pk small { display: block; font-size: .58rem; text-transform: uppercase; letter-spacing: .07em; color: var(--pd-fg-3); }
+.pro-page .pk b { display: block; font-family: var(--font-mono); font-size: 1.18rem; color: #fff; margin-top: 4px; letter-spacing: -.02em; }
+.pro-page .pk em { display: block; font-style: normal; font-size: .68rem; font-weight: 700; margin-top: 3px; }
+.pro-page .pk em.pos { color: #2dd4b0; } .pro-page .pk em.neg { color: #ff6b86; }
+.pro-page .pcard-focus { border: 1px solid rgba(243,201,105,.24); border-left: 3px solid var(--pg-1); border-radius: 11px; padding: 13px 15px; background: linear-gradient(100deg, rgba(243,201,105,.07), rgba(243,201,105,0)); }
+.pro-page .pcard-focus .pf-label { font-size: .62rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--pg-1); }
+.pro-page .pcard-focus strong { display: block; color: #fff; font-size: .94rem; margin: 5px 0 5px; }
+.pro-page .pcard-focus p { color: var(--pd-fg-2); font-size: .82rem; line-height: 1.55; }
+
+/* ============================================================
+   Premium gold accents for the light sections below
+   ============================================================ */
+.pro-page .eyebrow { color: var(--pg-mid); }
+.pro-page .eyebrow::before { background: linear-gradient(90deg, transparent, var(--pg-mid)); }
+.pro-page .step .n { background: linear-gradient(135deg, var(--pg-mid), var(--pg-1)); color: #2a1d05; }
+.pro-page .report .seal { background: linear-gradient(135deg, var(--pg-mid), var(--pg-1)); color: #2a1d05; }
+.pro-page .cta-band { position: relative; overflow: hidden; }
+.pro-page .cta-band::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(60% 80% at 80% 10%, rgba(243,201,105,.14), transparent 60%);
+}
+.pro-page .cta-band > * { position: relative; z-index: 1; }
+.pro-page .cta-band .btn-amber { background: linear-gradient(135deg, var(--pg-mid), var(--pg-1)); color: #2a1d05; box-shadow: 0 12px 30px -10px rgba(243,201,105,.5); }
+.pro-page .cta-band .btn-amber:hover { background: linear-gradient(135deg, var(--pg-1), var(--pg-glint)); color: #2a1d05; }
+
+/* ============================================================
+   Premium dark bands for the rest of the page (the .dark-section
+   blocks become true near-black panels with gold accents, so the
+   whole page reads like one high-end product story).
+   ============================================================ */
+.pro-page .dark-section {
+  position: relative; isolation: isolate; overflow: hidden;
+  background: linear-gradient(180deg, #0b0e12 0%, #090a0d 100%);
+  border-block: 1px solid var(--pd-line); color: var(--pd-fg-1);
+}
+.pro-page .dark-section::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(50% 60% at 84% 4%, rgba(243,201,105,.10), transparent 60%),
+    radial-gradient(46% 56% at 8% 100%, rgba(200,144,47,.08), transparent 62%);
+}
+.pro-page .dark-section .section-title,
+.pro-page .dark-section h2, .pro-page .dark-section h3,
+.pro-page .dark-section h4, .pro-page .dark-section h5 { color: #fff; }
+.pro-page .dark-section .lead { color: var(--pd-fg-2); }
+
+/* steps on dark */
+.pro-page .dark-section .steps { background: var(--pd-line); border-color: var(--pd-line); }
+.pro-page .dark-section .step { background: #11151b; }
+.pro-page .dark-section .step h4 { color: #fff; }
+.pro-page .dark-section .step p { color: var(--pd-fg-2); }
+
+/* sample report on dark */
+.pro-page .dark-section .report {
+  background: linear-gradient(180deg, #11161c 0%, #0d1116 100%);
+  border: 1px solid var(--pd-line);
+  box-shadow: 0 50px 120px -50px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,255,255,.05);
+}
+.pro-page .dark-section .report-head { background: rgba(255,255,255,.03); border-bottom-color: var(--pd-line); }
+.pro-page .dark-section .report-head h4 { color: #fff; }
+.pro-page .dark-section .report-head .rh-sub { color: var(--pd-fg-3); }
+.pro-page .dark-section .insight { border-bottom-color: var(--pd-line-2); }
+.pro-page .dark-section .insight h5 { color: #fff; }
+.pro-page .dark-section .insight p { color: var(--pd-fg-2); }
+.pro-page .dark-section .insight .rec { color: var(--pg-1); }
+.pro-page .dark-section .badge.ops { background: rgba(45,212,176,.16); color: #2dd4b0; }
+.pro-page .dark-section .badge.fin { background: rgba(61,127,242,.18); color: #79a6ff; }
+.pro-page .dark-section .badge.hr  { background: rgba(243,201,105,.16); color: var(--pg-1); }
+.pro-page .dark-section .badge.lp  { background: rgba(225,42,86,.18); color: #ff6b86; }
+.pro-page .dark-section .form-note { color: var(--pd-fg-3) !important; }
+
+/* premium cards (light "coverage" section) */
+.pro-page .card.hover:hover { border-color: rgba(200,144,47,.42); box-shadow: 0 26px 60px -26px rgba(200,144,47,.28); }
+
+/* testimonial */
+.pro-page .quote .q-mark { color: var(--pg-mid); opacity: .55; }
+.pro-page .quote .q-avatar { background: linear-gradient(135deg, var(--pg-mid), var(--pg-1)); color: #2a1d05; }
+
+/* closing CTA band — dark premium with gold */
+.pro-page .cta-band {
+  background: linear-gradient(155deg, #11151b 0%, #0b0e12 60%, #08090b 100%);
+  box-shadow: var(--shadow-lg), 0 50px 110px -52px rgba(0,0,0,.7);
+}
+.pro-page .cta-band::after { background-image: url("../img/cta-card.png"); }
+.pro-page .cta-band::before { background: radial-gradient(60% 72% at 50% 118%, rgba(243,201,105,.18), transparent 62%); }
+.pro-page .cta-band .btn-darkline,
+.pro-page .cta-band .btn-ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,.26); }
+.pro-page .cta-band .btn-ghost:hover { background: rgba(255,255,255,.07); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .pro-page .pro-hero-inner { grid-template-columns: 1fr; }
+  .pro-page .pro-hero-card { order: -1; }
+  .pro-page .pro-lead { max-width: none; }
+}
+@media (max-width: 600px) {
+  .pro-page .pcard-kpis { grid-template-columns: repeat(2, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pro-page .gold-shine,
+  .pro-page .nav-links a[href="pro.html"],
+  .pro-page .btn-gold::after { animation: none !important; }
+  .pro-page .cycle-ring path { animation: none !important; stroke-dashoffset: 0 !important; }
+  .pro-page .cycle { transition: none !important; }
+}
+
+/* ============================================================
+   Section blends, coverage findings, and CTA briefing graphic
+   ============================================================ */
+/* (7) blend the dark hero into the first dark section — no hard seam */
+.pro-page section { position: relative; }
+.pro-page .pro-hero { border-bottom: none; }
+.pro-page .pro-hero::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 150px; z-index: 2; pointer-events: none;
+  background: linear-gradient(180deg, transparent, #0b0e12);
+}
+.pro-page .pro-hero + .dark-section { border-top: none; }
+.pro-page .pro-hero + .dark-section::after {
+  content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: min(640px, 76%); height: 1px; z-index: 3; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(243,201,105,.55), transparent);
+}
+/* timeline rail connecting the steps (the "cool" flow touch) */
+.pro-page .dark-section .steps { position: relative; background: transparent; border: none; gap: 0; }
+.pro-page .dark-section .step { background: transparent; border: 0; padding: 14px 0; }
+.pro-page .dark-section .step .n {
+  position: relative; z-index: 1;
+  box-shadow: 0 0 0 6px #0a0d11, 0 0 22px -4px rgba(243,201,105,.6);
+}
+.pro-page .dark-section .steps::before {
+  content: ""; position: absolute; left: 17px; top: 28px; bottom: 28px; width: 2px; z-index: 0;
+  background: linear-gradient(180deg, var(--pg-1), rgba(243,201,105,.15));
+}
+
+/* (8) coverage cards that show what Pro surfaces */
+.pro-page .cov { display: flex; flex-direction: column; }
+.pro-page .cov h3 { margin-bottom: .4rem; }
+.pro-page .cov .cov-find { margin-top: auto; }
+.pro-page .cov-find { padding-top: .95rem; margin-top: 1.05rem; border-top: 1px dashed var(--border-1); font-size: .84rem; color: var(--fg-2); line-height: 1.5; }
+.pro-page .cov-find .cf-tag { display: inline-block; font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--pg-mid); margin-right: .4rem; }
+.pro-page .card.cov.hover:hover { border-color: rgba(200,144,47,.42); box-shadow: 0 24px 56px -26px rgba(200,144,47,.3); }
+
+/* (9) CTA "briefing" graphic instead of the dashboard image */
+.pro-page .cta-pro::after { display: none; }
+.pro-page .cta-pro { padding-top: clamp(40px, 5vw, 66px); }
+.pro-page .cta-brief { position: relative; z-index: 1; width: min(440px, 88%); margin: 0 auto clamp(20px, 3vw, 30px); }
+.cta-brief .cb-doc { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15); border-radius: 14px; padding: 12px 14px; box-shadow: 0 26px 54px -26px rgba(0,0,0,.65); }
+.cta-brief .cb-seal { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; font-weight: 800; font-size: .76rem; color: #06281f; background: linear-gradient(135deg, #2dd4b0, #1dac92); flex: 0 0 auto; }
+.cta-brief .cb-head { display: flex; flex-direction: column; text-align: left; min-width: 0; }
+.cta-brief .cb-head b { color: #fff; font-size: .9rem; }
+.cta-brief .cb-head span { color: rgba(255,255,255,.55); font-size: .74rem; }
+.cta-brief .cb-ready { margin-left: auto; font-size: .64rem; font-weight: 800; letter-spacing: .06em; color: #2a1d05; background: linear-gradient(135deg, var(--pg-mid), var(--pg-1)); padding: .26rem .5rem; border-radius: 6px; }
+.cta-brief .cb-lines { display: grid; gap: 7px; padding: 14px 16px 2px; }
+.cta-brief .cb-lines i { height: 7px; border-radius: 4px; background: rgba(255,255,255,.13); display: block; }
+.cta-brief .cb-lines i.cb-gold { background: linear-gradient(90deg, var(--pg-mid), var(--pg-1)); }
+@media (prefers-reduced-motion: no-preference) { .pro-page .cta-brief { animation: pgRise .9s var(--ease-emphasis) both; } }

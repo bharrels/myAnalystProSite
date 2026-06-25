@@ -245,3 +245,107 @@
     });
   }
 })();
+
+/* =============================================================
+   Interactive invoice lookup ([data-invoice]) — simple teaser
+   ============================================================= */
+(function () {
+  "use strict";
+  var hosts = document.querySelectorAll("[data-invoice]");
+  if (!hosts.length) return;
+  var INV = {
+    "INV-10482": { store: "0142 Rio Rancho", date: "Jun 12, 2026", cust: "J. M.", vehicle: "2019 Toyota Camry · 84,210 mi", advisor: "Marcus T.", pay: "Visa ••4417",
+      items: [["Full synthetic oil change", 79.99], ["Tire rotation", 24.99], ["Engine air filter", 19.99]] },
+    "0142-8891": { store: "0142 Rio Rancho", date: "Jun 12, 2026", cust: "R. P.", vehicle: "2021 Honda CR-V · 41,880 mi", advisor: "Dana K.", pay: "Mastercard ••0913",
+      items: [["Conventional oil change", 49.99], ["Wiper blades", 27.98], ["Cabin air filter", 22.99]] },
+    "INV-10517": { store: "0188 Albuquerque", date: "Jun 13, 2026", cust: "S. L.", vehicle: "2018 Ford F-150 · 102,540 mi", advisor: "Priya N.", pay: "Amex ••2200",
+      items: [["High-mileage oil change", 89.99], ["Coolant flush", 109.99], ["Battery replacement", 179.99]] }
+  };
+  var KEYS = Object.keys(INV);
+  function money(n) { return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+
+  hosts.forEach(function (host) {
+    host.classList.add("invlook");
+    host.innerHTML =
+      '<div class="mademo-bar"><i></i><i></i><i></i><span>Invoice lookup</span></div>' +
+      '<form class="inv-search"><input type="text" aria-label="Search ticket, invoice, or VIN" placeholder="Search ticket, invoice, or VIN" /><button type="submit">Look up</button></form>' +
+      '<div class="inv-chips"><span class="lbl">Try:</span></div>' +
+      '<div class="inv-result"></div>';
+    var form = host.querySelector(".inv-search");
+    var input = host.querySelector("input");
+    var chips = host.querySelector(".inv-chips");
+    var result = host.querySelector(".inv-result");
+    KEYS.forEach(function (k) {
+      var c = document.createElement("button"); c.type = "button"; c.className = "inv-chip"; c.textContent = k;
+      c.addEventListener("click", function () { input.value = k; lookup(k); });
+      chips.appendChild(c);
+    });
+    form.addEventListener("submit", function (e) { e.preventDefault(); lookup(input.value); });
+    function lookup(q) {
+      q = (q || "").trim().toUpperCase();
+      var key = KEYS.filter(function (k) { return k.toUpperCase() === q; })[0] ||
+                KEYS.filter(function (k) { return k.toUpperCase().indexOf(q) > -1; })[0];
+      if (!q) { renderEmpty("Enter a ticket, invoice, or VIN to pull the full record."); return; }
+      if (!key) { renderEmpty("No match for “" + q + ".” Try one of the examples above."); return; }
+      render(key, INV[key]);
+    }
+    function renderEmpty(msg) { result.innerHTML = '<div class="inv-card"><div class="inv-empty">' + msg + "</div></div>"; }
+    function render(no, d) {
+      var sub = d.items.reduce(function (a, it) { return a + it[1]; }, 0);
+      var tax = sub * 0.08, tot = sub + tax;
+      var lis = d.items.map(function (it) { return '<div class="inv-li"><span>' + it[0] + '</span><span class="p">' + money(it[1]) + "</span></div>"; }).join("");
+      result.innerHTML =
+        '<div class="inv-card">' +
+          '<div class="inv-head"><div><div class="inv-no">' + no + '</div><div class="inv-meta" style="text-align:left">Store ' + d.store + '</div></div>' +
+          '<div class="inv-meta">' + d.date + '<br/>' + d.vehicle + '<br/>Customer ' + d.cust + '</div></div>' +
+          lis +
+          '<div class="inv-li"><span>Tax</span><span class="p">' + money(tax) + "</span></div>" +
+          '<div class="inv-tot"><span>Total</span><span class="p">' + money(tot) + "</span></div>" +
+          '<div class="inv-foot"><span>Advisor ' + d.advisor + " · Paid " + d.pay + '</span><span class="ok">● Captured</span></div>' +
+        "</div>";
+    }
+    lookup("INV-10482");
+  });
+})();
+
+/* =============================================================
+   Interactive Signals demo ([data-signals]) — flip a rule, the text arrives
+   ============================================================= */
+(function () {
+  "use strict";
+  var hosts = document.querySelectorAll("[data-signals]");
+  if (!hosts.length) return;
+  var RULES = [
+    { title: "Labor over plan", sub: "If a store runs over 4% over labor plan", kind: "warn", body: "Store 0305: Labor 4.2% over plan before 11am. Sent to the GM." },
+    { title: "Voids spike", sub: "On 5 or more voids in an hour", kind: "bad", body: "Harbor: 6 voids in the last hour, above threshold. Escalated to the owner." },
+    { title: "Behind budget pace", sub: "If a store falls behind pace", kind: "warn", body: "Store 0142: Behind budget pace at 11:00am. Texted to the District Manager." },
+    { title: "Daily summary", sub: "A morning recap to your phone", kind: "good", body: "Daily summary: portfolio sales $41.2K, up 8.4% vs last week. 9 of 12 stores above plan." }
+  ];
+  hosts.forEach(function (host) {
+    host.classList.add("sigdemo");
+    host.innerHTML =
+      '<div class="mademo-bar"><i></i><i></i><i></i><span>Signals</span></div>' +
+      '<div class="sig-grid"><div><div class="sig-col-title">Alert me when</div><div class="sig-rules"></div></div>' +
+      '<div><div class="sig-col-title">Manager texts</div><div class="sig-feed"></div></div></div>';
+    var rulesEl = host.querySelector(".sig-rules"), feed = host.querySelector(".sig-feed");
+    var state = RULES.map(function () { return false; });
+    function renderFeed() {
+      var on = RULES.filter(function (r, i) { return state[i]; });
+      if (!on.length) { feed.innerHTML = '<div class="sig-empty">Flip a rule on to arm the alert. The manager text arrives here.</div>'; return; }
+      feed.innerHTML = on.map(function (r) {
+        return '<div class="sig-sms ' + r.kind + '"><div class="from"><span class="live-dot"></span>myAnalyst Signals</div><div class="body">' + r.body + "</div></div>";
+      }).join("");
+    }
+    RULES.forEach(function (r, i) {
+      var row = document.createElement("div"); row.className = "sig-rule";
+      row.innerHTML = '<div class="lab"><strong>' + r.title + "</strong><small>" + r.sub + "</small></div>" +
+        '<button class="sig-switch" type="button" role="switch" aria-checked="false" aria-label="' + r.title + '"></button>';
+      var sw = row.querySelector(".sig-switch");
+      sw.addEventListener("click", function () { state[i] = !state[i]; sw.setAttribute("aria-checked", state[i] ? "true" : "false"); renderFeed(); });
+      rulesEl.appendChild(row);
+    });
+    state[0] = true;
+    rulesEl.querySelector(".sig-switch").setAttribute("aria-checked", "true");
+    renderFeed();
+  });
+})();

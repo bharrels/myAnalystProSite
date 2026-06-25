@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260624e" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260625b" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -80,7 +80,7 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="platform.html">Platform</a>
         <a href="pro.html">Pro</a>
@@ -102,39 +102,26 @@
     <a href="contact.html" class="btn btn-primary">Book a demo</a>
   </div>
 
-  <section class="page-hero">
+  <section class="page-hero" data-hero-fx="addons">
     <div class="container">
       <span class="eyebrow" style="justify-content:center">Add-ons</span>
       <h1 class="display" style="margin-top:1rem">Extend your platform<br/><span class="text-grad">beyond the core.</span></h1>
-      <p class="lead" style="margin:1.2rem auto 0;max-width:58ch">Start with the reporting platform, then layer on exactly what your business needs, alerts, mapping, real estate intelligence, and connections to your other tools.</p>
+      <p class="lead" style="margin:1.2rem auto 0;max-width:58ch">Start with the core platform, then add exactly what you need: alerts, mapping, real estate intelligence, and connections to your other tools.</p>
     </div>
   </section>
 
-  <!-- SIGNALS (phone demo) -->
+  <!-- SIGNALS (interactive demo) -->
   <section class="section">
     <div class="container">
-      <div class="feature-row reveal">
-        <div class="fr-copy">
-          <span class="tag">Signals</span>
-          <h2 class="section-title" style="margin-top:1rem">The moment something needs attention, your team knows</h2>
-          <p class="lead" style="margin-top:.8rem">Automated text alerts that reach managers and owners in real time, no app to open, no dashboard to remember.</p>
-          <ul class="fr-list">
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Custom rules by metric, location, and recipient</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Escalation routing when a threshold is crossed</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Daily summaries delivered straight to your phone</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary" style="margin-top:1.6rem">Add Signals to your plan</a>
-        </div>
-        <div class="fr-media">
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="sms warn"><div class="sms-from"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> myAnalyst Signals</div><div class="sms-body"><b>Oak St:</b> Labor 4.2% over plan before 11am. Sent to GM.</div></div>
-              <div class="sms good"><div class="sms-from"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> myAnalyst Signals</div><div class="sms-body"><b>Daily summary:</b> Portfolio sales $41.2K, +8.4% vs last week. 9/12 stores above plan.</div></div>
-              <div class="sms bad"><div class="sms-from"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg> myAnalyst Signals</div><div class="sms-body"><b>Harbor:</b> 6 voids in last hour, above threshold. Escalated to owner.</div></div>
-            </div>
-          </div>
-        </div>
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Signals</span>
+        <h2 class="section-title">The moment something needs attention, your team knows</h2>
+        <p class="lead">Automated text alerts that reach managers and owners in real time. Flip a rule on and watch the alert arrive.</p>
       </div>
+      <div class="reveal d1" style="max-width:760px;margin:clamp(28px,4vw,44px) auto 0">
+        <div data-signals aria-label="Interactive Signals alerts demo"></div>
+      </div>
+      <div class="center" style="margin-top:1.8rem"><a href="contact.html" class="btn btn-primary">Add Signals to your plan</a></div>
     </div>
   </section>
 
@@ -145,11 +132,11 @@
         <div class="card hover reveal">
           <div class="c-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg></div>
           <h3>Customer Mapping</h3>
-          <p>Heat maps and origin reports showing where your customers come from, with drive-time zones to guide marketing and site decisions.</p>
+          <p>Heat maps, origin reports, and drive-time zones that show where customers come from to guide marketing and site decisions.</p>
           <div style="margin-top:1rem;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border-2)">
             <svg viewBox="0 0 320 130" style="width:100%;display:block" aria-hidden="true">
-              <rect width="320" height="130" fill="#121417"/>
-              <g stroke="rgba(255,255,255,.06)"><line x1="0" y1="32" x2="320" y2="32"/><line x1="0" y1="65" x2="320" y2="65"/><line x1="0" y1="98" x2="320" y2="98"/><line x1="80" y1="0" x2="80" y2="130"/><line x1="160" y1="0" x2="160" y2="130"/><line x1="240" y1="0" x2="240" y2="130"/></g>
+              <rect width="320" height="130" fill="#f5f5f3"/>
+              <g stroke="rgba(15,14,11,.06)"><line x1="0" y1="32" x2="320" y2="32"/><line x1="0" y1="65" x2="320" y2="65"/><line x1="0" y1="98" x2="320" y2="98"/><line x1="80" y1="0" x2="80" y2="130"/><line x1="160" y1="0" x2="160" y2="130"/><line x1="240" y1="0" x2="240" y2="130"/></g>
               <circle cx="170" cy="66" r="46" fill="#1dac92" opacity=".10"/><circle cx="170" cy="66" r="30" fill="#1dac92" opacity=".18"/><circle cx="170" cy="66" r="16" fill="#1dac92" opacity=".30"/>
               <circle cx="170" cy="66" r="5" fill="#1dac92"/>
               <circle cx="120" cy="48" r="3" fill="#3d7ff2"/><circle cx="205" cy="52" r="3" fill="#3d7ff2"/><circle cx="150" cy="92" r="3" fill="#3d7ff2"/><circle cx="200" cy="88" r="3" fill="#3d7ff2"/><circle cx="138" cy="70" r="3" fill="#3d7ff2"/>
@@ -161,7 +148,7 @@
         <div class="card hover reveal d1">
           <div class="c-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>Real Estate Consulting</h3>
-          <p>Data-driven site selection for franchisees: feasibility studies, trade-area analysis, competitive intelligence, lease analysis, and portfolio strategy.</p>
+          <p>Data-driven site selection for franchisees: feasibility, trade-area analysis, competitive intelligence, lease analysis, and portfolio strategy.</p>
           <ul class="fr-list" style="margin-top:1rem">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Site selection &amp; feasibility</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Trade-area &amp; competitive mapping</li>
@@ -174,7 +161,7 @@
         <div class="card hover reveal d2">
           <div class="c-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3v6a3 3 0 0 0 3 3h6a3 3 0 0 1 3 3v6M6 3H4m2 0h2m10 18h-2m2 0h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
           <h3>Data Pipelines</h3>
-          <p>Push your myAnalyst data into the systems you already use, BI tools, CRMs, and franchisor portals, so it lives where your team works.</p>
+          <p>Push myAnalyst data into the tools you already use: BI tools, CRMs, and franchisor portals.</p>
           <div class="logos" style="justify-content:flex-start;gap:1.2rem;margin-top:1rem;font-size:.95rem"><span>Salesforce</span><span>HubSpot</span><span>BI Tools</span></div>
           <a href="contact.html" class="btn-link" style="margin-top:1rem">Connect your stack
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -189,12 +176,26 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Operations consulting</span>
         <h2 class="section-title">We don't just hand you a dashboard. We help you use it.</h2>
-        <p class="lead">Direct analyst access from a team that's run multi-unit businesses before.</p>
+        <p class="lead">Direct analyst access from a team that's run multi-unit businesses.</p>
       </div>
       <div class="grid grid-3 reveal d1" style="margin-top:2.6rem">
         <div class="card hover"><h3>Quarterly Business Reviews</h3><p>Sit down with your analyst to read the trends, set targets, and plan the next quarter.</p></div>
         <div class="card hover"><h3>Location Audits</h3><p>Deep-dive a single store's numbers to find what's holding it back, and what to do about it.</p></div>
         <div class="card hover"><h3>Onboarding &amp; Training</h3><p>Get your managers fluent in the dashboards so the whole team runs on the same numbers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INVOICE LOOKUP ============ -->
+  <section class="section" id="invoice-lookup">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Invoice lookup</span>
+        <h2 class="section-title">Pull any ticket in seconds</h2>
+        <p class="lead">Search a ticket, invoice, or VIN and see the full line items, advisor, and payment. Try it.</p>
+      </div>
+      <div class="reveal d1" style="max-width:600px;margin:clamp(28px,4vw,44px) auto 0">
+        <div data-invoice aria-label="Interactive invoice lookup"></div>
       </div>
     </div>
   </section>
@@ -223,7 +224,7 @@
       </div>
       <div class="footer-top">
         <div>
-          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
           <p class="footer-blurb" style="margin-top:1rem">myAnalyst, real-time analytics, Store Health scoring, and alerts for multi-unit auto-service operators. A product of SiteTech Systems. Built by operators, for operators.</p>
           <address class="footer-address" style="margin-top:1.2rem">
             <a href="tel:18438089716">843-808-9716</a><br/>
@@ -240,6 +241,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260624e" defer></script>
+  <script src="assets/js/main.js?v=20260625b" defer></script>
+  <script src="assets/js/herofx.js?v=20260625b" defer></script>
+  <script src="assets/js/demo.js?v=20260625b" defer></script>
 </body>
 </html>

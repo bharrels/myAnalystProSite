@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260624e" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260625b" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -88,7 +88,7 @@
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+      <a href="index.html" class="brand" aria-label="myAnalyst home"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="platform.html">Platform</a>
         <a href="pro.html">Pro</a>
@@ -110,11 +110,11 @@
     <a href="contact.html" class="btn btn-primary">Book a demo</a>
   </div>
 
-  <section class="page-hero">
+  <section class="page-hero" data-hero-fx="grid">
     <div class="container">
       <span class="eyebrow" style="justify-content:center">The platform</span>
       <h1 class="display" style="margin-top:1rem">Forty-plus reports.<br/><span class="text-grad">One source of truth.</span></h1>
-      <p class="lead" style="margin:1.2rem auto 0;max-width:62ch">myAnalyst reads your POS and warehouses it, then turns it into live operations dashboards, health scoring, forecasting, mapping, retention, and auditing. No rip-and-replace, no data pipeline to build on your side.</p>
+      <p class="lead" style="margin:1.2rem auto 0;max-width:62ch">myAnalyst reads your POS and turns it into live dashboards, health scoring, forecasting, mapping, retention, and auditing. No rip-and-replace.</p>
       <div class="hero-actions" style="justify-content:center">
         <a href="contact.html" class="btn btn-amber btn-lg">Book a demo</a>
         <a href="add-ons.html" class="btn btn-ghost btn-lg">Explore add-ons</a>
@@ -125,10 +125,91 @@
   <!-- METRICS STRIP -->
   <section class="section-sm">
     <div class="container">
-      <div class="card reveal" style="text-align:center">
-        <strong style="color:var(--fg-3);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase">The metrics that run your shops</strong>
-        <div class="logos" style="gap:clamp(1rem,3vw,2.2rem);margin-top:1.2rem;font-size:1rem">
-          <span>Net Sales</span><span>Cars</span><span>Avg Ticket</span><span>Repeat Rate</span><span>PMM Attach</span><span>Throughput</span><span>Sales / Labor Hr</span><span>Avg Service Min</span><span>Fleet %</span>
+      <div class="metricwall reveal">
+        <p class="mw-eyebrow">The metrics that run your shops</p>
+        <p class="mw-hint"><span class="mg-dot"></span> Hover any metric to peek at it live in your dashboard</p>
+        <div class="mw-grid">
+          <button class="mchip" type="button" aria-label="Net Sales, live preview">
+            <span class="mchip-face"><span class="mchip-dot"></span>Net Sales</span>
+            <span class="mglass" role="tooltip">
+              <span class="mglass-head"><span class="mg-dot"></span> LiveStats &middot; today, so far</span>
+              <span class="mglass-val">$94,546</span>
+              <span class="mglass-delta up">▲ 6.8% <i>vs LY</i></span>
+              <svg class="mglass-spark" viewBox="0 0 220 52" preserveAspectRatio="none" aria-hidden="true"><path d="M4 42 L38 36 L74 39 L110 28 L146 22 L182 15 L216 9"/></svg>
+            </span>
+          </button>
+          <button class="mchip" type="button" aria-label="Cars, live preview">
+            <span class="mchip-face"><span class="mchip-dot"></span>Cars</span>
+            <span class="mglass" role="tooltip">
+              <span class="mglass-head"><span class="mg-dot"></span> LiveStats &middot; today, so far</span>
+              <span class="mglass-val">2,517</span>
+              <span class="mglass-delta up">▲ 5.2% <i>vs LY</i></span>
+              <svg class="mglass-spark" viewBox="0 0 220 52" preserveAspectRatio="none" aria-hidden="true"><path d="M4 38 L34 28 L64 34 L96 20 L128 27 L160 13 L192 17 L216 8"/></svg>
+            </span>
+          </button>
+          <button class="mchip" type="button" aria-label="Average Ticket, live preview">
+            <span class="mchip-face"><span class="mchip-dot"></span>Avg Ticket</span>
+            <span class="mglass" role="tooltip">
+              <span class="mglass-head"><span class="mg-dot"></span> LiveStats &middot; today, so far</span>
+              <span class="mglass-val">$37.56</span>
+              <span class="mglass-delta up">▲ 2.1% <i>vs LY</i></span>
+              <svg class="mglass-spark" viewBox="0 0 220 52" preserveAspectRatio="none" aria-hidden="true"><path d="M4 32 L40 29 L76 31 L112 25 L148 23 L184 20 L216 17"/></svg>
+            </span>
+          </button>
+          <button class="mchip" type="button" aria-label="Repeat Rate, live preview">
+            <span class="mchip-face"><span class="mchip-dot"></span>Repeat Rate</span>
+            <span class="mglass" role="tooltip">
+              <span class="mglass-head"><span class="mg-dot"></span> Retention &middot; trailing 90 days</span>
+              <span class="mglass-val">38.4%</span>
+              <span class="mglass-delta up">▲ 1.4% <i>vs LY</i></span>
+              <svg class="mglass-spark" viewBox="0 0 220 52" preserveAspectRatio="none" aria-hidden="true"><path d="M4 34 L40 31 L76 30 L112 26 L148 24 L184 21 L216 18"/></svg>
+            </span>
+          </button>
+          <button class="mchip" type="button" aria-label="PMM Attach, live preview">
+            <span class="mchip-face"><span class="mchip-dot"></span>PMM Attach</span>
+            <span class="mglass" role="tooltip">
+              <span class="mglass-head"><span class="mg-dot"></span> Mix &middot; month to date</span>
+              <span class="mglass-val">61%</span>
+              <span class="mglass-delta up">▲ 3.0% <i>vs LY</i></span>
+              <svg class="mglass-spark" viewBox="0 0 220 52" preserveAspectRatio="none" aria-hidden="true"><path d="M4 42 L38 36 L74 39 L110 28 L146 22 L182 15 L216 9"/></svg>
+            </span>
+          </button>
+          <button class="mchip" type="button" aria-label="Throughput, live preview">
+            <span class="mchip-face"><span class="mchip-dot"></span>Throughput</span>
+            <span class="mglass" role="tooltip">
+              <span class="mglass-head"><span class="mg-dot"></span> Ops &middot; cars / hour</span>
+              <span class="mglass-val">92<small>/hr</small></span>
+              <span class="mglass-delta up">▲ 5.1% <i>vs LY</i></span>
+              <svg class="mglass-spark" viewBox="0 0 220 52" preserveAspectRatio="none" aria-hidden="true"><path d="M4 38 L34 28 L64 34 L96 20 L128 27 L160 13 L192 17 L216 8"/></svg>
+            </span>
+          </button>
+          <button class="mchip" type="button" aria-label="Sales per Labor Hour, live preview">
+            <span class="mchip-face"><span class="mchip-dot"></span>Sales / Labor Hr</span>
+            <span class="mglass" role="tooltip">
+              <span class="mglass-head"><span class="mg-dot"></span> Labor &middot; today, so far</span>
+              <span class="mglass-val">$148</span>
+              <span class="mglass-delta up">▲ 4.3% <i>vs LY</i></span>
+              <svg class="mglass-spark" viewBox="0 0 220 52" preserveAspectRatio="none" aria-hidden="true"><path d="M4 42 L38 36 L74 39 L110 28 L146 22 L182 15 L216 9"/></svg>
+            </span>
+          </button>
+          <button class="mchip" type="button" aria-label="Average Service Minutes, live preview">
+            <span class="mchip-face"><span class="mchip-dot"></span>Avg Service Min</span>
+            <span class="mglass" role="tooltip">
+              <span class="mglass-head"><span class="mg-dot"></span> Ops &middot; bay speed</span>
+              <span class="mglass-val">19.4<small>min</small></span>
+              <span class="mglass-delta up">▼ 6.0% <i>faster vs LY</i></span>
+              <svg class="mglass-spark" viewBox="0 0 220 52" preserveAspectRatio="none" aria-hidden="true"><path d="M4 12 L40 16 L76 15 L112 22 L148 26 L184 30 L216 34"/></svg>
+            </span>
+          </button>
+          <button class="mchip" type="button" aria-label="Fleet percent, live preview">
+            <span class="mchip-face"><span class="mchip-dot"></span>Fleet %</span>
+            <span class="mglass" role="tooltip">
+              <span class="mglass-head"><span class="mg-dot"></span> Mix &middot; month to date</span>
+              <span class="mglass-val">12.7%</span>
+              <span class="mglass-delta up">▲ 0.8% <i>vs LY</i></span>
+              <svg class="mglass-spark" viewBox="0 0 220 52" preserveAspectRatio="none" aria-hidden="true"><path d="M4 34 L40 31 L76 30 L112 26 L148 24 L184 21 L216 18"/></svg>
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -142,7 +223,7 @@
         <div class="fr-copy">
           <span class="tag">LiveStats</span>
           <h2 class="section-title" style="margin-top:1rem">Real-time, store by store</h2>
-          <p class="lead" style="margin-top:.8rem">This year vs last year for every location, refreshed every five minutes. Group by Market, Regional Manager, or District Manager and let the outliers surface themselves.</p>
+          <p class="lead" style="margin-top:.8rem">This year vs last year for every location, refreshed every five minutes. Group by Market, RM, or DM and outliers surface on their own.</p>
           <ul class="fr-list">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Net sales, cars, full service, labor hours &amp; dollars, avg ticket, rev/hr</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Color-coded YoY deltas, green and red at a glance</li>
@@ -171,7 +252,7 @@
         <div class="fr-copy">
           <span class="tag">Store Health</span>
           <h2 class="section-title" style="margin-top:1rem">A 0 to 100 score for every store</h2>
-          <p class="lead" style="margin-top:.8rem">Five weighted pillars, ranked against your own chain, rolled into one grade. Letter grades A to F, twelve-week trend, and automatic "movers" detection so improvement and decline both surface.</p>
+          <p class="lead" style="margin-top:.8rem">Five weighted pillars, ranked against your own chain, rolled into one grade. Letter grades A to F, a twelve-week trend, and automatic "movers" detection.</p>
           <ul class="fr-list">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Growth 25% · Goal 25% · Loyalty 20% · Standing 15% · Operations 15%</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Chain-relative percentiles over a rolling 91-day window</li>
@@ -182,7 +263,7 @@
           <div class="card" style="box-shadow:var(--shadow-lg)">
             <div style="display:flex;align-items:center;gap:20px;margin-bottom:18px">
               <div class="score-ring">
-                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#2dd4b0" stroke-width="4.5" stroke-dasharray="78 22" stroke-linecap="round"/></svg>
+                <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="rgba(15,14,11,.08)" stroke-width="4.5"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#2dd4b0" stroke-width="4.5" stroke-dasharray="78 22" stroke-linecap="round"/></svg>
                 <div class="sc-center"><div class="sc-grade" style="color:var(--teal-600)">B</div><div class="sc-num">78 / 100</div></div>
               </div>
               <div><div style="font-weight:700;font-size:1.05rem">Store 0142 · Rio Rancho</div><div style="color:var(--fg-3);font-size:.85rem;margin:.3rem 0 .6rem">Healthy · top quartile</div><span class="spill ahead">▲ up 6 pts this week</span></div>
@@ -203,7 +284,7 @@
         <div class="fr-copy">
           <span class="tag" style="background:var(--info-bg);color:var(--info)">Pacing &amp; Forecast</span>
           <h2 class="section-title" style="margin-top:1rem">Will you hit budget? Know by the 5th.</h2>
-          <p class="lead" style="margin-top:.8rem">Month-to-date pace against your budget goal, with linear and shape-adjusted projections and confidence bands. Every store flagged ahead, on-track, or behind.</p>
+          <p class="lead" style="margin-top:.8rem">Month-to-date pace against budget, with linear and shape-adjusted projections plus confidence bands. Every store flagged ahead, on-track, or behind.</p>
           <ul class="fr-list">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Projection weighted by your same-day-of-month curve</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Compare to budget goal or last year</li>
@@ -232,7 +313,7 @@
         <div class="fr-copy">
           <span class="tag" style="background:var(--info-bg);color:var(--info)">Geospatial Map</span>
           <h2 class="section-title" style="margin-top:1rem">See demand on the map</h2>
-          <p class="lead" style="margin-top:.8rem">Heatmaps, point maps, and choropleths across gross sales, guest count, vehicle mix, trends, and retention, with drive-time isochrones and custom trade-area polygons.</p>
+          <p class="lead" style="margin-top:.8rem">Heatmaps, point maps, and choropleths across gross sales, guest count, vehicle mix, trends, and retention, plus drive-time isochrones and custom trade-area polygons.</p>
           <ul class="fr-list">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Six data layers, three rendering modes</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Drive-time isochrones for trade-area analysis</li>
@@ -244,8 +325,8 @@
             <div class="shot-bar"><i></i><i></i><i></i><span>Map · Guest origin</span></div>
             <div class="shot-body">
               <svg viewBox="0 0 320 180" style="width:100%;display:block;border-radius:var(--r-md)" aria-hidden="true">
-                <rect width="320" height="180" fill="#121417"/>
-                <g stroke="rgba(255,255,255,.06)"><line x1="0" y1="45" x2="320" y2="45"/><line x1="0" y1="90" x2="320" y2="90"/><line x1="0" y1="135" x2="320" y2="135"/><line x1="80" y1="0" x2="80" y2="180"/><line x1="160" y1="0" x2="160" y2="180"/><line x1="240" y1="0" x2="240" y2="180"/></g>
+                <rect width="320" height="180" fill="#f5f5f3"/>
+                <g stroke="rgba(15,14,11,.06)"><line x1="0" y1="45" x2="320" y2="45"/><line x1="0" y1="90" x2="320" y2="90"/><line x1="0" y1="135" x2="320" y2="135"/><line x1="80" y1="0" x2="80" y2="180"/><line x1="160" y1="0" x2="160" y2="180"/><line x1="240" y1="0" x2="240" y2="180"/></g>
                 <circle cx="170" cy="92" r="62" fill="#1dac92" opacity=".09"/><circle cx="170" cy="92" r="42" fill="#1dac92" opacity=".16"/><circle cx="170" cy="92" r="24" fill="#1dac92" opacity=".28"/>
                 <circle cx="170" cy="92" r="6" fill="#1dac92"/>
                 <circle cx="120" cy="64" r="3" fill="#3d7ff2"/><circle cx="210" cy="70" r="3" fill="#3d7ff2"/><circle cx="150" cy="124" r="3" fill="#3d7ff2"/><circle cx="206" cy="116" r="3" fill="#3d7ff2"/><circle cx="132" cy="98" r="3" fill="#3d7ff2"/><circle cx="190" cy="50" r="3" fill="#3d7ff2"/>
@@ -261,7 +342,7 @@
         <div class="fr-copy">
           <span class="tag" style="background:var(--warning-bg);color:var(--amber)">Retention</span>
           <h2 class="section-title" style="margin-top:1rem">Win back the cars you're losing</h2>
-          <p class="lead" style="margin-top:.8rem">Two grains of truth: VIN-level lifecycle and household-level identity resolution with CLV, repeat rate, and RFM segments. Export due-for-service lists straight to your stores.</p>
+          <p class="lead" style="margin-top:.8rem">Two grains: VIN-level lifecycle and household identity resolution with CLV, repeat rate, and RFM segments. Export due-for-service lists straight to your stores.</p>
           <ul class="fr-list">
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Lifecycle: on-track · due-soon · overdue · lapsed</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Household CLV, repeat rate, and RFM segmentation</li>
@@ -293,10 +374,13 @@
       <div class="section-head center reveal">
         <span class="eyebrow" style="justify-content:center">Interactive demo</span>
         <h2 class="section-title">Tour the dashboard</h2>
-        <p class="lead">The real layout, on sample data. Switch views, sort the grid, click a store, hover the chart.</p>
+        <p class="lead">The real layout on demo data. Filter by what needs you first, hover any store, and read the five drivers behind its grade.</p>
       </div>
-      <div class="reveal d1" style="max-width:940px;margin:clamp(28px,4vw,48px) auto 0">
-        <div data-demo aria-label="Interactive myAnalyst dashboard preview"></div>
+      <div class="hero-stage reveal-scale" style="margin-top:clamp(28px,4vw,48px)">
+        <div class="appshot">
+          <div class="appshot-bar"><i></i><i></i><i></i><span class="hs-cap mono">myanalyst &middot; Store Health</span><span class="appshot-live">Demo data</span></div>
+          <div data-shboard></div>
+        </div>
       </div>
     </div>
   </section>
@@ -309,9 +393,23 @@
         <div class="card hover"><h3>Auditing &amp; Compliance</h3><p>Voids, over/short, open/close, top-offs, warranty, wildcards, aborted sales, and data-capture quality.</p></div>
         <div class="card hover"><h3>Financials</h3><p>Means of payment, paid in/out, and credit memos, reconciled across every store.</p></div>
         <div class="card hover"><h3>Wall of Records &amp; Rankings</h3><p>All-time single-day bests and current-period leaderboards to drive the floor.</p></div>
-        <div class="card hover"><h3>Invoice Lookup</h3><p>Search any ticket and see the full header, line items, wildcards, promo, and employee, print-ready.</p></div>
+        <div class="card hover"><h3>Invoice Lookup</h3><p>Any ticket with full header, line items, wildcards, promo, and employee, print-ready.</p></div>
         <div class="card hover"><h3>Budgets &amp; Goals</h3><p>Monthly, weekly, day-of-week, and cumulative targets with auto-derived avg ticket and copy-forward.</p></div>
-        <div class="card hover"><h3>Report Builder</h3><p>Drag-and-drop custom dashboards and saved trackers, the views your team actually wants.</p></div>
+        <div class="card hover"><h3>Report Builder</h3><p>Drag-and-drop custom dashboards and saved trackers, the views your team wants.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INVOICE LOOKUP ============ -->
+  <section class="section" id="invoice-lookup">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Invoice lookup</span>
+        <h2 class="section-title">Pull any ticket in seconds</h2>
+        <p class="lead">Search a ticket, invoice, or VIN for full line items, advisor, and payment.</p>
+      </div>
+      <div class="reveal d1" style="max-width:600px;margin:clamp(28px,4vw,44px) auto 0">
+        <div data-invoice aria-label="Interactive invoice lookup"></div>
       </div>
     </div>
   </section>
@@ -321,7 +419,7 @@
     <div class="container">
       <div class="section-head center reveal"><span class="eyebrow" style="justify-content:center">Live in days, not quarters</span><h2 class="section-title">Three steps to your first dashboard</h2></div>
       <div class="grid grid-3 reveal d1" style="margin-top:3rem">
-        <div class="step" style="border-radius:var(--r-lg)"><span class="n">1</span><div><h4>Connect</h4><p>We integrate with your existing POS, payroll, QuickBooks, and scheduling systems. No rip-and-replace. If the data exists, we can pull it.</p></div></div>
+        <div class="step" style="border-radius:var(--r-lg)"><span class="n">1</span><div><h4>Connect</h4><p>We integrate with your POS, payroll, QuickBooks, and scheduling. No rip-and-replace. If the data exists, we can pull it.</p></div></div>
         <div class="step" style="border-radius:var(--r-lg)"><span class="n">2</span><div><h4>Configure</h4><p>We map your hierarchy (VP → RM → DM → Store), labels, and budgets so the numbers match how you operate.</p></div></div>
         <div class="step" style="border-radius:var(--r-lg)"><span class="n">3</span><div><h4>Run</h4><p>LiveStats goes live, every store gets scored, and Signals start watching. Your analyst is one message away.</p></div></div>
       </div>
@@ -352,7 +450,7 @@
       </div>
       <div class="footer-top">
         <div>
-          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" /></a>
+          <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
           <p class="footer-blurb" style="margin-top:1rem">myAnalyst, real-time analytics, Store Health scoring, and alerts for multi-unit auto-service operators. A product of SiteTech Systems. Built by operators, for operators.</p>
           <address class="footer-address" style="margin-top:1.2rem">
             <a href="tel:18438089716">843-808-9716</a><br/>
@@ -369,7 +467,9 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260624e" defer></script>
-  <script src="assets/js/demo.js?v=20260624e" defer></script>
+  <script src="assets/js/main.js?v=20260625b" defer></script>
+  <script src="assets/js/herofx.js?v=20260625b" defer></script>
+  <script src="assets/js/demo.js?v=20260625b" defer></script>
+  <script src="assets/js/board.js?v=20260625b" defer></script>
 </body>
 </html>
