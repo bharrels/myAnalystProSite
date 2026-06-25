@@ -18,7 +18,7 @@
   layer.setAttribute("aria-hidden", "true");
 
   // how many child nodes each theme wants
-  var COUNTS = { addons: 9, bars: 7, nodes: 16, waves: 4, score: 1, tiers: 3, docs: 5, map: 8, signal: 4, grid: 0 };
+  var COUNTS = { addons: 9, bars: 7, nodes: 16, waves: 4, score: 1, tiers: 3, docs: 5, map: 8, signal: 4, grid: 0, dash: 6, roi: 6 };
   var n = COUNTS[fx] != null ? COUNTS[fx] : 6;
 
   // deterministic-ish pseudo random so it differs by index but is stable
@@ -39,7 +39,7 @@
       s.style.top = (10 + pr(k, 78.2) * 76).toFixed(1) + "%";
       s.style.setProperty("--d", (pr(k, 3.7) * 6).toFixed(2) + "s");
       s.style.setProperty("--sz", (5 + pr(k, 5.1) * 8).toFixed(1) + "px");
-    } else if (fx === "docs") {
+    } else if (fx === "docs" || fx === "dash" || fx === "roi") {
       s.style.left = gutterLeft(k, 3, 17).toFixed(1) + "%";
       s.style.top = (12 + pr(k, 41.3) * 62).toFixed(1) + "%";
       s.style.setProperty("--d", (pr(k, 9.4) * 5).toFixed(2) + "s");

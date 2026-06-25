@@ -96,3 +96,59 @@
     body.addEventListener("pointerleave", function () { tip.classList.remove("on"); });
   });
 })();
+
+/* ---------- Store Health snapshot: click a store to switch the live score + pillars ---------- */
+(function () {
+  "use strict";
+  var ring = document.querySelector(".fr-media .score-ring");
+  if (!ring) return;
+  var card = ring.closest(".card");
+  if (!card) return;
+  var circles = ring.querySelectorAll("circle");
+  var arc = circles[circles.length - 1];
+  var grade = card.querySelector(".sc-grade");
+  var num = card.querySelector(".sc-num");
+  var pillars = card.querySelectorAll(".pillar .pl-fill");
+  var pvals = card.querySelectorAll(".pillar .pl-val");
+  var nameEl = card.querySelector("div[style*='font-weight:700']");
+  var statusEl = card.querySelector("div[style*='color:var(--fg-3)']");
+  if (!arc || !grade || !num || pillars.length < 5) return;
+
+  var STORES = [
+    { n: "Store 0142 · Rio Rancho", sc: 78, g: "B", c: "#2dd4b0", status: "Healthy · top quartile", p: [72, 64, 85, 81, 58] },
+    { n: "Store 0188 · Albuquerque", sc: 91, g: "A", c: "#1dac92", status: "Healthy · chain leader", p: [100, 84, 88, 89, 84] },
+    { n: "Store 0305 · Las Cruces", sc: 58, g: "C", c: "#fcb041", status: "Watch · slipping", p: [54, 49, 62, 57, 48] },
+    { n: "Store 0411 · Farmington", sc: 41, g: "D", c: "#e12a56", status: "At risk · needs attention", p: [38, 32, 50, 44, 36] }
+  ];
+
+  var chips = document.createElement("div");
+  chips.className = "sh-switch";
+  chips.innerHTML = '<span class="sh-lbl">Tap a store:</span>';
+  STORES.forEach(function (st, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "sh-chip" + (i === 0 ? " on" : "");
+    b.textContent = st.n.split("·")[1].trim();
+    b.addEventListener("click", function () {
+      set(i);
+      chips.querySelectorAll(".sh-chip").forEach(function (c) { c.classList.remove("on"); });
+      b.classList.add("on");
+    });
+    chips.appendChild(b);
+  });
+  card.insertBefore(chips, card.firstChild);
+
+  function set(i) {
+    var st = STORES[i];
+    arc.setAttribute("stroke", st.c);
+    arc.setAttribute("stroke-dasharray", st.sc + " " + (100 - st.sc));
+    grade.textContent = st.g; grade.style.color = st.c;
+    num.textContent = st.sc + " / 100";
+    if (nameEl) nameEl.textContent = st.n;
+    if (statusEl) statusEl.textContent = st.status;
+    for (var k = 0; k < pillars.length && k < 5; k++) {
+      pillars[k].style.width = st.p[k] + "%";
+      pillars[k].style.background = st.p[k] >= 70 ? "var(--viz-1)" : st.p[k] >= 50 ? "var(--viz-4)" : "var(--viz-2)";
+      if (pvals[k]) pvals[k].textContent = st.p[k];
+    }
+  }
+})();

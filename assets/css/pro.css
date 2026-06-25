@@ -228,8 +228,13 @@
    ============================================================ */
 .pro-page .dark-section {
   position: relative; isolation: isolate; overflow: hidden;
-  background: linear-gradient(180deg, #0b0e12 0%, #090a0d 100%);
-  border-block: 1px solid var(--pd-line); color: var(--pd-fg-1);
+  /* fade in/out of the light page instead of a hard solid border */
+  background: linear-gradient(180deg, var(--bg-1) 0%, #0b0e12 7%, #090a0d 93%, var(--bg-1) 100%);
+  border-block: none; color: var(--pd-fg-1);
+}
+/* the first dark section continues straight out of the dark hero, so keep its top dark */
+.pro-page .pro-hero + .dark-section {
+  background: linear-gradient(180deg, #0b0e12 0%, #090a0d 93%, var(--bg-1) 100%);
 }
 .pro-page .dark-section::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
