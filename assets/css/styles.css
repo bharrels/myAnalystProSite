@@ -1587,31 +1587,17 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 @media (prefers-reduced-motion: reduce) { .cmdk-scrim, .cmdk-panel { transition: none; } }
 
 /* =============================================================
-   Live operations map (homepage [data-opsmap])
+   Quick-lube KPI guide — structured cards (was a wall of text)
    ============================================================= */
-.opsmap { position: relative; max-width: 980px; margin-inline: auto; aspect-ratio: 16 / 7; border-radius: var(--r-xl); border: 1px solid var(--border-1); overflow: hidden;
-  background:
-    radial-gradient(60% 80% at 30% 20%, rgba(21,169,140,.08), transparent 60%),
-    radial-gradient(60% 80% at 80% 80%, rgba(37,99,235,.07), transparent 60%),
-    var(--bg-2);
-  box-shadow: var(--shadow-lg); }
-.opsmap::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
-  background-image: radial-gradient(rgba(13,18,28,.14) 1.1px, transparent 1.1px); background-size: 26px 26px; }
-.opsmap .om-pin { position: absolute; transform: translate(-50%, -50%); width: 26px; height: 26px; display: grid; place-items: center; background: none; border: none; cursor: pointer; z-index: 2; }
-.opsmap .om-dot { width: 11px; height: 11px; border-radius: 50%; position: relative; transition: transform var(--dur-base) var(--ease); }
-.opsmap .om-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; animation: omPulse 2.8s ease-out infinite; animation-delay: var(--d, 0s); }
-.opsmap .om-pin.gA .om-dot, .opsmap .om-pin.gB .om-dot { background: var(--teal); }
-.opsmap .om-pin.gC .om-dot { background: var(--amber-fill); }
-.opsmap .om-pin.gD .om-dot { background: var(--crimson-deep); }
-.opsmap .om-pin:hover .om-dot, .opsmap .om-pin:focus-visible .om-dot { transform: scale(1.5); }
-@keyframes omPulse { 0% { box-shadow: 0 0 0 0 rgba(21,169,140,.45); } 70% { box-shadow: 0 0 0 12px rgba(21,169,140,0); } 100% { box-shadow: 0 0 0 0 rgba(21,169,140,0); } }
-.opsmap .om-tip { position: absolute; transform: translate(-50%, calc(-100% - 16px)); z-index: 5; pointer-events: none; min-width: 150px;
-  background: rgba(255,255,255,.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--border-1); border-radius: 12px; padding: 10px 12px; box-shadow: var(--shadow-md);
-  opacity: 0; transition: opacity var(--dur-fast) var(--ease); }
-.opsmap .om-tip.on { opacity: 1; }
-.opsmap .om-tip b { display: block; font-size: .82rem; color: var(--fg-1); margin-bottom: 4px; }
-.opsmap .om-row { display: flex; justify-content: space-between; gap: 14px; font-size: .76rem; color: var(--fg-3); }
-.opsmap .om-row em { font-style: normal; font-family: var(--font-mono); font-weight: 700; color: var(--fg-1); }
-.opsmap .om-g.gA, .opsmap .om-g.gB { color: var(--teal-600); } .opsmap .om-g.gC { color: var(--amber); } .opsmap .om-g.gD { color: var(--crimson); }
-@media (prefers-reduced-motion: reduce) { .opsmap .om-dot::after { animation: none; } }
-@media (max-width: 600px) { .opsmap { aspect-ratio: 4 / 3; } }
+.kpi-guide { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 980px; margin-inline: auto; }
+.kpig-card { position: relative; background: var(--bg-2); border: 1px solid var(--border-1); border-radius: var(--r-lg); padding: clamp(18px, 2vw, 26px); box-shadow: var(--shadow-xs); transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease), border-color var(--dur-base); }
+.kpig-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
+.kpig-n { position: absolute; top: 14px; right: 18px; font-family: var(--font-mono); font-weight: 800; font-size: 1.5rem; letter-spacing: -.03em; opacity: .55; background: linear-gradient(120deg, var(--teal-600), var(--info)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.kpig-card h3 { font-size: 1.12rem; margin: 0 2.4rem .8rem 0; }
+.kpig-what, .kpig-why { font-size: .9rem; color: var(--fg-2); line-height: 1.55; margin-top: .55rem; }
+.kpig-what span, .kpig-why span { display: inline-block; font-size: .58rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; padding: .14rem .42rem; border-radius: 5px; margin-right: .55rem; vertical-align: 1.5px; }
+.kpig-what span { background: var(--success-bg); color: var(--teal-600); }
+.kpig-why span { background: var(--info-bg); color: var(--info); }
+.kpig-card a { color: var(--teal-600); font-weight: 600; }
+.kpig-feature { box-shadow: 0 0 0 1.5px var(--teal), var(--shadow-sm); border-color: transparent; }
+@media (max-width: 720px) { .kpi-guide { grid-template-columns: 1fr; } }
