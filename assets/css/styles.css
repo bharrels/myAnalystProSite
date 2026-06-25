@@ -1526,3 +1526,92 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 .fr-media .shot:hover { box-shadow: var(--shadow-lg); }
 .shot .pillar .pl-fill { transition: filter var(--dur-base) var(--ease), width .7s var(--ease-emphasis); }
 .shot .pillar:hover .pl-fill { filter: saturate(1.3) brightness(1.06); }
+
+/* =============================================================
+   WOW + global premium upgrades (from full-site audit)
+   ============================================================= */
+
+/* ---- bolder gold "Pro" nav (reads clearly gold at a glance) ----
+   background-image (not the `background` shorthand, which resets
+   background-clip and would paint a solid gold block) ---- */
+.nav-links a[href="pro.html"], .mobile-drawer a[href="pro.html"] {
+  background-image: linear-gradient(100deg, #a86a12 0%, #cf8f1f 28%, #f3c264 50%, #cf8f1f 72%, #a86a12 100%);
+  background-size: 220% 100%; font-weight: 800;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* ---- premium card hover (lifts every card grid sitewide) ---- */
+.card.hover .c-ico { transition: transform var(--dur-base) var(--ease-emphasis), box-shadow var(--dur-base) var(--ease); }
+.card.hover:hover { transform: translateY(-6px); box-shadow: 0 26px 60px -28px rgba(16,24,40,.26), 0 0 0 1.5px var(--teal); border-color: transparent; }
+.card.hover:hover .c-ico { transform: scale(1.1) rotate(-4deg); }
+.card.hover h3 { transition: color var(--dur-base) var(--ease); }
+.card.hover:hover h3 { color: var(--teal-600); }
+
+/* ---- stats polish (about / customers / multi-location) ---- */
+.stat { transition: background var(--dur-base) var(--ease); }
+.stat:hover { background: var(--bg-3); }
+.stat .s-value { letter-spacing: -.03em; }
+
+/* =============================================================
+   Command palette
+   ============================================================= */
+.cmdk-launch { display: inline-flex; align-items: center; gap: .4rem; padding: .5rem .7rem; border-radius: var(--r-pill); background: transparent; color: var(--fg-2); box-shadow: inset 0 0 0 1px var(--border-1); transition: background var(--dur-base), color var(--dur-base), box-shadow var(--dur-base); }
+.cmdk-launch:hover { color: var(--fg-1); box-shadow: inset 0 0 0 1px var(--border-strong); background: var(--bg-2); }
+.cmdk-launch svg { width: 16px; height: 16px; }
+.cmdk-launch kbd { font-family: var(--font-mono); font-size: .68rem; font-weight: 700; color: var(--fg-3); }
+.pro-page .cmdk-launch { color: rgba(255,255,255,.82); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+.pro-page .cmdk-launch:hover { color: #fff; background: rgba(255,255,255,.06); }
+.pro-page .cmdk-launch kbd { color: rgba(255,255,255,.6); }
+@media (max-width: 1120px) { .cmdk-launch { display: none; } }
+
+.cmdk { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: start center; padding-top: 12vh; }
+.cmdk[hidden] { display: none; }
+.cmdk-scrim { position: absolute; inset: 0; background: rgba(8,11,16,.5); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); opacity: 0; transition: opacity var(--dur-base) var(--ease); }
+.cmdk.show .cmdk-scrim { opacity: 1; }
+.cmdk-panel { position: relative; width: min(560px, 92vw); background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 16px; box-shadow: 0 40px 100px -30px rgba(8,11,16,.6); overflow: hidden; transform: translateY(-12px) scale(.98); opacity: 0; transition: transform var(--dur-base) var(--ease-emphasis), opacity var(--dur-base) var(--ease); }
+.cmdk.show .cmdk-panel { transform: none; opacity: 1; }
+.cmdk-top { display: flex; align-items: center; gap: .7rem; padding: 1rem 1.1rem; border-bottom: 1px solid var(--border-2); }
+.cmdk-top svg { width: 20px; height: 20px; color: var(--fg-3); flex: 0 0 auto; }
+.cmdk-input { flex: 1; min-width: 0; font: inherit; font-size: 1.05rem; border: none; outline: none; background: none; color: var(--fg-1); }
+.cmdk-input::placeholder { color: var(--fg-3); }
+.cmdk-esc { font-family: var(--font-mono); font-size: .68rem; color: var(--fg-3); border: 1px solid var(--border-1); border-radius: 6px; padding: .15rem .4rem; }
+.cmdk-list { max-height: 52vh; overflow-y: auto; padding: .5rem; }
+.cmdk-item { display: flex; align-items: center; justify-content: space-between; padding: .7rem .85rem; border-radius: 10px; cursor: pointer; color: var(--fg-1); font-weight: 600; font-size: .96rem; }
+.cmdk-item .ci-go { font-family: var(--font-mono); font-size: .8rem; color: var(--teal-600); opacity: 0; }
+.cmdk-item.on { background: linear-gradient(100deg, rgba(21,169,140,.12), rgba(37,99,235,.08)); }
+.cmdk-item.on .ci-go { opacity: 1; }
+.cmdk-empty { padding: 1.2rem; text-align: center; color: var(--fg-3); }
+.cmdk-foot { display: flex; align-items: center; gap: 1.1rem; padding: .7rem 1.1rem; border-top: 1px solid var(--border-2); font-size: .72rem; color: var(--fg-3); }
+.cmdk-foot kbd { font-family: var(--font-mono); border: 1px solid var(--border-1); border-radius: 5px; padding: 0 .35rem; margin-right: 2px; }
+.cmdk-foot .cmdk-brand { margin-left: auto; font-weight: 700; color: var(--teal-600); letter-spacing: -.01em; }
+@media (prefers-reduced-motion: reduce) { .cmdk-scrim, .cmdk-panel { transition: none; } }
+
+/* =============================================================
+   Live operations map (homepage [data-opsmap])
+   ============================================================= */
+.opsmap { position: relative; max-width: 980px; margin-inline: auto; aspect-ratio: 16 / 7; border-radius: var(--r-xl); border: 1px solid var(--border-1); overflow: hidden;
+  background:
+    radial-gradient(60% 80% at 30% 20%, rgba(21,169,140,.08), transparent 60%),
+    radial-gradient(60% 80% at 80% 80%, rgba(37,99,235,.07), transparent 60%),
+    var(--bg-2);
+  box-shadow: var(--shadow-lg); }
+.opsmap::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+  background-image: radial-gradient(rgba(13,18,28,.14) 1.1px, transparent 1.1px); background-size: 26px 26px; }
+.opsmap .om-pin { position: absolute; transform: translate(-50%, -50%); width: 26px; height: 26px; display: grid; place-items: center; background: none; border: none; cursor: pointer; z-index: 2; }
+.opsmap .om-dot { width: 11px; height: 11px; border-radius: 50%; position: relative; transition: transform var(--dur-base) var(--ease); }
+.opsmap .om-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; animation: omPulse 2.8s ease-out infinite; animation-delay: var(--d, 0s); }
+.opsmap .om-pin.gA .om-dot, .opsmap .om-pin.gB .om-dot { background: var(--teal); }
+.opsmap .om-pin.gC .om-dot { background: var(--amber-fill); }
+.opsmap .om-pin.gD .om-dot { background: var(--crimson-deep); }
+.opsmap .om-pin:hover .om-dot, .opsmap .om-pin:focus-visible .om-dot { transform: scale(1.5); }
+@keyframes omPulse { 0% { box-shadow: 0 0 0 0 rgba(21,169,140,.45); } 70% { box-shadow: 0 0 0 12px rgba(21,169,140,0); } 100% { box-shadow: 0 0 0 0 rgba(21,169,140,0); } }
+.opsmap .om-tip { position: absolute; transform: translate(-50%, calc(-100% - 16px)); z-index: 5; pointer-events: none; min-width: 150px;
+  background: rgba(255,255,255,.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--border-1); border-radius: 12px; padding: 10px 12px; box-shadow: var(--shadow-md);
+  opacity: 0; transition: opacity var(--dur-fast) var(--ease); }
+.opsmap .om-tip.on { opacity: 1; }
+.opsmap .om-tip b { display: block; font-size: .82rem; color: var(--fg-1); margin-bottom: 4px; }
+.opsmap .om-row { display: flex; justify-content: space-between; gap: 14px; font-size: .76rem; color: var(--fg-3); }
+.opsmap .om-row em { font-style: normal; font-family: var(--font-mono); font-weight: 700; color: var(--fg-1); }
+.opsmap .om-g.gA, .opsmap .om-g.gB { color: var(--teal-600); } .opsmap .om-g.gC { color: var(--amber); } .opsmap .om-g.gD { color: var(--crimson); }
+@media (prefers-reduced-motion: reduce) { .opsmap .om-dot::after { animation: none; } }
+@media (max-width: 600px) { .opsmap { aspect-ratio: 4 / 3; } }
