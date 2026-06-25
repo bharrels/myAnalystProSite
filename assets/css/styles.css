@@ -1037,11 +1037,12 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 @media (max-width: 520px) { .cookie-bar .cb-actions { width: 100%; } .cookie-bar .cb-actions .btn { flex: 1; } }
 
 /* ---------- Footer lead capture / newsletter ---------- */
-.footer-cta { display: grid; grid-template-columns: 1fr auto; gap: clamp(16px, 3vw, 44px); align-items: center; padding-bottom: clamp(28px, 4vw, 40px); margin-bottom: clamp(28px, 4vw, 40px); border-bottom: 1px solid var(--border-2); }
+.footer-cta { display: grid; grid-template-columns: 1fr; justify-items: center; text-align: center; gap: clamp(16px, 2.4vw, 22px); padding-bottom: clamp(28px, 4vw, 40px); margin-bottom: clamp(28px, 4vw, 40px); border-bottom: 1px solid var(--border-2); }
+.footer-cta > div { max-width: 560px; }
 .footer-cta h4 { font-size: clamp(1.2rem, 2vw, 1.55rem); color: var(--fg-1); }
 .footer-cta p { color: var(--fg-3); font-size: .95rem; margin-top: .35rem; }
-.lead-form { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start; }
-.lead-form input { font: inherit; padding: .8rem 1rem; border-radius: var(--r-md); border: 1px solid var(--border-1); background: var(--bg-2); color: var(--fg-1); min-width: 240px; }
+.lead-form { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start; justify-content: center; width: 100%; max-width: 460px; }
+.lead-form input { font: inherit; padding: .8rem 1rem; border-radius: var(--r-md); border: 1px solid var(--border-1); background: var(--bg-2); color: var(--fg-1); min-width: 240px; flex: 1 1 240px; }
 .lead-form input::placeholder { color: var(--fg-3); }
 .lead-form input:focus { outline: none; border-color: var(--teal-600); box-shadow: 0 0 0 3px rgba(10,125,102,.16); }
 .lead-form input[aria-invalid="true"] { border-color: var(--crimson); box-shadow: 0 0 0 3px rgba(214,49,90,.16); }
@@ -1788,3 +1789,17 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 .fr-link svg { width: 17px; height: 17px; transition: transform .2s ease; }
 .fr-link:hover { color: var(--teal); }
 .fr-link:hover svg { transform: translateX(4px); }
+
+/* In-card signal feed: the .signal-alert badge is built to float over a hero
+   (absolute, hidden until revealed). When listed inside a card, render the
+   alerts as a normal stacked, always-visible feed instead. */
+.signal-feed { display: flex; flex-direction: column; gap: .7rem; width: 100%; }
+.signal-feed .signal-alert { position: static; right: auto; bottom: auto; width: 100%; max-width: none; margin: 0; opacity: 1; transform: none; }
+
+/* Add-on cards: keep the three cards balanced and the map visual a consistent
+   shape across mobile + desktop. */
+.addon-viz svg { width: 100%; height: 100%; display: block; }
+@media (max-width: 760px) {
+  .addon-grid > .card { padding: clamp(18px, 5vw, 24px); }
+  .addon-viz { aspect-ratio: 320 / 118; }
+}

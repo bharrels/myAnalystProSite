@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260625e" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260625f" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -208,13 +208,33 @@
   <!-- ============ PROOF STATS ============ -->
   <section class="section-sm">
     <div class="container">
-      <div class="stats reveal">
-        <div class="stat"><div class="s-value"><span data-count="1100" data-decimals="0">1,100</span><span class="unit">+</span></div><div class="s-label">Locations served</div></div>
-        <div class="stat"><div class="s-value"><span class="unit">$</span><span data-count="2" data-decimals="0">2</span><span class="unit">B+</span></div><div class="s-label">Annual revenue analyzed</div></div>
-        <div class="stat"><div class="s-value"><span data-count="5" data-decimals="0">5</span><span class="unit">min</span></div><div class="s-label">Live data refresh</div></div>
-        <div class="stat"><div class="s-value"><span data-count="10" data-decimals="0">10</span><span class="unit">:1</span></div><div class="s-label">Average client ROI</div></div>
+      <div class="statwall" data-stagger>
+        <div class="statcard reveal">
+          <span class="sc-ico teal"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg></span>
+          <div class="sc-value"><span data-count="1100" data-decimals="0">1,100</span><span class="unit">+</span></div>
+          <div class="sc-label">Locations served</div>
+          <span class="sc-bar"><i style="--w:90%"></i></span>
+        </div>
+        <div class="statcard reveal">
+          <span class="sc-ico blue"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="sc-value"><span class="unit">$</span><span data-count="2" data-decimals="0">2</span><span class="unit">B+</span></div>
+          <div class="sc-label">Annual revenue analyzed</div>
+          <span class="sc-bar"><i style="--w:78%"></i></span>
+        </div>
+        <div class="statcard reveal">
+          <span class="sc-ico amber"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="sc-value"><span data-count="5" data-decimals="0">5</span><span class="unit">min</span></div>
+          <div class="sc-label">Live data refresh</div>
+          <span class="sc-bar"><i style="--w:96%"></i></span>
+        </div>
+        <div class="statcard reveal">
+          <span class="sc-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M3 18l6-6 4 4 8-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="sc-value"><span data-count="10" data-decimals="0">10</span><span class="unit">:1</span></div>
+          <div class="sc-label">Average client ROI</div>
+          <span class="sc-bar"><i style="--w:84%"></i></span>
+        </div>
       </div>
-      <p class="proof-note reveal">Figures reflect aggregate platform usage; ROI is client-reported from recovered labor, void, and discount leakage. Ask for a breakdown on a demo.</p>
+      <p class="proof-note reveal" style="margin-top:2rem">Figures reflect aggregate platform usage; ROI is client-reported from recovered labor, void, and discount leakage. Ask for a breakdown on a demo.</p>
     </div>
   </section>
 
@@ -305,6 +325,7 @@
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Shape-adjusted projections with confidence bands</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ahead / on-track / behind, with dollars to goal</li>
           </ul>
+          <a class="fr-link" href="pacing-forecast.html">How pacing &amp; forecasting works <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
         <div class="fr-media">
           <div class="shot">
@@ -341,10 +362,13 @@
         </div>
       </div>
       <div class="grid grid-4 reveal d1" data-stagger style="margin-top:2.6rem">
-        <div class="persona"><div class="p-role">VP / Owner</div><h3>The whole chain, at a glance</h3><p>Portfolio totals, Store Health ranking, and pacing across every market.</p></div>
-        <div class="persona"><div class="p-role">Regional Manager</div><h3>Spot the outliers fast</h3><p>LiveStats across the region, rankings to coach with, and budget pace by store.</p></div>
-        <div class="persona"><div class="p-role">District Manager</div><h3>Pacing &amp; accountability</h3><p>Budget pace by store, Signals when a shop falls behind, and one-click store drill-downs.</p></div>
-        <div class="persona"><div class="p-role">Store Manager</div><h3>Today's numbers, live</h3><p>Sales, cars, and labor so far today, invoice lookup, and the records board to chase.</p></div>
+        <a class="persona persona-link" href="roles.html"><div class="p-role">VP / Owner</div><h3>The whole chain, at a glance</h3><p>Portfolio totals, Store Health ranking, and pacing across every market.</p><span class="p-view">VP view &rarr;</span></a>
+        <a class="persona persona-link" href="roles.html"><div class="p-role">Regional Manager</div><h3>Spot the outliers fast</h3><p>LiveStats across the region, rankings to coach with, and budget pace by store.</p><span class="p-view">Regional view &rarr;</span></a>
+        <a class="persona persona-link" href="roles.html"><div class="p-role">District Manager</div><h3>Pacing &amp; accountability</h3><p>Budget pace by store, Signals when a shop falls behind, and one-click store drill-downs.</p><span class="p-view">District view &rarr;</span></a>
+        <a class="persona persona-link" href="roles.html"><div class="p-role">Store Manager</div><h3>Today's numbers, live</h3><p>Sales, cars, and labor so far today, invoice lookup, and the records board to chase.</p><span class="p-view">Store view &rarr;</span></a>
+      </div>
+      <div class="center" style="margin-top:2.4rem">
+        <a href="roles.html" class="btn-link">See every role in detail <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
   </section>
@@ -386,18 +410,21 @@
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Escalation routing and daily summaries</li>
             <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pair with <a class="btn-link" href="add-ons.html">add-ons</a> and <a class="btn-link" href="pro.html">myAnalyst Pro</a></li>
           </ul>
+          <a class="fr-link" href="add-ons.html">Explore Signals &amp; other add-ons <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
         <div class="fr-media">
           <div class="shot">
             <div class="shot-bar"><i></i><i></i><i></i><span>Signals · today</span></div>
             <div class="shot-body">
-              <div class="signal-alert" style="margin-bottom:.8rem">
+              <div class="signal-feed">
+              <div class="signal-alert">
                 <span class="sa-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.6"/></svg></span>
                 <div><div class="sa-title">Signal · Store 0305</div><div class="sa-text">Behind budget pace at 11:00 AM. Texted to the District Manager.</div></div>
               </div>
               <div class="signal-alert">
                 <span class="sa-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9m0 4h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="currentColor" stroke-width="1.6"/></svg></span>
                 <div><div class="sa-title">Signal · Store 0142</div><div class="sa-text">New single-day net sales record. Sent to the Regional Manager.</div></div>
+              </div>
               </div>
             </div>
           </div>
@@ -484,8 +511,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260625e" defer></script>
-  <script src="assets/js/wow.js?v=20260625e" defer></script>
-  <script src="assets/js/herofx.js?v=20260625e" defer></script>
+  <script src="assets/js/main.js?v=20260625f" defer></script>
+  <script src="assets/js/wow.js?v=20260625f" defer></script>
+  <script src="assets/js/herofx.js?v=20260625f" defer></script>
 </body>
 </html>

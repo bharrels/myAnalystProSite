@@ -104,24 +104,43 @@
 .pro-page .pro-hero {
   position: relative; overflow: hidden; isolation: isolate;
   background: var(--pd-0); color: var(--pd-fg-1);
-  padding-block: clamp(96px, 13vw, 168px) clamp(72px, 9vw, 120px);
+  padding-block: clamp(58px, 8vw, 104px) clamp(72px, 9vw, 120px);
 }
+/* (1o) the most premium golden hero: layered gold blooms biased to the
+   right (copy sits left and stays legible), a fine gold grid, a slow
+   aurora sweep, and a warm gold horizon into the section below. */
 .pro-page .pro-hero-bg {
   position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background:
-    radial-gradient(60% 70% at 88% 8%, rgba(243,201,105,.18), transparent 60%),
-    radial-gradient(50% 60% at 96% 64%, rgba(200,144,47,.16), transparent 62%),
-    radial-gradient(48% 52% at 4% 96%, rgba(21,169,140,.10), transparent 64%),
-    linear-gradient(180deg, #0a0c0f 0%, #08090b 60%, #0a0b0e 100%);
+    radial-gradient(58% 80% at 96% 2%, rgba(243,201,105,.34), transparent 56%),
+    radial-gradient(46% 66% at 102% 46%, rgba(200,144,47,.26), transparent 60%),
+    radial-gradient(40% 48% at 78% 104%, rgba(243,201,105,.16), transparent 60%),
+    radial-gradient(42% 50% at 2% 102%, rgba(21,169,140,.09), transparent 64%),
+    linear-gradient(180deg, #0d0e10 0%, #08090b 52%, #0a0b0e 100%);
 }
+/* fine gold grid, masked to the bright corner */
 .pro-page .pro-hero-bg::before {
   content: ""; position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
-  background-size: 64px 64px;
-  -webkit-mask-image: radial-gradient(70% 70% at 50% 40%, #000, transparent 78%);
-  mask-image: radial-gradient(70% 70% at 50% 40%, #000, transparent 78%);
+    linear-gradient(rgba(243,201,105,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243,201,105,.05) 1px, transparent 1px);
+  background-size: 58px 58px;
+  -webkit-mask-image: radial-gradient(80% 75% at 88% 12%, #000, transparent 72%);
+  mask-image: radial-gradient(80% 75% at 88% 12%, #000, transparent 72%);
+}
+/* slow golden aurora sweep + a soft gold horizon glow at the seam */
+.pro-page .pro-hero-bg::after {
+  content: ""; position: absolute; inset: -20% -10%;
+  background:
+    conic-gradient(from 210deg at 82% 22%, rgba(243,201,105,.16), transparent 28%, rgba(200,144,47,.12) 52%, transparent 74%, rgba(243,201,105,.14) 100%);
+  filter: blur(46px); opacity: .9;
+  animation: proAurora 16s ease-in-out infinite alternate;
+}
+@keyframes proAurora { 0% { transform: translate3d(-3%, -2%, 0) rotate(0deg) scale(1.02); } 100% { transform: translate3d(4%, 3%, 0) rotate(8deg) scale(1.12); } }
+/* warm gold hairline along the very top of the hero */
+.pro-page .pro-hero::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; z-index: 2; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(243,201,105,.5) 40%, rgba(255,243,207,.7) 60%, transparent);
 }
 .pro-page .pro-hero-inner {
   position: relative; display: grid; grid-template-columns: 1.02fr 1fr;
@@ -134,6 +153,14 @@
   color: var(--pg-1); font-size: .82rem; font-weight: 600; letter-spacing: .01em;
 }
 .pro-page .pro-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pg-1); box-shadow: 0 0 0 4px rgba(243,201,105,.16); }
+/* (1h) pulsing myAnalyst logo mark inside the pill */
+.pro-page .pro-pill .pro-pill-mark { position: relative; width: 17px; height: 17px; flex: 0 0 auto; display: grid; place-items: center; }
+.pro-page .pro-pill .pro-pill-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.pro-page .pro-pill .pro-pill-mark::after {
+  content: ""; position: absolute; inset: -4px; border-radius: 50%;
+  border: 1.5px solid rgba(243,201,105,.55); animation: proPillPulse 2.4s ease-out infinite;
+}
+@keyframes proPillPulse { 0% { transform: scale(.55); opacity: .9; } 70% { opacity: 0; } 100% { transform: scale(1.5); opacity: 0; } }
 
 .pro-page .pro-h1 {
   font-size: clamp(2.6rem, 5.4vw, 4.3rem); font-weight: 700; line-height: 1.04;
@@ -302,7 +329,10 @@
 @media (prefers-reduced-motion: reduce) {
   .pro-page .gold-shine,
   .pro-page .nav-links a[href="pro.html"],
-  .pro-page .btn-gold::after { animation: none !important; }
+  .pro-page .btn-gold::after,
+  .pro-page .pro-hero-bg::after,
+  .pro-page .pro-pill .pro-pill-mark::after { animation: none !important; }
+  .pro-page .pro-hero-bg::after { opacity: .6; }
   .pro-page .cycle-ring path { animation: none !important; stroke-dashoffset: 0 !important; }
   .pro-page .cycle { transition: none !important; }
 }
@@ -357,3 +387,14 @@
 .cta-brief .cb-lines i { height: 7px; border-radius: 4px; background: rgba(255,255,255,.13); display: block; }
 .cta-brief .cb-lines i.cb-gold { background: linear-gradient(90deg, var(--pg-mid), var(--pg-1)); }
 @media (prefers-reduced-motion: no-preference) { .pro-page .cta-brief { animation: pgRise .9s var(--ease-emphasis) both; } }
+
+/* ============================================================
+   Spacing & centering refinements
+   ============================================================ */
+/* (1i/1j/1k) more even black breathing room around the dark bands,
+   so content is framed evenly top and bottom before fading to light */
+.pro-page .dark-section { padding-block: clamp(74px, 8.5vw, 128px); }
+/* (1l) testimonial as a tight, clearly-centered column that lines up
+   with the briefing graphic in the CTA directly below it */
+.pro-page .section-sm .quote { max-width: 660px; }
+.pro-page .section-sm { padding-bottom: clamp(40px, 5vw, 64px); }
