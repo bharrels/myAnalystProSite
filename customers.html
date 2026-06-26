@@ -28,6 +28,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css?v=20260625h" />
+  <style>
+    /* Testimonial cards (customers page) */
+    .tgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.6vw, 20px); }
+    .tcard { display: flex; flex-direction: column; background: var(--bg-2); border: 1px solid var(--border-1); border-radius: var(--r-lg); padding: clamp(20px, 2.2vw, 28px); box-shadow: var(--shadow-xs); transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease), border-color var(--dur-base); }
+    .tcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
+    .tcard .tq-mark { font-family: Georgia, serif; font-size: 2.6rem; line-height: .1; color: var(--teal-600); opacity: .42; }
+    .tcard blockquote { color: var(--fg-1); font-size: 1rem; line-height: 1.62; font-weight: 500; margin: 1rem 0 1.3rem; flex: 1; }
+    .tcard .tq-foot { display: flex; align-items: center; gap: .75rem; margin-top: auto; padding-top: 1.1rem; border-top: 1px solid var(--border-1); }
+    .tcard .tq-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--teal), var(--info)); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: .82rem; flex: 0 0 auto; }
+    .tcard .tq-name { font-weight: 600; font-size: .92rem; color: var(--fg-1); }
+    .tcard .tq-role { color: var(--fg-3); font-size: .82rem; line-height: 1.38; }
+    /* Case-study blog cards */
+    .csgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(16px, 2vw, 26px); }
+    .cscard { display: flex; flex-direction: column; gap: .85rem; }
+    .cscard h3 { font-size: clamp(1.15rem, 1.9vw, 1.4rem); line-height: 1.25; }
+    .cscard .cs-dek { color: var(--fg-2); font-size: .97rem; line-height: 1.55; }
+    .cscard .cs-stats { display: flex; gap: clamp(1rem, 2.4vw, 1.8rem); margin: .35rem 0 .2rem; padding: .2rem 0; }
+    .cscard .cs-stats b { font-family: var(--font-mono); font-size: 1.25rem; letter-spacing: -.03em; color: var(--cs, var(--teal-600)); display: block; line-height: 1.1; }
+    .cscard .cs-stats small { color: var(--fg-3); font-size: .76rem; }
+    .cscard .cs-read { margin-top: auto; display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; font-size: .92rem; color: var(--cs, var(--teal-600)); }
+    .cscard .cs-read svg { width: 18px; height: 18px; transition: transform var(--dur-base) var(--ease); }
+    .cscard:hover .cs-read svg { transform: translateX(4px); }
+    @media (max-width: 880px) { .tgrid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 720px) { .csgrid { grid-template-columns: 1fr; } }
+    @media (max-width: 560px) { .tgrid { grid-template-columns: 1fr; } }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -105,7 +131,7 @@
     <div class="container">
       <span class="eyebrow" style="justify-content:center">Customers</span>
       <h1 class="display" style="margin-top:1rem">Proof, not<br/><span class="text-grad">promises.</span></h1>
-      <p class="lead" style="margin:1.2rem auto 0;max-width:56ch">How operators use myAnalyst, plus a live sample report.</p>
+      <p class="lead" style="margin:1.2rem auto 0;max-width:58ch">Real operators, real results. Hear what they say, read how we got there, and explore a live sample report.</p>
     </div>
   </section>
 
@@ -140,109 +166,121 @@
         </div>
         <div class="statcard reveal">
           <span class="sc-ico crimson"><svg viewBox="0 0 24 24" fill="none"><path d="M3 18l6-6 4 4 8-10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="sc-value"><span data-count="10" data-decimals="0">10</span><span class="unit">:1</span></div>
-          <div class="sc-label">Average ROI</div>
+          <div class="sc-value"><span data-count="10" data-decimals="0">10</span><span class="unit">x</span></div>
+          <div class="sc-label">Average client ROI</div>
           <span class="sc-bar"><i style="--w:84%"></i></span>
         </div>
         <div class="statcard reveal">
-          <span class="sc-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="19" cy="17" r="2.2" stroke="currentColor" stroke-width="1.9"/></svg></span>
-          <div class="sc-value"><span data-count="9" data-decimals="0">9</span><span class="unit">→1</span></div>
-          <div class="sc-label">Data sources unified</div>
-          <span class="sc-bar"><i style="--w:72%"></i></span>
+          <span class="sc-ico amber"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13v-2a7 7 0 0 1 14 0v2M3 14a2 2 0 0 1 2-2h1v5H5a2 2 0 0 1-2-2v-1zM21 14a2 2 0 0 0-2-2h-1v5h1a2 2 0 0 0 2-2v-1zM18 17v1a3 3 0 0 1-3 3h-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="sc-value"><span data-count="100" data-decimals="0">100</span><span class="unit">%</span></div>
+          <div class="sc-label">U.S.-based support</div>
+          <span class="sc-bar"><i style="--w:96%"></i></span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CASE STUDIES -->
+  <!-- TESTIMONIALS -->
+  <section class="dark-section section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">What our clients say</span>
+        <h2 class="section-title">Hear from operators like you</h2>
+        <p class="lead">Don't take our word for it. Here's what multi-unit franchisees and operators say about what myAnalyst has done for their businesses.</p>
+      </div>
+      <div class="tgrid reveal d1" data-stagger style="margin-top:clamp(32px,4vw,52px)">
+        <figure class="tcard">
+          <div class="tq-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>Before myAnalyst, I was pulling data from nine different places every Monday morning. Now I walk in and everything is already waiting for me. It changed how I manage completely.</blockquote>
+          <figcaption class="tq-foot"><span class="tq-avatar">MF</span><div><div class="tq-name">Multi-unit Franchisee</div><div class="tq-role">Quick Lube · 9 locations, Southeast U.S.</div></div></figcaption>
+        </figure>
+        <figure class="tcard">
+          <div class="tq-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>The labor forecasting alone saved us thousands in overtime in the first month. I can see exactly when we're going to go over budget before it happens, not after.</blockquote>
+          <figcaption class="tq-foot"><span class="tq-avatar">RO</span><div><div class="tq-name">Regional Operator</div><div class="tq-role">Automotive Services · 14 locations, Mid-Atlantic</div></div></figcaption>
+        </figure>
+        <figure class="tcard">
+          <div class="tq-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>We tried other analytics platforms and none of them could handle our specific POS setup. myAnalyst figured it out in two weeks and built exactly what we needed.</blockquote>
+          <figcaption class="tq-foot"><span class="tq-avatar">FG</span><div><div class="tq-name">Franchisee Group</div><div class="tq-role">Car Wash · 22 locations, Southeast U.S.</div></div></figcaption>
+        </figure>
+        <figure class="tcard">
+          <div class="tq-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>The coupon tracking changed how we run promotions entirely. We can see in real time which campaigns are actually driving revenue and which ones are just giving money away.</blockquote>
+          <figcaption class="tq-foot"><span class="tq-avatar">MD</span><div><div class="tq-name">Marketing Director</div><div class="tq-role">Multi-brand operator · Regional franchise group</div></div></figcaption>
+        </figure>
+        <figure class="tcard">
+          <div class="tq-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>The support team is unlike anything I've experienced with other software vendors. They actually know our business and they pick up the phone when I call.</blockquote>
+          <figcaption class="tq-foot"><span class="tq-avatar">OM</span><div><div class="tq-name">Operations Manager</div><div class="tq-role">Quick Lube · 7 locations, Carolinas</div></div></figcaption>
+        </figure>
+        <figure class="tcard">
+          <div class="tq-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>We went from a 40-hour-per-week reporting process down to about 4. My team now spends their time on strategy and execution, not pulling numbers.</blockquote>
+          <figcaption class="tq-foot"><span class="tq-avatar">CE</span><div><div class="tq-name">CEO, Franchise Group</div><div class="tq-role">Automotive Services · 31 locations, Southeast U.S.</div></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES (blog posts) -->
   <section class="section">
     <div class="container">
-      <!-- Case 1 -->
-      <div class="feature-row reveal">
-        <div>
-          <span class="tag">Auto Care · 14 locations</span>
-          <h2 class="section-title" style="margin-top:1rem">Recovered $37K/year hiding in labor and voids</h2>
-          <p class="lead" style="margin-top:.8rem">A 14-location quick-lube group ran every store on a different spreadsheet.</p>
-          <div class="grid grid-3" style="margin:1.4rem 0">
-            <div class="b card" style="padding:1rem"><strong class="mono" style="font-size:1.6rem;color:var(--teal-600)">-1.3%</strong><br/><small style="color:var(--fg-3)">labor %</small></div>
-            <div class="b card" style="padding:1rem"><strong class="mono" style="font-size:1.6rem;color:var(--teal-600)">+8.4%</strong><br/><small style="color:var(--fg-3)">net sales</small></div>
-            <div class="b card" style="padding:1rem"><strong class="mono" style="font-size:1.6rem;color:var(--teal-600)">$37K</strong><br/><small style="color:var(--fg-3)">recovered / yr</small></div>
-          </div>
-          <ul class="fr-list">
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Challenge:</b>&nbsp;Nine data sources, weekly manual reporting, no portfolio view.</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Connected:</b>&nbsp;POS, payroll, QuickBooks + Signals alerts on labor &amp; voids.</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Outcome:</b>&nbsp;Labor tightened, void abuse caught, Monday reporting eliminated.</li>
-          </ul>
-        </div>
-        <div class="fr-media">
-          <div class="quote" style="text-align:left">
-            <div class="card" style="box-shadow:var(--shadow-lg)">
-              <div class="q-mark" style="font-size:3rem">&ldquo;</div>
-              <blockquote style="font-size:1.25rem">Everything is already waiting for me when I walk in. It changed how I manage completely.</blockquote>
-              <div class="q-author" style="justify-content:flex-start;margin-top:1.2rem"><span class="q-avatar">RM</span><div><div class="q-name">Owner / Operator</div><div class="q-role">Southeast U.S.</div></div></div>
-            </div>
-          </div>
-        </div>
+      <div class="section-head center reveal">
+        <span class="eyebrow" style="justify-content:center">Case studies</span>
+        <h2 class="section-title">How operators put myAnalyst to work</h2>
+        <p class="lead">Real business challenges, solved with data. Read the full story behind each result, and how we got there.</p>
       </div>
+      <div class="csgrid reveal d1" data-stagger style="margin-top:clamp(32px,4vw,52px)">
 
-      <!-- Case 2 -->
-      <div class="feature-row flip reveal">
-        <div>
-          <span class="tag" style="background:var(--info-bg);color:var(--info)">Car Wash · 8 sites</span>
-          <h2 class="section-title" style="margin-top:1rem">Lifted membership mix 3.4 points in one quarter</h2>
-          <p class="lead" style="margin-top:.8rem">An express-wash operator saw retention drop only after it was too late.</p>
-          <div class="grid grid-3" style="margin:1.4rem 0">
-            <div class="b card" style="padding:1rem"><strong class="mono" style="font-size:1.6rem;color:var(--info)">+3.4pt</strong><br/><small style="color:var(--fg-3)">membership mix</small></div>
-            <div class="b card" style="padding:1rem"><strong class="mono" style="font-size:1.6rem;color:var(--info)">+7.8%</strong><br/><small style="color:var(--fg-3)">wash count</small></div>
-            <div class="b card" style="padding:1rem"><strong class="mono" style="font-size:1.6rem;color:var(--info)">4.2x</strong><br/><small style="color:var(--fg-3)">coupon ROI</small></div>
+        <a class="card hover cscard" href="case-quick-lube-reporting.html">
+          <span class="tag">Quick Lube · 9 locations</span>
+          <h3>From 40 hours of Monday reporting to 4</h3>
+          <p class="cs-dek">A Southeast franchisee group spent most of Monday pulling data from nine different systems to build one weekly report. After myAnalyst, it was automated and waiting before the first store opened.</p>
+          <div class="cs-stats">
+            <div><b>90%</b><small>less reporting time</small></div>
+            <div><b>36hr</b><small>saved per week</small></div>
+            <div><b>10x</b><small>ROI in year one</small></div>
           </div>
-          <ul class="fr-list">
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Challenge:</b>&nbsp;No early warning on plan cancellations or capture rate.</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Connected:</b>&nbsp;POS + Customer Mapping + monthly Pro briefing.</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Outcome:</b>&nbsp;Retention plays targeted by site; marketing spend re-allocated by ROI.</li>
-          </ul>
-        </div>
-        <div class="fr-media">
-          <div class="shot">
-            <div class="shot-bar"><i></i><i></i><i></i><span>Membership trend</span></div>
-            <div class="shot-body">
-              <svg viewBox="0 0 320 130" preserveAspectRatio="none" style="width:100%;height:150px" aria-hidden="true">
-                <defs><linearGradient id="cs-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3d7ff2" stop-opacity=".4"/><stop offset="100%" stop-color="#3d7ff2" stop-opacity="0"/></linearGradient></defs>
-                <path d="M0,104 L46,98 L92,100 L138,84 L184,72 L230,58 L276,44 L320,32 L320,130 L0,130Z" fill="url(#cs-g)"/>
-                <path d="M0,104 L46,98 L92,100 L138,84 L184,72 L230,58 L276,44 L320,32" fill="none" stroke="#3d7ff2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="320" cy="32" r="4" fill="#fff" stroke="#3d7ff2" stroke-width="2"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+          <span class="cs-read">Read the story <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
 
-      <!-- Case 3 -->
-      <div class="feature-row reveal">
-        <div>
-          <span class="tag" style="background:var(--warning-bg);color:var(--amber)">QSR · 22 stores</span>
-          <h2 class="section-title" style="margin-top:1rem">Cut food cost 1.1 points across the portfolio</h2>
-          <p class="lead" style="margin-top:.8rem">A franchisee needed daypart visibility without 22 separate logins.</p>
-          <div class="grid grid-3" style="margin:1.4rem 0">
-            <div class="b card" style="padding:1rem"><strong class="mono" style="font-size:1.6rem;color:var(--amber)">-1.1pt</strong><br/><small style="color:var(--fg-3)">food cost</small></div>
-            <div class="b card" style="padding:1rem"><strong class="mono" style="font-size:1.6rem;color:var(--amber)">+5.2%</strong><br/><small style="color:var(--fg-3)">throughput</small></div>
-            <div class="b card" style="padding:1rem"><strong class="mono" style="font-size:1.6rem;color:var(--amber)">22→1</strong><br/><small style="color:var(--fg-3)">dashboards</small></div>
+        <a class="card hover cscard" href="case-auto-service-overtime.html" style="--cs:var(--amber)">
+          <span class="tag" style="background:var(--warning-bg);color:var(--amber);border-color:rgba(176,111,15,.2)">Automotive Services · 14 locations</span>
+          <h3>Stopping overtime before it hits payroll</h3>
+          <p class="cs-dek">A regional operator was running 5% to 8% over labor budget on untracked overtime. With labor forecasting and alerting, managers were notified before shifts ran over, not after payroll closed.</p>
+          <div class="cs-stats">
+            <div><b>62%</b><small>overtime reduction</small></div>
+            <div><b>$4K+</b><small>saved per week</small></div>
+            <div><b>3wk</b><small>to see results</small></div>
           </div>
-          <ul class="fr-list">
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Challenge:</b>&nbsp;No consolidated food-cost or daypart view across stores.</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Connected:</b>&nbsp;POS + inventory + Data Pipeline to the franchisor portal.</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Outcome:</b>&nbsp;Waste flagged by store/daypart; managers held to one set of numbers.</li>
-          </ul>
-        </div>
-        <div class="fr-media">
-          <div class="quote" style="text-align:left">
-            <div class="card" style="box-shadow:var(--shadow-lg)">
-              <div class="q-mark" style="font-size:3rem">&ldquo;</div>
-              <blockquote style="font-size:1.25rem">I finally manage all 22 stores from one screen, and the briefing tells me where to look first.</blockquote>
-              <div class="q-author" style="justify-content:flex-start;margin-top:1.2rem"><span class="q-avatar">JP</span><div><div class="q-name">Franchisee</div><div class="q-role">QSR · Multi-DMA</div></div></div>
-            </div>
+          <span class="cs-read">Read the story <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card hover cscard" href="case-car-wash-churn.html" style="--cs:var(--info)">
+          <span class="tag" style="background:var(--info-bg);color:var(--info);border-color:rgba(61,127,242,.2)">Car Wash · 22 locations</span>
+          <h3>Membership churn, caught before revenue dropped</h3>
+          <p class="cs-dek">A multi-site car wash group was losing members without knowing why. Membership analytics surfaced churn by location and package type in time to run targeted retention before the losses showed up in the P&amp;L.</p>
+          <div class="cs-stats">
+            <div><b>18%</b><small>churn reduction</small></div>
+            <div><b>$12K</b><small>monthly revenue kept</small></div>
+            <div><b>2mo</b><small>to identify issue</small></div>
           </div>
-        </div>
+          <span class="cs-read">Read the story <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card hover cscard" href="case-multi-brand-scaling.html" style="--cs:var(--crimson)">
+          <span class="tag" style="background:var(--danger-bg);color:var(--crimson);border-color:rgba(214,69,69,.2)">Multi-Brand · 31 locations</span>
+          <h3>Scaling from 9 to 31 locations without adding headcount</h3>
+          <p class="cs-dek">A fast-growing franchisee group acquired 22 locations over 18 months. Each new site dropped into a standardized reporting framework in days, with no additional analysts or operations staff hired.</p>
+          <div class="cs-stats">
+            <div><b>22</b><small>locations onboarded</small></div>
+            <div><b>0</b><small>analysts hired</small></div>
+            <div><b>5 days</b><small>avg onboarding</small></div>
+          </div>
+          <span class="cs-read">Read the story <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
       </div>
     </div>
   </section>
