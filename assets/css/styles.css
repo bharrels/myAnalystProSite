@@ -676,7 +676,6 @@ body.nav-open .nav-toggle span::after { top: 0; transform: rotate(-45deg); }
 @media (max-width: 1120px) {
   .nav-links, .nav-cta .btn { display: none; }
   .nav-toggle { display: inline-flex; }
-  .mobile-drawer { display: block; }
 }
 @media (max-width: 980px) {
   .hero-inner { grid-template-columns: 1fr; }
@@ -701,13 +700,17 @@ body.nav-open .nav-toggle span::after { top: 0; transform: rotate(-45deg); }
 /* ---------- Mobile drawer ---------- */
 .mobile-drawer {
   display: none; position: fixed; inset: var(--header-h) 0 0; z-index: 90;
-  background: rgba(8,9,10,.98); backdrop-filter: blur(8px); padding: 2rem var(--gutter); transform: translateX(100%);
+  background: var(--bg-1); box-shadow: var(--shadow-lg); padding: 2rem var(--gutter); transform: translateX(100%);
   transition: transform var(--dur-base) var(--ease); overflow-y: auto;
 }
+/* Show the drawer at the mobile breakpoint. This override must come AFTER the
+   base rule above: equal specificity means the later rule wins, so placing it
+   in an earlier @media block let the base display:none override it (the bug). */
+@media (max-width: 1120px) { .mobile-drawer { display: block; } }
 body.nav-open .mobile-drawer { transform: translateX(0); }
 body.nav-open { overflow: hidden; }
 .mobile-drawer a { display: block; font-size: 1.3rem; font-weight: 600; padding: 1rem 0; border-bottom: 1px solid var(--border-2); color: var(--fg-1); }
-.mobile-drawer .btn { width: 100%; margin-top: 1.4rem; }
+.mobile-drawer .btn { display: flex; width: fit-content; min-width: 220px; margin: 1.6rem auto 0; justify-content: center; }
 
 /* =============================================================
    New components (SEO/AEO pages) + motion system + logo marquee
@@ -776,6 +779,9 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 .cmp .no::before { content: "✕"; display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: var(--bg-3); font-size: .66rem; }
 .cmp tr:last-child td { border-bottom: none; }
 .cmp-hint { text-align: center; font-size: .8rem; color: var(--fg-3); margin-top: .9rem; }
+/* Pricing "What's included" table — gently highlight the Plus (3rd) column */
+.cmp.cmp-plans thead th:nth-child(3), .cmp.cmp-plans tbody td:nth-child(3) { background: rgba(29,172,146,.06); }
+.cmp.cmp-plans tbody tr:hover td:nth-child(3) { background: rgba(29,172,146,.12); }
 
 /* ---------- Footnotes / address ---------- */
 .proof-note { text-align: center; font-size: .8rem; color: var(--fg-3); margin-top: 1.2rem; max-width: 700px; margin-inline: auto; line-height: 1.5; }
