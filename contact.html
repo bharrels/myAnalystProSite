@@ -28,6 +28,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css?v=20260625h" />
+  <style>
+    /* Contact intro ambiance: gives the demo page the same aurora as the site heroes */
+    .contact-hero { position: relative; overflow: hidden; }
+    .contact-hero::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(46% 60% at 80% -8%, rgba(21,169,140,.16), transparent 60%),
+        radial-gradient(40% 52% at 4% 2%, rgba(37,99,235,.10), transparent 58%),
+        radial-gradient(42% 54% at 52% 112%, rgba(252,176,65,.10), transparent 60%);
+      animation: auroraDrift 24s ease-in-out infinite;
+    }
+    .contact-hero > .container { position: relative; z-index: 1; }
+    @media (prefers-reduced-motion: reduce) { .contact-hero::before { animation: none; } }
+    /* Form-card breathing room (owner note: fix the spacing) */
+    .demo-form button[type="submit"] { margin-top: 1.1rem; }
+    .demo-form .form-note { margin-top: .85rem; }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -110,7 +127,7 @@
     <a href="contact.html" class="btn btn-primary">Book a demo</a>
   </div>
 
-  <section class="section" style="padding-top:clamp(48px,6vw,80px)">
+  <section class="section contact-hero" style="padding-top:clamp(48px,6vw,80px)">
     <div class="container">
       <div class="grid grid-2" style="gap:clamp(32px,5vw,72px);align-items:start">
         <!-- Left: copy + info -->
@@ -128,7 +145,7 @@
 
         <!-- Right: form -->
         <div class="reveal d1">
-          <div class="card" style="box-shadow:var(--shadow-lg)">
+          <div class="card" style="box-shadow:var(--shadow-lg);padding:clamp(26px,3vw,38px)">
             <div class="form-success" role="status">Thanks, we got it. We'll reach out within one business day to schedule your demo.</div>
             <!-- NOTE: front-end only. See README.md to wire to Formspree / PHP mail on Hostinger. -->
             <form class="demo-form" novalidate>
@@ -165,6 +182,19 @@
     </div>
   </section>
 
+  <!-- CLIENT LOGO MARQUEE -->
+  <section class="logowall">
+    <div class="container">
+      <p>Trusted by operators across industries</p>
+    </div>
+    <div class="marquee" aria-label="A selection of operators and brands myAnalyst works with">
+      <div class="marquee-track">
+        <div class="m-logo"><img src="assets/img/logos/jiffy-lube.webp" alt="Jiffy Lube" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/midas.webp" alt="Midas" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/take-5.png" alt="Take 5" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/team-car-care.webp" alt="Team Car Care" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/meineke.webp" alt="Meineke" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/bojangles.webp" alt="Bojangles" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/dash.png" alt="Dash" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/solvix.png" alt="Solvix" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/capital-vacations.jpg" alt="Capital Vacations" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/united-bank.jpg" alt="United Bank" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/carolina-trust.png" alt="Carolina Trust" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/vacation-mb.webp" alt="Vacation MB" loading="lazy" /></div><div class="m-logo"><img src="assets/img/logos/chamber-of-commerce.webp" alt="Chamber of Commerce" loading="lazy" /></div>
+        <div class="m-logo" aria-hidden="true"><img src="assets/img/logos/jiffy-lube.webp" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/midas.webp" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/take-5.png" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/team-car-care.webp" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/meineke.webp" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/bojangles.webp" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/dash.png" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/solvix.png" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/capital-vacations.jpg" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/united-bank.jpg" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/carolina-trust.png" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/vacation-mb.webp" alt="" loading="lazy" /></div><div class="m-logo" aria-hidden="true"><img src="assets/img/logos/chamber-of-commerce.webp" alt="" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-cta">
@@ -190,7 +220,7 @@
         <div class="footer-col"><h5>Resources</h5><a href="resources.html">Resources hub</a><a href="best-all-in-one-multi-unit-dashboard.html">Best all-in-one dashboard</a><a href="faq.html">FAQ</a><a href="glossary.html">Glossary</a><a href="store-health-score.html">Store Health score</a><a href="compare-myanalyst-vs-bi.html">myAnalyst vs. BI tools</a></div>
         <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="customers.html#sample">Sample report</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
       </div>
-      <div class="footer-assoc"><span>Auto Care Association</span><span>PAMA</span><span>JLAF</span><span>IMDA</span><span>International Carwash Association</span><span>MDA</span></div>
+      <div class="footer-assoc"><span><img src="assets/img/logos/assoc-auto-care.webp" alt="Auto Care Association" loading="lazy"/></span><span>PAMA</span><span><img src="assets/img/logos/assoc-jlaf.webp" alt="JLAF" loading="lazy"/></span><span><img src="assets/img/logos/assoc-imda.webp" alt="IMDA" loading="lazy"/></span><span><img src="assets/img/logos/assoc-carwash.webp" alt="International Carwash Association" loading="lazy"/></span><span>MDA</span></div>
       <div class="footer-bottom"><span>© <span data-year>2026</span> myAnalyst, a product of SiteTech Systems. All rights reserved.</span><span>Myrtle Beach, SC · U.S.-based support</span></div>
     </div>
   </footer>

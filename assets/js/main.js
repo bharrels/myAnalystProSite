@@ -157,6 +157,22 @@
     retail:      { name: "Retail / C-Store", kpis: [["Basket Size", "$22.10", "+3.1%", "up"], ["Inside Sales", "$58.4K", "+6.0%", "up"], ["Margin %", "31.8%", "+0.9%", "up"]], note: "Inside sales, fuel margin, basket size, and shrink across every location and shift." },
     homeservices:{ name: "Home Services", kpis: [["Avg Job Value", "$612", "+8.3%", "up"], ["Close Rate", "47%", "+3.0%", "up"], ["Tech Revenue / Day", "$1,840", "+5.5%", "up"]], note: "Job value, close rate, tech utilization, and marketing ROI across crews and territories." }
   };
+  // Per-industry trend shape (9 y-points on the 0..110 viewBox) so the chart
+  // actually changes with the selector, not just the KPI numbers.
+  var IND_SPARK = {
+    autocare:     [82, 76, 80, 62, 66, 48, 52, 34, 38],
+    carwash:      [88, 84, 78, 80, 66, 60, 50, 46, 34],
+    hospitality:  [80, 74, 78, 64, 58, 62, 48, 44, 40],
+    qsr:          [86, 82, 76, 72, 66, 58, 54, 44, 40],
+    fitness:      [84, 80, 82, 70, 66, 56, 58, 46, 38],
+    retail:       [82, 78, 74, 70, 64, 60, 54, 48, 42],
+    homeservices: [90, 86, 80, 72, 62, 56, 46, 40, 30]
+  };
+  var IND_X = [0, 40, 80, 120, 160, 200, 240, 280, 320];
+  function indPaths(ys) {
+    var line = "M" + IND_X.map(function (x, i) { return x + "," + ys[i]; }).join(" L");
+    return { line: line, area: line + " L320,110 L0,110 Z" };
+  }
   var indTabs = document.querySelectorAll(".ind-tab");
 
   /* ARIA tab semantics + keyboard nav */
@@ -211,6 +227,28 @@
         var titleEl = document.querySelector(".ind-title");
         if (titleEl) titleEl.textContent = d.name;
         if (noteEl) noteEl.textContent = d.note;
+        // Redraw the trend chart for this industry
+        var spark = IND_SPARK[key];
+        var svg = metrics.parentElement ? metrics.parentElement.querySelector("svg") : null;
+        if (svg && spark) {
+          var ps = svg.querySelectorAll("path");
+          var area = svg.querySelector(".ind-area") || ps[0];
+          var line = svg.querySelector(".ind-line") || ps[1];
+          var pth = indPaths(spark);
+          if (area) area.setAttribute("d", pth.area);
+          if (line) {
+            line.setAttribute("d", pth.line);
+            if (!reduceMotion && line.getTotalLength) {
+              var len = line.getTotalLength();
+              line.style.transition = "none";
+              line.style.strokeDasharray = len;
+              line.style.strokeDashoffset = len;
+              line.getBoundingClientRect();
+              line.style.transition = "stroke-dashoffset .85s cubic-bezier(.22,.61,.36,1)";
+              line.style.strokeDashoffset = "0";
+            }
+          }
+        }
         metrics.style.opacity = "1";
       }, reduceMotion ? 0 : 180);
     }
