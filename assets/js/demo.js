@@ -268,7 +268,7 @@
     host.classList.add("invlook");
     host.innerHTML =
       '<div class="mademo-bar"><i></i><i></i><i></i><span>Invoice lookup</span></div>' +
-      '<form class="inv-search"><input type="text" aria-label="Search ticket, invoice, or VIN" placeholder="Search ticket, invoice, or VIN" /><button type="submit">Look up</button></form>' +
+      '<form class="inv-search"><input type="text" aria-label="Search a ticket or invoice" placeholder="Search a ticket or invoice" /><button type="submit">Look up</button></form>' +
       '<div class="inv-chips"><span class="lbl">Try:</span></div>' +
       '<div class="inv-result"></div>';
     var form = host.querySelector(".inv-search");
@@ -285,7 +285,7 @@
       q = (q || "").trim().toUpperCase();
       var key = KEYS.filter(function (k) { return k.toUpperCase() === q; })[0] ||
                 KEYS.filter(function (k) { return k.toUpperCase().indexOf(q) > -1; })[0];
-      if (!q) { renderEmpty("Enter a ticket, invoice, or VIN to pull the full record."); return; }
+      if (!q) { renderEmpty("Enter a ticket or invoice to pull the full record."); return; }
       if (!key) { renderEmpty("No match for “" + q + ".” Try one of the examples above."); return; }
       render(key, INV[key]);
     }

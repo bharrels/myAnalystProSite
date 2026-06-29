@@ -18,7 +18,15 @@
 - [Platform](https://www.myanalystpro.com/platform.html): LiveStats, Store Health, Pacing & Forecast, Geospatial Map, Retention, auditing, and Report Builder.
 - [myAnalyst Pro](https://www.myanalystpro.com/pro.html): an AI-assisted analyst that monitors every location 24/7 and delivers a plain-English monthly briefing.
 - [Add-ons](https://www.myanalystpro.com/add-ons.html): Signals SMS alerts, Customer Mapping, Real Estate Consulting, and Data Pipelines.
-- [Pricing](https://www.myanalystpro.com/pricing.html): Core Platform, Core + Pro, and Enterprise, all priced by number of locations.
+- [Integrations](https://www.myanalystpro.com/integrations.html): the POS, payroll, accounting, marketing, operations, and survey systems myAnalyst reads from.
+- [Pricing](https://www.myanalystpro.com/pricing.html): Core, Plus, and Expert plans, priced by number of locations, with enterprise plans for groups of 15+.
+
+## Platform features
+- [LiveStats](https://www.myanalystpro.com/livestats.html): real-time, store-by-store sales, cars, ticket average, and labor, refreshed every 5 minutes.
+- [Pacing & Forecast](https://www.myanalystpro.com/pacing-forecast.html): month-to-date pace vs budget with shape-adjusted projections.
+- [Retention](https://www.myanalystpro.com/retention.html): VIN- and household-level retention intelligence, CLV, RFM segments, and at-risk revenue.
+- [Geospatial Map](https://www.myanalystpro.com/geospatial-map.html): street-level customer origin, trade areas, and drive-time analysis.
+- [Roles](https://www.myanalystpro.com/roles.html): how owners, multi-unit operators, and district managers each use myAnalyst.
 
 ## Answer content (definitions, Q&A, methodology)
 - [FAQ](https://www.myanalystpro.com/faq.html): plain answers to common questions about setup, integrations, pricing, and support.
@@ -31,6 +39,12 @@
 - [Auto-service analytics](https://www.myanalystpro.com/auto-service-analytics.html): for quick-lube, tire, and repair chains.
 - [Multi-location dashboard software](https://www.myanalystpro.com/multi-location-dashboard-software.html): consolidate every location into one real-time view.
 - [myAnalyst vs. generic BI](https://www.myanalystpro.com/compare-myanalyst-vs-bi.html): purpose-built analytics compared with Power BI, Tableau, and spreadsheets.
+
+## Case studies
+- [Reining in auto-service overtime](https://www.myanalystpro.com/case-auto-service-overtime.html)
+- [Reducing car-wash membership churn](https://www.myanalystpro.com/case-car-wash-churn.html)
+- [Scaling from 9 to 31 locations](https://www.myanalystpro.com/case-multi-brand-scaling.html)
+- [Faster quick-lube reporting](https://www.myanalystpro.com/case-quick-lube-reporting.html)
 
 ## Guides
 - [Resources hub](https://www.myanalystpro.com/resources.html): guides for multi-unit operators.

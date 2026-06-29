@@ -257,7 +257,7 @@
     t.addEventListener("click", function () { setIndustry(t.getAttribute("data-ind")); });
   });
 
-  /* ---------- Contact form (front-end only, accessible validation) ---------- */
+  /* ---------- Contact form (posts to Netlify Forms; accessible validation) ---------- */
   var form = document.querySelector(".demo-form");
   if (form) {
     var requiredEls = form.querySelectorAll("[required]");
@@ -269,7 +269,7 @@
     }
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var ok = form.querySelector(".form-success");
+      var ok = form.parentNode.querySelector(".form-success") || document.querySelector(".form-success");
       var invalid = [];
       requiredEls.forEach(function (el) {
         var valid = fieldValid(el);
@@ -280,6 +280,16 @@
         if (ok) ok.style.display = "none";
         invalid[0].focus();
         return;
+      }
+      // Post to Netlify Forms (read the data before we clear the fields). Local/offline
+      // posts simply fail and are ignored — the inline success still shows.
+      if (form.getAttribute("data-netlify") === "true") {
+        var payload = new URLSearchParams(new FormData(form)).toString();
+        fetch(form.getAttribute("action") || window.location.pathname, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: payload
+        }).catch(function () {});
       }
       if (ok) { ok.style.display = "block"; }
       form.querySelectorAll("input,select,textarea").forEach(function (el) {
@@ -293,7 +303,7 @@
     });
   }
 
-  /* ---------- Newsletter / lead capture (front-end only) ---------- */
+  /* ---------- Newsletter / lead capture (Netlify-ready; opt in per form) ---------- */
   document.querySelectorAll(".lead-form").forEach(function (lf) {
     lf.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -303,7 +313,16 @@
       var ok = /.+@.+\..+/.test(v);
       if (input) input.setAttribute("aria-invalid", ok ? "false" : "true");
       if (!ok) { if (input) input.focus(); return; }
-      /* TODO: POST the email to your CRM / Formspree endpoint here to persist the lead. */
+      // Post to Netlify Forms when the form opts in (add name + data-netlify + a hidden
+      // form-name field to the footer form to enable site-wide newsletter capture).
+      if (lf.getAttribute("data-netlify") === "true") {
+        var leadBody = new URLSearchParams(new FormData(lf)).toString();
+        fetch(lf.getAttribute("action") || window.location.pathname, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: leadBody
+        }).catch(function () {});
+      }
       if (msg) msg.style.display = "block";
       lf.querySelectorAll("input").forEach(function (el) { el.value = ""; });
     });

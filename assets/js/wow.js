@@ -1,6 +1,6 @@
 /* =============================================================
    myAnalyst — "wow" layer (loaded sitewide after main.js)
-   1) ⌘K command palette  2) confetti on form success  3) live ops map
+   1) ⌘K command palette  2) confetti on form success
    ============================================================= */
 
 /* ---------- 1) ⌘K command palette ---------- */

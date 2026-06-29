@@ -90,22 +90,46 @@
         '<button data-f="at_risk">At risk ' + CHAIN.at_risk + '</button>' +
         '<button data-f="watch">Watch ' + CHAIN.watch + '</button>' +
         '<button data-f="healthy">Healthy ' + CHAIN.healthy + '</button></div>' +
-      '<div class="shb-grid">' + STORES.map(card).join("") + '</div>';
+      '<div class="shb-grid">' + STORES.map(card).join("") + '</div>' +
+      '<button class="shb-more" type="button" hidden></button>';
 
     // hover lift
     host.querySelectorAll(".sh-card").forEach(function (c) {
       c.addEventListener("mouseover", function () { c.style.transform = "translateY(-2px)"; c.style.boxShadow = "var(--shadow-md)"; });
       c.addEventListener("mouseout", function () { c.style.transform = "none"; c.style.boxShadow = "var(--shadow-xs)"; });
     });
-    // filters
+    // filters + mobile "show more" (cap the long single-column list on phones,
+    // so you get the chain summary + a few cards instead of endless scrolling)
+    var MOBILE_CAP = 3, expanded = false, activeFilter = "all";
+    var moreBtn = host.querySelector(".shb-more");
+    function isMobile() { return window.matchMedia("(max-width:560px)").matches; }
+    function applyView() {
+      var mob = isMobile(), shown = 0, total = 0;
+      host.querySelectorAll(".sh-card").forEach(function (c) {
+        var match = activeFilter === "all" || c.getAttribute("data-status") === activeFilter;
+        if (match) total++;
+        var show = match && !(mob && !expanded && shown >= MOBILE_CAP);
+        if (show) shown++;
+        c.style.display = show ? "" : "none";
+      });
+      if (moreBtn) {
+        var need = mob && !expanded && total > MOBILE_CAP;
+        moreBtn.hidden = !need;
+        if (need) moreBtn.textContent = "Show all " + total + " stores";
+      }
+    }
     var btns = host.querySelectorAll(".shb-filters button");
     btns.forEach(function (b) {
       b.addEventListener("click", function () {
         btns.forEach(function (x) { x.classList.toggle("active", x === b); });
-        var f = b.getAttribute("data-f");
-        host.querySelectorAll(".sh-card").forEach(function (c) { c.style.display = (f === "all" || c.getAttribute("data-status") === f) ? "" : "none"; });
+        activeFilter = b.getAttribute("data-f");
+        expanded = false;
+        applyView();
       });
     });
+    if (moreBtn) moreBtn.addEventListener("click", function () { expanded = true; applyView(); });
+    applyView();
+    window.addEventListener("resize", applyView);
     // animate rings + pillars on first reveal
     function play() {
       host.querySelectorAll(".sh-arc").forEach(function (a) { a.setAttribute("stroke-dashoffset", a.getAttribute("data-target")); });
