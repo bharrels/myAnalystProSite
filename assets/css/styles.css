@@ -183,8 +183,8 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 600; }
 .nav-cta .btn-primary { background: #0e1116; color: #fff; box-shadow: 0 6px 18px -10px rgba(14,17,22,.55); }
 .nav-cta .btn-primary:hover { background: #1b212a; box-shadow: 0 10px 24px -10px rgba(14,17,22,.6); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 2rem; }
-.brand { display: inline-flex; align-items: center; }
-.brand-logo { height: 30px; width: auto; display: block; aspect-ratio: 1920 / 386; object-fit: contain; }
+.brand { display: inline-flex; align-items: center; flex-shrink: 0; }
+.brand-logo { height: 30px; width: auto; display: block; flex-shrink: 0; aspect-ratio: 1920 / 386; object-fit: contain; }
 .nav-links { display: flex; align-items: center; gap: 1.2rem; }
 .nav-links a { position: relative; font-size: .94rem; font-weight: 600; color: var(--fg-1); white-space: nowrap; transition: color var(--dur-fast) var(--ease); }
 .nav-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, var(--teal-600), var(--info)); transform: scaleX(0); transform-origin: left; transition: transform var(--dur-base) var(--ease); }
