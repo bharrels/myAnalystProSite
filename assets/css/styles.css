@@ -191,16 +191,16 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 600; }
 .nav-links a:hover, .nav-links a.active { color: var(--fg-1); }
 .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
 /* "Pro" is the premium product — gold, with a steady gold underline, on every page */
-.nav-links a[href="pro.html"], .mobile-drawer a[href="pro.html"] {
+.nav-links a[href*="pro"], .mobile-drawer a[href*="pro"] {
   font-weight: 700;
   background: linear-gradient(100deg, #9c6f12 0%, #c8902f 32%, #f3c969 50%, #c8902f 68%, #9c6f12 100%);
   background-size: 220% 100%;
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
   animation: proGold 5.5s ease-in-out infinite;
 }
-.nav-links a[href="pro.html"]::after { transform: scaleX(1); background: linear-gradient(90deg, #c8902f, #f3c969); opacity: .9; }
+.nav-links a[href*="pro"]::after { transform: scaleX(1); background: linear-gradient(90deg, #c8902f, #f3c969); opacity: .9; }
 @keyframes proGold { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
-@media (prefers-reduced-motion: reduce) { .nav-links a[href="pro.html"], .mobile-drawer a[href="pro.html"] { animation: none !important; } }
+@media (prefers-reduced-motion: reduce) { .nav-links a[href*="pro"], .mobile-drawer a[href*="pro"] { animation: none !important; } }
 .nav-cta { display: flex; align-items: center; gap: .7rem; }
 .nav-cta .btn-ghost { box-shadow: none; background: transparent; color: var(--fg-2); padding: .6rem .5rem; }
 .nav-cta .btn-ghost:hover { color: var(--fg-1); background: transparent; }
@@ -1553,7 +1553,7 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 /* ---- bolder gold "Pro" nav (reads clearly gold at a glance) ----
    background-image (not the `background` shorthand, which resets
    background-clip and would paint a solid gold block) ---- */
-.nav-links a[href="pro.html"], .mobile-drawer a[href="pro.html"] {
+.nav-links a[href*="pro"], .mobile-drawer a[href*="pro"] {
   background-image: linear-gradient(100deg, #a86a12 0%, #cf8f1f 28%, #f3c264 50%, #cf8f1f 72%, #a86a12 100%);
   background-size: 220% 100%; font-weight: 800;
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;

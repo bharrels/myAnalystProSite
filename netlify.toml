@@ -1,14 +1,36 @@
 # myAnalyst — Netlify configuration
-# Hand-built static site (no build step). Serve files EXACTLY as committed and
-# skip Netlify's post-processing. In particular, Netlify "Pretty URLs" rewrites
-# internal links from "pro.html" to "/pro"; that breaks CSS that targets
-# a[href="pro.html"] (the gold "Pro" nav link) and the JS active-link matching.
-# skip_processing also disables CSS/JS bundling+minify and image compression.
-# Clean URLs (/contact -> contact.html) still resolve via Netlify's default
-# file lookup; we cache-bust assets ourselves with ?v= query strings.
+# Hand-built static site (no build step).
+#
+# IMPORTANT: skip_processing must stay FALSE. Netlify's deploy-time
+# post-processing pass is where automatic Netlify Forms DETECTION happens;
+# skip_processing = true would skip it and the form would never be registered.
+# We instead turn OFF only the individual transforms we don't want:
+#   - pretty_urls: stops Netlify rewriting "pro.html" -> "/pro", which broke the
+#     gold "Pro" nav styling (CSS a[href*="pro"]) and JS active-link matching.
+#   - css/js bundle+minify: keep our hand-tuned CSS/JS byte-for-byte
+#     (minify can break the gradient-clipped "Pro" text effect).
+#
+# Form detection is OFF BY DEFAULT on Netlify sites created after 2023-04-12 and
+# CANNOT be enabled from this file. After deploying, enable it in the Netlify UI:
+#   Site -> Forms -> Usage and configuration -> Form detection -> Enable
+# then trigger a redeploy. Submissions then appear under Forms ("demo-request").
 
 [build]
   publish = "."
 
 [build.processing]
-  skip_processing = true
+  skip_processing = false
+
+[build.processing.css]
+  bundle = false
+  minify = false
+
+[build.processing.js]
+  bundle = false
+  minify = false
+
+[build.processing.html]
+  pretty_urls = false
+
+[build.processing.images]
+  compress = false

@@ -55,10 +55,11 @@
   }
 
   /* ---------- Mark active nav link ---------- */
-  var path = location.pathname.split("/").pop() || "index.html";
+  // Normalize so it matches whether links are "pro.html" or pretty URLs ("/pro").
+  function maNorm(u) { u = (u || "").split(/[?#]/)[0].replace(/\/+$/, ""); u = u.slice(u.lastIndexOf("/") + 1); return u.replace(/\.html$/, "") || "index"; }
+  var path = maNorm(location.pathname);
   document.querySelectorAll(".nav-links a, .mobile-drawer a").forEach(function (a) {
-    var href = a.getAttribute("href");
-    if (href === path) a.classList.add("active");
+    if (maNorm(a.getAttribute("href")) === path) a.classList.add("active");
   });
 
   /* ---------- Scroll reveal ---------- */
