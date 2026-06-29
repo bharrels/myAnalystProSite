@@ -284,9 +284,12 @@
       }
       // Post to Netlify Forms (read the data before we clear the fields). Local/offline
       // posts simply fail and are ignored — the inline success still shows.
-      if (form.getAttribute("data-netlify") === "true") {
+      // Netlify STRIPS the data-netlify attribute on deploy, so detect the form by
+      // its hidden form-name field (which survives) and POST to "/" — Netlify routes
+      // the submission by the form-name in the body, not the path.
+      if (form.querySelector('input[name="form-name"]')) {
         var payload = new URLSearchParams(new FormData(form)).toString();
-        fetch(form.getAttribute("action") || window.location.pathname, {
+        fetch(form.getAttribute("action") || "/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: payload
@@ -316,9 +319,9 @@
       if (!ok) { if (input) input.focus(); return; }
       // Post to Netlify Forms when the form opts in (add name + data-netlify + a hidden
       // form-name field to the footer form to enable site-wide newsletter capture).
-      if (lf.getAttribute("data-netlify") === "true") {
+      if (lf.querySelector('input[name="form-name"]')) {
         var leadBody = new URLSearchParams(new FormData(lf)).toString();
-        fetch(lf.getAttribute("action") || window.location.pathname, {
+        fetch(lf.getAttribute("action") || "/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: leadBody
