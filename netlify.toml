@@ -1,0 +1,14 @@
+# myAnalyst — Netlify configuration
+# Hand-built static site (no build step). Serve files EXACTLY as committed and
+# skip Netlify's post-processing. In particular, Netlify "Pretty URLs" rewrites
+# internal links from "pro.html" to "/pro"; that breaks CSS that targets
+# a[href="pro.html"] (the gold "Pro" nav link) and the JS active-link matching.
+# skip_processing also disables CSS/JS bundling+minify and image compression.
+# Clean URLs (/contact -> contact.html) still resolve via Netlify's default
+# file lookup; we cache-bust assets ourselves with ?v= query strings.
+
+[build]
+  publish = "."
+
+[build.processing]
+  skip_processing = true
