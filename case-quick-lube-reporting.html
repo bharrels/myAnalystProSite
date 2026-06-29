@@ -263,7 +263,9 @@
     <div class="container">
       <div class="footer-cta">
         <div><h4>Get multi-unit benchmarks &amp; product updates</h4><p>Operator-focused insights for auto service, car wash, QSR, and more. No spam, unsubscribe anytime.</p></div>
-        <form class="lead-form" aria-label="Newsletter signup">
+        <form class="lead-form" aria-label="Newsletter signup" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="newsletter" />
+          <p class="hp-field" hidden aria-hidden="true"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
           <label for="lead-email" class="sr-only">Work email</label>
           <input id="lead-email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required />
           <button type="submit" class="btn btn-primary">Subscribe</button>
