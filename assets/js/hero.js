@@ -55,7 +55,7 @@
 
   var ctx = canvas.getContext("2d");
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  var W = 0, H = 0, nodes = [], raf = null, running = false, t0 = 0;
+  var W = 0, H = 0, nodes = [], raf = null, running = false, t0 = 0, lastDraw = 0;
 
   function rand(a, b) { return a + Math.random() * (b - a); }
 
@@ -69,7 +69,7 @@
     canvas.style.height = H + "px";
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    var count = Math.max(16, Math.min(40, Math.round(W / 46)));
+    var count = Math.max(12, Math.min(26, Math.round(W / 64)));
     var cols = Math.max(2, Math.ceil(Math.sqrt(count * (W / Math.max(H, 1)))));
     var rows = Math.ceil(count / cols);
     nodes = [];
@@ -96,6 +96,9 @@
   }
 
   function frame(ts) {
+    raf = requestAnimationFrame(frame);
+    if (ts - lastDraw < 32) return; // ~30fps cap — ambient backdrop, halves canvas CPU
+    lastDraw = ts;
     if (!t0) t0 = ts;
     var t = ts - t0;
     ctx.clearRect(0, 0, W, H);
@@ -159,10 +162,9 @@
       ctx.shadowBlur = 0;
     }
 
-    raf = requestAnimationFrame(frame);
   }
 
-  function start() { if (running) return; running = true; t0 = 0; raf = requestAnimationFrame(frame); }
+  function start() { if (running) return; running = true; t0 = 0; lastDraw = 0; raf = requestAnimationFrame(frame); }
   function stop() { running = false; if (raf) cancelAnimationFrame(raf); raf = null; }
 
   build();

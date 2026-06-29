@@ -371,7 +371,7 @@
      ============================================================ */
   var finePointer = window.matchMedia("(pointer: fine)").matches;
 
-  /* ---------- Spatial background field (orbs + bounded scroll parallax) ---------- */
+  /* ---------- Spatial background field (orbs, CSS-animated) ---------- */
   (function () {
     var field = document.createElement("div");
     field.className = "bg-field";
@@ -385,21 +385,8 @@
       wraps.push({ el: w, f: d[1] });
     });
     document.body.appendChild(field);
-    if (reduceMotion) return;
-    var tick = false;
-    function update() {
-      tick = false;
-      var h = document.documentElement;
-      var denom = (h.scrollHeight - h.clientHeight) || 1;
-      var prog = (h.scrollTop || window.scrollY || 0) / denom; // 0..1
-      wraps.forEach(function (w) {
-        w.el.style.transform = "translate3d(0," + ((prog - 0.5) * 230 * w.f).toFixed(1) + "px,0)";
-      });
-    }
-    window.addEventListener("scroll", function () {
-      if (!tick) { tick = true; requestAnimationFrame(update); }
-    }, { passive: true });
-    update();
+    // Orbs float via CSS keyframes only — the scroll-linked parallax transform was
+    // removed for performance (it forced compositing work on every scroll frame).
   })();
 
   /* ---------- Scroll progress bar ---------- */

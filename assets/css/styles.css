@@ -97,8 +97,9 @@ body::before {
 
 /* ---------- Spatial background field (orbs, injected by main.js) ---------- */
 .bg-field { position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
-.bg-field .orb-wrap { position: absolute; inset: 0; will-change: transform; }
-.bg-field .orb { position: absolute; border-radius: 50%; filter: blur(72px); opacity: .55; will-change: transform; }
+.bg-field .orb-wrap { position: absolute; inset: 0; }
+.bg-field .orb { position: absolute; border-radius: 50%; filter: blur(48px); opacity: .5; }
+@media (max-width: 760px) { .bg-field { display: none; } }
 .bg-field .orb.o1 { width: 48vw; height: 48vw; left: -10vw; top: -8vw;  background: radial-gradient(circle at 50% 50%, rgba(21,169,140,.30), transparent 70%); animation: orbFloat1 26s ease-in-out infinite; }
 .bg-field .orb.o2 { width: 44vw; height: 44vw; right: -12vw; top: 6vh;  background: radial-gradient(circle at 50% 50%, rgba(252,176,65,.20), transparent 70%);  animation: orbFloat2 32s ease-in-out infinite; }
 .bg-field .orb.o3 { width: 40vw; height: 40vw; right: 2vw;   top: 56vh; background: radial-gradient(circle at 50% 50%, rgba(225,42,86,.16), transparent 70%); animation: orbFloat3 30s ease-in-out infinite; }
@@ -174,11 +175,11 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 600; }
 /* ---------- Header (glass) ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(255,255,255,.72); backdrop-filter: saturate(160%) blur(16px); -webkit-backdrop-filter: saturate(160%) blur(16px);
+  background: rgba(255,255,255,.9);
   border-bottom: 1px solid transparent;
   transition: border-color var(--dur-base) var(--ease), background var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease);
 }
-.site-header.scrolled { border-bottom-color: var(--border-2); background: rgba(255,255,255,.9); box-shadow: var(--shadow-sm); }
+.site-header.scrolled { border-bottom-color: var(--border-2); background: rgba(255,255,255,.97); box-shadow: var(--shadow-sm); }
 .site-header::after { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--teal) 0%, var(--amber-fill) 50%, var(--crimson-deep) 100%); pointer-events: none; }
 .nav-cta .btn-primary { background: #0e1116; color: #fff; box-shadow: 0 6px 18px -10px rgba(14,17,22,.55); }
 .nav-cta .btn-primary:hover { background: #1b212a; box-shadow: 0 10px 24px -10px rgba(14,17,22,.6); }
@@ -782,6 +783,24 @@ abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cur
 /* Pricing "What's included" table — gently highlight the Plus (3rd) column */
 .cmp.cmp-plans thead th:nth-child(3), .cmp.cmp-plans tbody td:nth-child(3) { background: rgba(29,172,146,.06); }
 .cmp.cmp-plans tbody tr:hover td:nth-child(3) { background: rgba(29,172,146,.12); }
+/* Mobile: stack the plan comparison into one card per feature (Core/Plus/Expert
+   labeled inline) so it reads top-to-bottom with no sideways scrolling. Scoped to
+   .cmp-plans so the BI-comparison table keeps its own behavior. */
+@media (max-width: 600px) {
+  .cmp-wrap-plans { overflow: visible; border: 0; border-radius: 0; }
+  .cmp-plans { min-width: 0; }
+  .cmp-plans thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .cmp-plans tbody, .cmp-plans tr, .cmp-plans td { display: block; }
+  .cmp-plans tr { border: 1px solid var(--border-2); border-radius: var(--r-lg); background: var(--bg-2); padding: 2px 16px 14px; margin-bottom: 12px; }
+  .cmp-plans tr:last-child { margin-bottom: 0; }
+  .cmp-plans td { border: 0 !important; padding: 10px 0 0; background: transparent !important; }
+  .cmp-plans td:first-child { font-size: 1rem; color: var(--fg-1); padding: 12px 0 8px; border-bottom: 1px solid var(--border-2) !important; }
+  .cmp-plans td:not(:first-child) { display: grid; grid-template-columns: 78px 1fr; gap: 12px; align-items: start; }
+  .cmp-plans td:not(:first-child)::before { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--fg-3); padding-top: 2px; }
+  .cmp-plans td:nth-child(2)::before { content: "Core"; }
+  .cmp-plans td:nth-child(3)::before { content: "Plus"; }
+  .cmp-plans td:nth-child(4)::before { content: "Expert"; }
+}
 
 /* ---------- Footnotes / address ---------- */
 .proof-note { text-align: center; font-size: .8rem; color: var(--fg-3); margin-top: 1.2rem; max-width: 700px; margin-inline: auto; line-height: 1.5; }
