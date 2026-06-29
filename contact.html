@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260628b" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260628c" />
   <style>
     /* Contact intro ambiance: gives the demo page the same aurora as the site heroes */
     .contact-hero { position: relative; overflow: hidden; }
@@ -117,6 +117,7 @@
         <a href="pricing.html">Pricing</a>
       </nav>
       <div class="nav-cta">
+        <a href="https://app.myanalystpro.com" class="btn btn-ghost nav-signin">Sign In</a>
         <a href="contact.html" class="btn btn-primary">Book a demo</a>
         <button class="nav-toggle" aria-label="Menu" aria-controls="mobile-drawer" aria-expanded="false"><span></span></button>
       </div>
@@ -124,6 +125,7 @@
   </header>
   <div class="mobile-drawer" id="mobile-drawer">
     <a href="platform.html">Platform</a><a href="pro.html">Pro</a><a href="add-ons.html">Add-ons</a><a href="integrations.html">Integrations</a><a href="industries.html">Industries</a><a href="customers.html">Customers</a><a href="resources.html">Resources</a><a href="pricing.html">Pricing</a>
+    <a href="https://app.myanalystpro.com" class="btn btn-ghost">Sign In</a>
     <a href="contact.html" class="btn btn-primary">Book a demo</a>
   </div>
 
@@ -149,7 +151,7 @@
             <div class="form-success" role="status">Thanks, we got it. We'll reach out within one business day to schedule your demo.</div>
             <!-- Wired to Netlify Forms: submissions appear in the Netlify dashboard (Forms tab).
                  The form must exist in the deployed static HTML for Netlify to detect it. -->
-            <form class="demo-form" name="demo-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <form class="demo-form" name="demo-request" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field" novalidate>
               <input type="hidden" name="form-name" value="demo-request" />
               <p class="hp-field" hidden aria-hidden="true"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
               <div class="field-row">
@@ -176,6 +178,8 @@
                 </div>
               </div>
               <div class="field"><label for="message">What would you like to see? <span style="color:var(--fg-3);font-weight:500">(optional)</span></label><textarea id="message" name="message" rows="3"></textarea></div>
+              <div data-netlify-recaptcha="true" style="margin-top:1rem"></div>
+              <p class="form-captcha-err" hidden style="color:var(--danger);font-size:.85rem;margin-top:.5rem">Please complete the reCAPTCHA above before submitting.</p>
               <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Request my demo</button>
               <p class="form-note">By submitting, you agree to be contacted about myAnalyst. We never share your data.</p>
             </form>
@@ -209,6 +213,7 @@
           <p class="lead-msg" role="status">Thanks, you're on the list.</p>
         </form>
       </div>
+      <div class="footer-portal" style="display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center;justify-content:space-between;padding:1.5rem 0;margin-bottom:.6rem;border-bottom:1px solid var(--border-2)"><div><h4 style="font-size:1.05rem">Access the portal</h4><p style="color:var(--fg-3);font-size:.92rem;margin-top:.25rem">Already a customer? Sign in to your myAnalyst dashboard.</p></div><a href="https://app.myanalystpro.com" class="btn btn-primary" style="flex:0 0 auto">Sign In</a></div>
       <div class="footer-top">
         <div>
           <a href="index.html" class="brand"><img src="assets/img/logo-full.webp" alt="myAnalyst" class="brand-logo" width="1920" height="386" decoding="async" /></a>
@@ -228,7 +233,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20260628b" defer></script>
-  <script src="assets/js/wow.js?v=20260628b" defer></script>
+  <script src="assets/js/main.js?v=20260628c" defer></script>
+  <script src="assets/js/wow.js?v=20260628c" defer></script>
 </body>
 </html>

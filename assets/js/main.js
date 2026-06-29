@@ -284,6 +284,18 @@
       }
       // Post to Netlify Forms (read the data before we clear the fields). Local/offline
       // posts simply fail and are ignored — the inline success still shows.
+      // reCAPTCHA gate: if a Netlify reCAPTCHA widget is on the page and not solved,
+      // stop here (the token only exists after the user checks the box).
+      var rcField = form.querySelector('[name="g-recaptcha-response"]');
+      var rcErr = form.querySelector(".form-captcha-err");
+      if (rcField && !(rcField.value || "").trim()) {
+        if (ok) ok.style.display = "none";
+        if (rcErr) rcErr.hidden = false;
+        var rcEl = form.querySelector(".g-recaptcha") || rcField;
+        if (rcEl.scrollIntoView) rcEl.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+        return;
+      }
+      if (rcErr) rcErr.hidden = true;
       // Netlify STRIPS the data-netlify attribute on deploy, so detect the form by
       // its hidden form-name field (which survives) and POST to "/" — Netlify routes
       // the submission by the form-name in the body, not the path.
