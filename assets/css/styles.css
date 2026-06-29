@@ -77,7 +77,7 @@
 /* ---------- Reset / base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
 body {
   font-family: var(--font-sans);
   background: var(--bg-1);
@@ -86,7 +86,7 @@ body {
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 /* fine grain texture across the whole page (kills the flat, generated look) */
 body::before {
@@ -321,6 +321,10 @@ body.nav-open .nav-toggle span::after { top: 0; transform: rotate(-45deg); }
 .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
 .feature-row + .feature-row { margin-top: clamp(56px, 8vw, 110px); }
 .feature-row.flip .fr-media { order: -1; }
+/* prevent grid/flex items from forcing their track wider than the viewport
+   (CSS grid items default to min-width:auto, which causes mobile h-overflow) */
+.feature-row > *, .hero-inner > * { min-width: 0; }
+.fr-media, .fr-media .shot, .fr-media .report, .fr-media img { max-width: 100%; }
 .fr-list { display: grid; gap: .9rem; margin-top: 1.6rem; }
 .fr-list li { display: flex; gap: .7rem; align-items: flex-start; color: var(--fg-2); }
 .fr-list .ck { width: 22px; height: 22px; flex: 0 0 auto; border-radius: 50%; background: var(--success-bg); color: var(--teal-600); display: grid; place-items: center; margin-top: 1px; }
